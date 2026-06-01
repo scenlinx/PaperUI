@@ -129,7 +129,9 @@ const initSearch = async () => {
     }
 
     sInput.disabled = false;
-    sInput.focus();
+    if (sInput.id === 'searchInput') {
+        sInput.focus();
+    }
 
     try {
         const response = await fetch('/index.json');
