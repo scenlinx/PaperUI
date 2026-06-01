@@ -1,7 +1,8 @@
 ---
 title: '关于'
 description: '关于新墨韬'
-hideTitle: true
+wideLayout: true
+ShowToc: false
 ---
 
 ## 关于本站

@@ -83,6 +83,10 @@
     border: 1px solid var(--border);
 }
 
+.main:has(.post-single.wide-layout) {
+    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+}
+
 .page-header h1 {
     display: none;
 }

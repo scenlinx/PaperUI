@@ -6,7 +6,7 @@
 </aside>
 {{- end }}
 
-<article class="post-single">
+<article class="post-single{{ if (.Param "wideLayout") }} wide-layout{{ end }}">
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
     {{- if not (.Param "hideTitle") }}
