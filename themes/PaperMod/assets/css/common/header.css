@@ -114,3 +114,69 @@
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
 }
+
+.header-search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.header-search input {
+    padding: 2px 8px;
+    width: 120px;
+    font-size: 14px;
+    color: var(--primary);
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+}
+
+.header-search input:focus {
+    width: 180px;
+    outline: none;
+    border-color: var(--tertiary);
+}
+
+.header-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 90;
+    width: 300px;
+    max-height: 360px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 4px;
+}
+
+.header-search-results:empty {
+    display: none;
+}
+
+.header-search-results li {
+    list-style: none;
+    border-radius: calc(var(--radius) - 2px);
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--entry);
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.header-search-results li:hover {
+    background: var(--border);
+}
+
+.header-search-results li svg {
+    display: none;
+}

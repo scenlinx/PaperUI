@@ -84,6 +84,10 @@
             </div>
             {{- end }}
         </div>
+        <div class="header-search">
+            <input id="headerSearchInput" type="search" placeholder="搜索" autocomplete="off" maxlength="64">
+            <ul id="headerSearchResults" class="header-search-results"></ul>
+        </div>
         {{- $currentPage := . }}
         <ul id="menu" class="menu">
             {{- range site.Menus.main }}

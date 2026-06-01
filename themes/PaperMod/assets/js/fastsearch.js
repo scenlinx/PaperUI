@@ -1,8 +1,8 @@
 import * as params from '@params';
 
-const resList = document.getElementById('searchResults');
-const sInput = document.getElementById('searchInput');
-const searchBox = document.getElementById('searchbox');
+const resList = document.getElementById('searchResults') || document.getElementById('headerSearchResults');
+const sInput = document.getElementById('searchInput') || document.getElementById('headerSearchInput');
+const searchBox = document.getElementById('searchbox') || document.getElementById('headerSearch');
 
 let fuse;
 let currentElement = null;
@@ -132,7 +132,7 @@ const initSearch = async () => {
     sInput.focus();
 
     try {
-        const response = await fetch('../index.json');
+        const response = await fetch('/index.json');
         if (!response.ok) {
             throw new Error(`Search index load failed: ${response.status}`);
         }
