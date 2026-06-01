@@ -18,6 +18,14 @@
     --border: rgb(238, 238, 238);
     --accent: #2563eb;
     --accent2: #f59e0b;
+    --tag-1: #ef4444;
+    --tag-2: #f97316;
+    --tag-3: #eab308;
+    --tag-4: #22c55e;
+    --tag-5: #06b6d4;
+    --tag-6: #3b82f6;
+    --tag-7: #8b5cf6;
+    --tag-8: #ec4899;
     color-scheme: light;
 }
 
@@ -33,6 +41,14 @@
     --border: rgb(51, 51, 51);
     --accent: #60a5fa;
     --accent2: #fbbf24;
+    --tag-1: #fca5a5;
+    --tag-2: #fdba74;
+    --tag-3: #fde047;
+    --tag-4: #86efac;
+    --tag-5: #67e8f9;
+    --tag-6: #93c5fd;
+    --tag-7: #c4b5fd;
+    --tag-8: #f9a8d4;
     color-scheme: dark;
 }
 

@@ -222,10 +222,23 @@
 .sidebar-tag {
     font-size: 12px;
     padding: 2px 8px;
-    background: color-mix(in srgb, var(--accent) 12%, var(--code-bg));
-    border-radius: var(--radius);
-    color: var(--accent);
-    transition: background var(--transition), color var(--transition);
+    border-radius: 4px;
+    transition: background var(--transition), color var(--transition), transform var(--transition);
+}
+
+.sidebar-tag:nth-child(8n+1) { background: color-mix(in srgb, var(--tag-1) 20%, white); color: var(--tag-1); }
+.sidebar-tag:nth-child(8n+2) { background: color-mix(in srgb, var(--tag-2) 20%, white); color: var(--tag-2); }
+.sidebar-tag:nth-child(8n+3) { background: color-mix(in srgb, var(--tag-3) 20%, white); color: var(--tag-3); }
+.sidebar-tag:nth-child(8n+4) { background: color-mix(in srgb, var(--tag-4) 20%, white); color: var(--tag-4); }
+.sidebar-tag:nth-child(8n+5) { background: color-mix(in srgb, var(--tag-5) 20%, white); color: var(--tag-5); }
+.sidebar-tag:nth-child(8n+6) { background: color-mix(in srgb, var(--tag-6) 20%, white); color: var(--tag-6); }
+.sidebar-tag:nth-child(8n+7) { background: color-mix(in srgb, var(--tag-7) 20%, white); color: var(--tag-7); }
+.sidebar-tag:nth-child(8n+8) { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
+
+.sidebar-tag:hover {
+    background: currentColor !important;
+    color: #fff !important;
+    transform: translateY(-1px);
 }
 
 .sidebar-tag:hover {
