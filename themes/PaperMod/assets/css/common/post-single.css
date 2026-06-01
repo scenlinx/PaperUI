@@ -413,6 +413,11 @@ details li ul {
     display: flex;
     gap: var(--gap);
     line-height: 1.2;
+    width: 100%;
+}
+
+.paginav a {
+    min-width: 0;
 }
 
 .paginav .title {
@@ -435,7 +440,7 @@ details li ul {
     transition: background var(--transition), border-color var(--transition);
 }
 
-.paginav a span:first-of-type {
+.paginav a span {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
