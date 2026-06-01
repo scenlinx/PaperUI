@@ -11,9 +11,9 @@
 <meta name="description" content="新墨韬 - 个人技术博客">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.47c14871838ac74c26b830fdc5c42cdaa7e8dc2ed6650f418db967f1db8ec8b9.css" integrity="sha256-R8FIcYOKx0wmuDD9xcQs2qfo3C7WZQ9Bjbln8duOyLk=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a1882ab556da5bb2c3d65f845f50fdecc5708cdb2277b40b5b6b89768ec30989.css" integrity="sha256-oYgqtVbaW7LD1l&#43;EX1D97MVwjNsid7QLW2uJdo7DCYk=" rel="preload stylesheet" as="style">
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
-<script defer crossorigin="anonymous" src="/assets/js/search.55d38d3c833fb0453c72b8626a1593dc505f3d72e4fbde382d274e0062419f9d.js" integrity="sha256-VdONPIM/sEU8crhiahWT3FBfPXLk&#43;944LSdOAGJBn50="></script>
+<script defer crossorigin="anonymous" src="/assets/js/search.19e71f93c0a732983fe6683c23c18a021461cc4452db3c8b623d1582c979a9dd.js" integrity="sha256-Gecfk8CnMpg/5mg8I8GKAhRhzERS2zyLYj0Vgsl5qd0="></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -100,9 +100,9 @@
             </li>
         </ul>
         <div class="logo-switches">
-            <a href="http://localhost:1313/search" class="search-btn" title="搜索" aria-label="搜索">
+            <button class="search-btn" title="搜索" aria-label="搜索" onclick="const el = document.getElementById('homeSearchInput'); if(el) { el.focus(); }">
                 <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            </a>
+            </button>
             <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="切换主题">
                 <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -242,7 +242,6 @@
   <div class="home-sidebar-section">
     <h3>搜索</h3>
     <input id="homeSearchInput" type="search" placeholder="搜索文章..." autocomplete="off" maxlength="64">
-    <ul id="homeSearchResults" class="home-search-results"></ul>
   </div>
 
   <div class="home-sidebar-section">
@@ -275,11 +274,11 @@
   <div class="home-sidebar-section">
     <h3>随机文章</h3>
     <ul class="sidebar-posts">
-      <li><a href="http://localhost:1313/posts/git-guide/">Git 常用命令速查手册</a></li>
-      <li><a href="http://localhost:1313/posts/hello-world/">你好，世界！</a></li>
-      <li><a href="http://localhost:1313/posts/vs-code-setup/">VS Code 高效配置指南</a></li>
       <li><a href="http://localhost:1313/posts/docker-intro/">Docker 容器化入门</a></li>
-      <li><a href="http://localhost:1313/posts/python-tips/">Python 开发实用技巧</a></li>
+      <li><a href="http://localhost:1313/posts/git-guide/">Git 常用命令速查手册</a></li>
+      <li><a href="http://localhost:1313/posts/vs-code-setup/">VS Code 高效配置指南</a></li>
+      <li><a href="http://localhost:1313/posts/linux-commands/">Linux 命令行实用技巧</a></li>
+      <li><a href="http://localhost:1313/posts/getting-started/">Hugo 快速入门指南</a></li>
     </ul>
   </div>
 
@@ -295,6 +294,9 @@
   </div>
 </aside>
 </div>
+
+<ul id="homeSearchResults" class="home-search-results"></ul>
+<div id="homeSearchOverlay" class="home-search-overlay"></div>
     </main>
     
 <footer class="footer">
