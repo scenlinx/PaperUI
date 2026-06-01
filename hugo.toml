@@ -1,0 +1,9 @@
+baseURL = 'https://example.org/'
+locale = 'en-us'
+title = 'My New Hugo Project'
+theme = "Blonde"
+paginate = 10
+mainSections = ["posts"]
+
+[params]
+paginator_pages = 10
