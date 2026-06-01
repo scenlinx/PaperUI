@@ -2,7 +2,7 @@
     max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
     display: grid;
     grid-template-columns: 220px 1fr;
-    gap: var(--gap);
+    gap: 8px;
 }
 
 .main:has(.sidebar) .post-single,
@@ -76,6 +76,28 @@
     border-left: 3px solid var(--accent);
 }
 
+.rss-header {
+    display: flex;
+    align-items: center;
+}
+
+.rss-header .rss-icon-inline {
+    margin-left: auto;
+}
+
+.rss-icon-inline {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    color: var(--secondary);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.rss-icon-inline:hover {
+    color: var(--accent);
+}
+
 .sidebar-section h3 {
     font-size: 16px;
     font-weight: 600;
@@ -96,8 +118,12 @@
 
 .rss-label {
     font-size: 12px;
-    color: var(--secondary);
     margin-left: 4px;
+}
+
+.rss-icon-inline:hover .rss-label,
+.rss-icon-inline:hover svg {
+    color: var(--accent);
 }
 
 .rss-icon {
@@ -294,7 +320,7 @@ details li ul {
 }
 
 .post-footer>* {
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .post-tags {
