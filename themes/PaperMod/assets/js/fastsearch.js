@@ -2,6 +2,7 @@ import * as params from '@params';
 
 const searchPairs = [
     { input: 'searchInput', results: 'searchResults' },
+    { input: 'modalSearchInput', results: 'modalSearchResults' },
     { input: 'homeSearchInput', results: 'homeSearchResults' }
 ];
 
@@ -65,6 +66,13 @@ const hideSearchOverlay = () => {
     }
 };
 
+const closeSearchModal = () => {
+    const modal = document.getElementById('searchModal');
+    if (modal) {
+        modal.classList.remove('active');
+    }
+};
+
 const reset = () => {
     currentElement = null;
     firstResult = null;
@@ -74,6 +82,7 @@ const reset = () => {
         inst.sInput.value = '';
     }
     hideSearchOverlay();
+    closeSearchModal();
 };
 
 const setActiveResult = (element) => {
@@ -190,6 +199,21 @@ const initSearch = async () => {
             for (const inst of instances) {
                 if (inst.sInput.id === 'homeSearchInput') {
                     inst.sInput.blur();
+                }
+            }
+        });
+    }
+
+    const modal = document.getElementById('searchModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                modal.classList.remove('active');
+                for (const inst of instances) {
+                    if (inst.sInput.id === 'modalSearchInput') {
+                        inst.resList.innerHTML = '';
+                        inst.sInput.value = '';
+                    }
                 }
             }
         });
