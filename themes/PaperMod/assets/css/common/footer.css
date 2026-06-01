@@ -32,13 +32,18 @@
     position: fixed;
     bottom: 4rem;
     right: 2rem;
-    z-index: 99;
-    background: var(--tertiary);
+    z-index: 999;
+    background: var(--accent);
+    color: white;
     width: 2.5rem;
     height: 2.5rem;
     padding: 10px;
     border-radius: 64px;
-    transition: visibility var(--transition), opacity var(--transition), color var(--transition);
+    transition: visibility var(--transition), opacity var(--transition), color var(--transition), transform var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 .hidden {
