@@ -11,7 +11,7 @@
 <meta name="description" content="新墨韬 - 个人技术博客">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.92b004946fdb597a7c092af7aa9aeaa759d924df40a8f210f5e92fea2638cef6.css" integrity="sha256-krAElG/bWXp8CSr3qprqp1nZJN9AqPIQ9ekv6iY4zvY=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.eacadaa03fa124ab067c53901dc8053d49fa806cd5fb5a35964bc84de5dcf91c.css" integrity="sha256-6sraoD&#43;hJKsGfFOQHcgFPUn6gGzV&#43;1o1lkvITeXc&#43;Rw=" rel="preload stylesheet" as="style">
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
 <script defer crossorigin="anonymous" src="/assets/js/search.dbfab4cc757eead4e402c4df65baab6f71f2a16a41cd87819f32a0a8a5e81809.js" integrity="sha256-2/q0zHV&#43;6tTkAsTfZbqrb3HyoWpBzYeBnzKgqKXoGAk="></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -145,21 +145,71 @@
 </div>
 </header>
 <main class="main"> 
-<article class="first-entry home-info">
-    <header class="entry-header">
-        <h1>欢迎来到新墨韬</h1>
-    </header>
-    <div class="entry-content md-content">
-        
-        <p>这里是一个技术博客，分享编程、开源和生活中的思考。</p>
-
+<div class="first-entry home-info hero-carousel-wrap">
+  <div class="hero-carousel">
+    <div class="hero-left">
+      <div class="hero-inner hero-inner-16x9">
+        <div class="carousel-slides">
+          <a href="/posts/getting-started/" class="carousel-slide active">
+            <img src="/images/hero-1.jpg" alt="" loading="lazy">
+          </a>
+          <a href="/posts/hello-world/" class="carousel-slide" aria-hidden="true">
+            <img src="/images/hero-2.jpg" alt="" loading="lazy">
+          </a>
+          <a href="/posts/git-guide/" class="carousel-slide" aria-hidden="true">
+            <img src="/images/hero-3.jpg" alt="" loading="lazy">
+          </a>
+        </div>
+        <div class="carousel-dots">
+          <span class="carousel-dot active" data-index="0"></span>
+          <span class="carousel-dot" data-index="1"></span>
+          <span class="carousel-dot" data-index="2"></span>
+        </div>
+      </div>
     </div>
-    <footer class="entry-footer">
-        <div class="social-icons" >
+    <div class="hero-middle">
+      <a href="/posts/python-tips/" class="hero-square">
+        <img src="/images/square-1.jpg" alt="" loading="lazy">
+      </a>
+      <a href="/posts/go-concurrency/" class="hero-square">
+        <img src="/images/square-2.jpg" alt="" loading="lazy">
+      </a>
+    </div>
+    <div class="hero-right">
+      <div class="hero-inner hero-inner-3x4">
+        <a href="/about/" class="hero-portrait">
+          <img src="/images/portrait-1.jpg" alt="" loading="lazy">
+        </a>
+      </div>
+    </div>
+  </div>
 </div>
-
-    </footer>
-</article>
+<script>
+(function(){
+  const container = document.querySelector('.hero-carousel-wrap .carousel-slides');
+  if (!container) return;
+  const slides = container.querySelectorAll('.carousel-slide');
+  const dots = container.parentElement.querySelectorAll('.carousel-dot');
+  if (slides.length < 2) return;
+  let current = 0;
+  const total = slides.length;
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    slides[current].setAttribute('aria-hidden', 'true');
+    if (dots.length) dots[current].classList.remove('active');
+    current = (idx + total) % total;
+    slides[current].classList.add('active');
+    slides[current].removeAttribute('aria-hidden');
+    if (dots.length) dots[current].classList.add('active');
+  }
+  setInterval(function(){ goTo(current + 1); }, 4000);
+  if (dots.length) {
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function(){ goTo(i); });
+    });
+  }
+})();
+</script>
 <div class="home-layout">
   <div class="home-content">
 
@@ -283,10 +333,10 @@
   <div class="home-sidebar-section">
     <h3>随机文章</h3>
     <ul class="sidebar-posts">
-      <li><a href="http://localhost:1313/posts/hello-world/">你好，世界！</a></li>
-      <li><a href="http://localhost:1313/posts/vs-code-setup/">VS Code 高效配置指南</a></li>
       <li><a href="http://localhost:1313/posts/python-tips/">Python 开发实用技巧</a></li>
-      <li><a href="http://localhost:1313/posts/docker-intro/">Docker 容器化入门</a></li>
+      <li><a href="http://localhost:1313/posts/linux-commands/">Linux 命令行实用技巧</a></li>
+      <li><a href="http://localhost:1313/posts/vs-code-setup/">VS Code 高效配置指南</a></li>
+      <li><a href="http://localhost:1313/posts/getting-started/">Hugo 快速入门指南</a></li>
       <li><a href="http://localhost:1313/posts/git-guide/">Git 常用命令速查手册</a></li>
     </ul>
   </div>

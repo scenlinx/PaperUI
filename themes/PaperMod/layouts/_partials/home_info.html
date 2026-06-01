@@ -1,3 +1,67 @@
+{{- with site.Params.homeCarousel }}
+<div class="first-entry home-info hero-carousel-wrap">
+  <div class="hero-carousel">
+    <div class="hero-left">
+      <div class="hero-inner hero-inner-16x9">
+        <div class="carousel-slides">
+          {{- range $i, $slide := .slides }}
+          <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }}>
+            <img src="{{ $slide.image | relURL }}" alt="" loading="lazy">
+          </a>
+          {{- end }}
+        </div>
+        <div class="carousel-dots">
+          {{- range $i, $_ := .slides }}
+          <span class="carousel-dot{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}"></span>
+          {{- end }}
+        </div>
+      </div>
+    </div>
+    <div class="hero-middle">
+      {{- range .middle }}
+      <a href="{{ .url | relURL }}" class="hero-square">
+        <img src="{{ .image | relURL }}" alt="" loading="lazy">
+      </a>
+      {{- end }}
+    </div>
+    <div class="hero-right">
+      <div class="hero-inner hero-inner-3x4">
+        {{- with .right }}
+        <a href="{{ .url | relURL }}" class="hero-portrait">
+          <img src="{{ .image | relURL }}" alt="" loading="lazy">
+        </a>
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(){
+  const container = document.querySelector('.hero-carousel-wrap .carousel-slides');
+  if (!container) return;
+  const slides = container.querySelectorAll('.carousel-slide');
+  const dots = container.parentElement.querySelectorAll('.carousel-dot');
+  if (slides.length < 2) return;
+  let current = 0;
+  const total = slides.length;
+  function goTo(idx) {
+    slides[current].classList.remove('active');
+    slides[current].setAttribute('aria-hidden', 'true');
+    if (dots.length) dots[current].classList.remove('active');
+    current = (idx + total) % total;
+    slides[current].classList.add('active');
+    slides[current].removeAttribute('aria-hidden');
+    if (dots.length) dots[current].classList.add('active');
+  }
+  setInterval(function(){ goTo(current + 1); }, 4000);
+  if (dots.length) {
+    dots.forEach(function(dot, i) {
+      dot.addEventListener('click', function(){ goTo(i); });
+    });
+  }
+})();
+</script>
+{{- else }}
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">
     <header class="entry-header">
@@ -11,4 +75,5 @@
         {{ partial "social_icons.html" (dict "align" site.Params.homeInfoParams.AlignSocialIconsTo) }}
     </footer>
 </article>
+{{- end }}
 {{- end -}}

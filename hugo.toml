@@ -31,6 +31,18 @@ ShowFullTextinRSS = false
 Title = '欢迎来到新墨韬'
 Content = '这里是一个技术博客，分享编程、开源和生活中的思考。'
 
+[params.homeCarousel]
+slides = [
+  { image = '/images/hero-1.jpg', url = '/posts/getting-started/' },
+  { image = '/images/hero-2.jpg', url = '/posts/hello-world/' },
+  { image = '/images/hero-3.jpg', url = '/posts/git-guide/' },
+]
+middle = [
+  { image = '/images/square-1.jpg', url = '/posts/python-tips/' },
+  { image = '/images/square-2.jpg', url = '/posts/go-concurrency/' },
+]
+right = { image = '/images/portrait-1.jpg', url = '/about/' }
+
 [params.footer]
 hideCopyright = false
 
