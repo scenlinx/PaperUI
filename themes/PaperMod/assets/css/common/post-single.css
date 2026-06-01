@@ -74,6 +74,13 @@
     display: inline-flex;
     vertical-align: middle;
     margin-top: 8px;
+    align-items: center;
+    gap: 6px;
+}
+
+.rss-label {
+    font-size: 13px;
+    color: var(--secondary);
 }
 
 .post-single {
