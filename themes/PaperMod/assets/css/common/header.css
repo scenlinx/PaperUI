@@ -99,3 +99,18 @@
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 2px;
 }
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid var(--border);
+    background: var(--theme);
+    transition: background 0.3s, backdrop-filter 0.3s;
+}
+
+.header.scrolled {
+    background: color-mix(in srgb, var(--theme) 85%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
