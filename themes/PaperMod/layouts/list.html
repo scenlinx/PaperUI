@@ -14,27 +14,30 @@
 {{- end }}
 
 {{- if not .IsHome | and .Title }}
-<header class="page-header">
+<aside class="sidebar">
+  <div class="sidebar-section">
+    <h1>{{ .Title }}</h1>
+    {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
+    {{- with .OutputFormats.Get "rss" }}
+    <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS 订阅" class="rss-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round" height="23">
+        <path d="M4 11a9 9 0 0 1 9 9" />
+        <path d="M4 4a16 16 0 0 1 16 16" />
+        <circle cx="5" cy="19" r="1" />
+      </svg>
+    </a>
+    {{- end }}
+    {{- end }}
+  </div>
+</aside>
+<div class="page-main-content">
   {{- partial "breadcrumbs.html" . }}
-  <h1>{{ .Title }}</h1>
-  {{- if and (or (eq .Kind `term`) (eq .Kind `section`)) (.Param "ShowRssButtonInSectionTermList") }}
-  {{- with .OutputFormats.Get "rss" }}
-  <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS 订阅" class="rss-icon">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-      stroke-linecap="round" stroke-linejoin="round" height="23">
-      <path d="M4 11a9 9 0 0 1 9 9" />
-      <path d="M4 4a16 16 0 0 1 16 16" />
-      <circle cx="5" cy="19" r="1" />
-    </svg>
-  </a>
-  {{- end }}
-  {{- end }}
   {{- if .Description }}
   <div class="post-description">
     {{ .Description | markdownify }}
   </div>
   {{- end }}
-</header>
 {{- end }}
 
 {{- if .Content }}
@@ -175,6 +178,10 @@
     {{- end }}
   </nav>
 </footer>
+{{- end }}
+
+{{- if not .IsHome | and .Title }}
+</div>{{- /* close page-main-content */}}
 {{- end }}
 
 {{- end }}{{/* end profileMode */}}

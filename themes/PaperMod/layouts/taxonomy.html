@@ -1,15 +1,17 @@
 {{- define "main" }}
 
-<div class="post-single">
 {{- if .Title }}
-<header class="page-header">
+<aside class="sidebar">
+  <div class="sidebar-section">
     <h1>{{ .Title }}</h1>
     {{- if .Description }}
     <div class="post-description">
-        {{ .Description }}
+      {{ .Description }}
     </div>
     {{- end }}
-</header>
+  </div>
+</aside>
+<div class="page-main-content">
 {{- end }}
 
 <ul class="terms-tags">
@@ -24,6 +26,9 @@
         {{- end }}
     {{- end }}
 </ul>
+
+{{- if .Title }}
 </div>
+{{- end }}
 
 {{- end }}{{/* end main */ -}}
