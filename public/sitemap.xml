@@ -3,6 +3,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/ci/cd/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/docker/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/git/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -21,6 +30,9 @@
     <loc>http://localhost:1313/categories/%E6%95%99%E7%A8%8B/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/posts/hello-world/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
@@ -30,14 +42,14 @@
     <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/modern-development-workflow/</loc>
+    <lastmod>2026-06-01T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/%E6%8C%87%E5%8D%97/</loc>
     <lastmod>2026-06-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/git/</loc>
-    <lastmod>2026-05-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/git-guide/</loc>
     <lastmod>2026-05-28T00:00:00+00:00</lastmod>
@@ -71,9 +83,6 @@
   </url><url>
     <loc>http://localhost:1313/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
     <lastmod>2026-05-20T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/docker/</loc>
-    <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/posts/docker-intro/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>

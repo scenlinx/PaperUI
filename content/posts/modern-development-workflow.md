@@ -1,5 +1,5 @@
 ---
-date: '2026-06-02'
+date: '2026-06-01'
 title: '现代软件开发完整工作流'
 categories: ["技术"]
 tags: ["开发流程", "Git", "Docker", "CI/CD"]

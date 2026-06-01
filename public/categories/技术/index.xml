@@ -25,6 +25,13 @@
 &lt;/ul&gt;</description>
     </item>
     <item>
+      <title>现代软件开发完整工作流</title>
+      <link>http://localhost:1313/posts/modern-development-workflow/</link>
+      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/modern-development-workflow/</guid>
+      <description>从代码编写到生产部署的完整现代开发工作流实践指南</description>
+    </item>
+    <item>
       <title>Git 常用命令速查手册</title>
       <link>http://localhost:1313/posts/git-guide/</link>
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>

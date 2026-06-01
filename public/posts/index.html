@@ -4,7 +4,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
 <title>文章 | 新墨韬</title>
 <meta name="keywords" content="">
 <meta name="description" content="文章 - 新墨韬">
@@ -67,6 +67,31 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
+</script><meta property="og:url" content="http://localhost:1313/posts/">
+  <meta property="og:site_name" content="新墨韬">
+  <meta property="og:title" content="文章">
+  <meta property="og:description" content="新墨韬 - 个人技术博客">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="website">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="文章">
+  <meta name="twitter:description" content="新墨韬 - 个人技术博客">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "文章",
+      "item": "http://localhost:1313/posts/"
+    }
+  ]
+}
 </script>
 </head>
 <body class="list" id="top">
@@ -201,7 +226,7 @@
   <div class="sidebar-section">
     <h3>分类</h3>
     <ul class="sidebar-categories">
-      <li><a href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="count">5篇</span></li>
+      <li><a href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="count">6篇</span></li>
       <li><a href="http://localhost:1313/categories/%E6%95%99%E7%A8%8B/">教程</a><span class="count">2篇</span></li>
     </ul>
   </div>
@@ -209,6 +234,7 @@
   <div class="sidebar-section">
     <h3>标签</h3>
     <div class="sidebar-tags">
+      <a href="http://localhost:1313/tags/ci/cd/" class="sidebar-tag">CI/CD</a>
       <a href="http://localhost:1313/tags/docker/" class="sidebar-tag">Docker</a>
       <a href="http://localhost:1313/tags/git/" class="sidebar-tag">Git</a>
       <a href="http://localhost:1313/tags/hugo/" class="sidebar-tag">Hugo</a>
@@ -218,6 +244,7 @@
       <a href="http://localhost:1313/tags/%E5%85%A5%E9%97%A8/" class="sidebar-tag">入门</a>
       <a href="http://localhost:1313/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="sidebar-tag">命令行</a>
       <a href="http://localhost:1313/tags/%E5%AE%B9%E5%99%A8/" class="sidebar-tag">容器</a>
+      <a href="http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="sidebar-tag">开发流程</a>
       <a href="http://localhost:1313/tags/%E6%8C%87%E5%8D%97/" class="sidebar-tag">指南</a>
       <a href="http://localhost:1313/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/" class="sidebar-tag">版本控制</a>
       <a href="http://localhost:1313/tags/%E7%BC%96%E7%A8%8B/" class="sidebar-tag">编程</a>
@@ -257,6 +284,24 @@
 
 <span title='2026-06-01 00:00:00 +0000 UTC'>June 1, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>14 words</span></footer>
   <a class="entry-link" aria-label="post link to 你好，世界！" href="http://localhost:1313/posts/hello-world/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">现代软件开发完整工作流
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>在现代软件开发中，高效的工作流（Workflow）是提高团队开发效率和保证代码质量的关键。本文将分享一套完整的现代开发工作流实践，涵盖从本地开发到生产部署的各个环节。
+1. 版本控制工作流 1.1 分支策略 我推荐使用 Git Flow 的简化版本，适合大多数团队：
+# 主要功能分支 main # 生产环境代码 staging # 预发布环境 feature/* # 功能开发分支 hotfix/* # 紧急修复分支 # 日常开发流程 git checkout -b feature/user-authentication # 创建功能分支 # ... 开发代码 ... git add . git commit -m &#34;feat(auth): 添加用户认证功能&#34; git push origin feature/user-authentication 1.2 提交信息规范 采用 Conventional Commits 规范，让提交信息更加结构化：
+&lt;类型&gt;(&lt;可选范围&gt;): &lt;描述&gt;[可选正文][可选结尾]# 示例type可选值:- feat: 新功能- fix: 修复- docs: 文档- style: 格式调整- refactor: 重构- test: 测试相关- chore: 构建过程或辅助工具的变动 2. 本地开发环境 2.1 Docker 统一开发环境 使用 Docker 确保开发环境一致性：
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-06-01 00:00:00 +0000 UTC'>June 1, 2026</span>&nbsp;·&nbsp;<span>4 min</span>&nbsp;·&nbsp;<span>715 words</span></footer>
+  <a class="entry-link" aria-label="post link to 现代软件开发完整工作流" href="http://localhost:1313/posts/modern-development-workflow/"></a>
 </article>
 
 <article class="post-entry"> 

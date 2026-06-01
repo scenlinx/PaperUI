@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://newmo.tech/'
 title = '新墨韬'
 theme = 'PaperMod'
 defaultContentLanguage = 'zh-cn'
@@ -9,7 +9,7 @@ enableEmoji = true
 home = ['HTML', 'RSS', 'JSON']
 
 [params]
-env = 'development'
+env = 'production'
 description = '新墨韬 - 个人技术博客'
 keywords = ['博客', 'Hugo', 'PaperMod', '技术']
 defaultTheme = 'auto'
@@ -26,7 +26,7 @@ ShowPageNums = true
 ShowRssButtonInSectionTermList = true
 ShowAllPagesInArchive = false
 ShowFullTextinRSS = false
-homePostCount = 10
+homePostCount = 8
 
 [params.homeInfoParams]
 Title = '欢迎来到新墨韬'
@@ -40,7 +40,7 @@ slides = [
 ]
 middle = [
   { image = '/images/square-1.jpg', url = '/posts/python-tips/' },
-  { image = '/images/square-2.jpg', url = '/posts/go-concurrency/' },
+  { image = '/images/square-2.jpg', url = '/posts/linux-commands/' },
 ]
 right = { image = '/images/portrait-1.jpg', url = '/about/' }
 
