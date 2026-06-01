@@ -48,23 +48,19 @@
     </div>
   </div>
 </aside>
-<div class="page-main-content">
-{{- end }}
-
-<ul class="terms-tags">
-    {{- $type := .Type }}
-        {{- range $key, $value := .Data.Terms.Alphabetical }}
-            {{- $name := .Name }}
-            {{- $count := .Count }}
-            {{- with site.GetPage (printf "/%s/%s" $type $name) }}
-            <li>
-                <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
-            </li>
-        {{- end }}
-    {{- end }}
-</ul>
-
-{{- if .Title }}
+<div class="page-main-content taxonomy-content">
+  <ul class="terms-tags">
+      {{- $type := .Type }}
+          {{- range $key, $value := .Data.Terms.Alphabetical }}
+              {{- $name := .Name }}
+              {{- $count := .Count }}
+              {{- with site.GetPage (printf "/%s/%s" $type $name) }}
+              <li>
+                  <a href="{{ .Permalink }}">{{ .LinkTitle }} <sup><strong><sup>{{ $count }}</sup></strong></sup> </a>
+              </li>
+          {{- end }}
+      {{- end }}
+  </ul>
 </div>
 {{- end }}
 
