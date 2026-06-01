@@ -81,6 +81,9 @@
     <loc>http://localhost:1313/tags/%E5%AE%B9%E5%99%A8/</loc>
     <lastmod>2026-05-18T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/posts/test-long-post/</loc>
+    <lastmod>2024-01-01T10:00:00+08:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/about/</loc>
   </url><url>
     <loc>http://localhost:1313/archives/</loc>
