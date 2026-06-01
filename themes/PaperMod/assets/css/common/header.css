@@ -55,7 +55,7 @@
 
 .logo-switches {
     display: inline-flex;
-    gap: 0.4rem;
+    gap: 0.6rem;
     align-items: inherit;
     min-height: stretch;
     flex-wrap: inherit;
