@@ -12,7 +12,7 @@
 <link rel="canonical" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.07d70c2b84294e4fee20f0c19902410b6e345d4a0d27484e8a0b60d10edad76a.css" integrity="sha256-B9cMK4QpTk/uIPDBmQJBC240XUoNJ0hOigtg0Q7a12o=" rel="preload stylesheet" as="style">
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
-<script defer crossorigin="anonymous" src="/assets/js/search.7d10777cf5d1cff088ae565401017c2d06182f1fe6d73767525eedc8568ca334.js" integrity="sha256-fRB3fPXRz/CIrlZUAQF8LQYYLx/m1zdnUl7tyFaMozQ="></script>
+<script defer crossorigin="anonymous" src="/assets/js/search.199a1defecdbca3d6bcf6ec362229c534ef43df06bfe04ba665c67c0af91e2bb.js" integrity="sha256-GZod7&#43;zbyj1rz27DYiKcU070PfBr/gS6ZlxnwK&#43;R4rs="></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
@@ -98,7 +98,7 @@
             </li>
         </ul>
         <div class="logo-switches">
-            <button class="search-btn" title="搜索" aria-label="搜索" onclick="const m = document.getElementById('searchModal'); if(m) { m.classList.add('active'); m.querySelector('#modalSearchInput').focus(); }">
+            <button class="search-btn" title="搜索" aria-label="搜索" onclick="const m = document.getElementById('searchModal'); if(m) { m.classList.add('active'); setTimeout(() => m.querySelector('#modalSearchInput').focus(), 100); }">
                 <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
             <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="切换主题">

@@ -61,7 +61,7 @@
         {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
         {{- if $lsenabled }}
         <div class="logo-switches">
-            <button class="search-btn" title="搜索" aria-label="搜索" onclick="const m = document.getElementById('searchModal'); if(m) { m.classList.add('active'); m.querySelector('#modalSearchInput').focus(); }">
+            <button class="search-btn" title="搜索" aria-label="搜索" onclick="const m = document.getElementById('searchModal'); if(m) { m.classList.add('active'); setTimeout(() => m.querySelector('#modalSearchInput').focus(), 100); }">
                 <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </button>
             {{- if (not site.Params.disableThemeToggle) }}

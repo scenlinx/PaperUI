@@ -161,8 +161,7 @@ const initSearch = async () => {
                             modal.classList.add('active');
                             modalInput.value = sInput.value;
                             performSearch(modalInput, modalResults);
-                            modalInput.focus();
-                            modalInput.setSelectionRange(modalInput.value.length, modalInput.value.length);
+                            setTimeout(() => { modalInput.focus(); modalInput.setSelectionRange(modalInput.value.length, modalInput.value.length); }, 100);
                         }
                     }
                 });
