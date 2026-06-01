@@ -4,6 +4,10 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
+{{- if and .IsHome site.Params.homeInfoParams }}
+{{- partial "home_info.html" . }}
+{{- end }}
+
 {{- if .IsHome }}
 <div class="home-layout">
   <div class="home-content">
@@ -50,10 +54,6 @@
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
-
-{{- if and .IsHome site.Params.homeInfoParams }}
-{{- partial "home_info.html" . }}
-{{- end }}
 
 {{- $term := .Data.Term }}
 {{- $list := (cond .IsHome $pages $paginator.Pages) }}

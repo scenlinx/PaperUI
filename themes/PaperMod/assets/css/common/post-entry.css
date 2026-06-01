@@ -134,6 +134,20 @@
     align-items: flex-start;
 }
 
+.first-entry.home-info {
+    margin-left: calc(-1 * var(--gap));
+    margin-right: calc(-1 * var(--gap));
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+    background: var(--entry);
+    border-bottom: 1px solid var(--border);
+}
+
+.first-entry.home-info .entry-header h1 {
+    font-size: 34px;
+    margin: 0;
+}
+
 .home-content {
     flex: 1;
     min-width: 0;
