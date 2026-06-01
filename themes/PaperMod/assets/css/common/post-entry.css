@@ -135,12 +135,11 @@
 }
 
 .first-entry.home-info {
-    margin-left: calc(-1 * var(--gap));
-    margin-right: calc(-1 * var(--gap));
     padding-left: var(--gap);
     padding-right: var(--gap);
     background: var(--entry);
     border-bottom: 1px solid var(--border);
+    border-radius: var(--radius);
 }
 
 .first-entry.home-info .entry-header h1 {
