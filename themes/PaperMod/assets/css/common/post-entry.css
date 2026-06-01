@@ -247,7 +247,7 @@
 .sidebar-tag:nth-child(8n+8) { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
 
 .sidebar-tag:hover {
-    background: currentColor !important;
+    background: var(--accent) !important;
     color: #fff !important;
     transform: translateY(-1px);
 }

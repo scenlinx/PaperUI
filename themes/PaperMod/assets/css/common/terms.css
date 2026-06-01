@@ -27,7 +27,7 @@
 .terms-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
 
 .terms-tags a:hover {
-    background: currentColor !important;
+    background: var(--accent) !important;
     color: #fff !important;
     transform: translateY(-2px);
 }
