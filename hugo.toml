@@ -1,9 +1,43 @@
 baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
-theme = "Blonde"
+locale = 'zh-CN'
+title = '我的新 Hugo 网站'
+theme = "PaperMod"
 paginate = 10
 mainSections = ["posts"]
+defaultContentLanguage = "zh-CN"
 
 [params]
 paginator_pages = 10
+recentLimit = 5
+tagslimit = 15
+archive_dropdown = "false"
+
+[params.widgets]
+display = true
+mobile = true
+widgets = ["search", "recent", "category", "tags", "archive"]
+
+[languages.zh-CN]
+locale = "zh-CN"
+label = "中文"
+title = "新墨韬"
+
+[[languages.zh-CN.menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[languages.zh-CN.menu.main]]
+name = "文章"
+url = "/posts/"
+weight = 2
+
+[[languages.zh-CN.menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 3
+
+[[languages.zh-CN.menu.main]]
+name = "关于"
+url = "/about/"
+weight = 4
