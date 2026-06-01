@@ -4,7 +4,7 @@
 }
 
 .archive-year {
-    margin-top: 24px;
+    margin-top: 16px;
 }
 
 .archive-year:not(:last-of-type) {
@@ -14,12 +14,13 @@
 .archive-month {
     display: flex;
     align-items: flex-start;
-    padding: 6px 0;
+    padding: 4px 0;
 }
 
 .archive-month-header {
-    margin: 16px 0;
-    width: 200px;
+    margin: 10px 0;
+    width: 120px;
+    font-weight: 600;
 }
 
 .archive-header-link {
@@ -36,20 +37,20 @@
 
 .archive-entry {
     position: relative;
-    padding: 5px 10px;
-    margin: 8px 0;
+    padding: 4px 8px;
+    margin: 4px 0;
     border-radius: var(--radius);
     transition: background var(--transition);
 }
 
 .archive-entry:not(:last-of-type) {
     border-bottom: 1px solid var(--border);
-    padding-bottom: 6px;
+    padding-bottom: 4px;
 }
 
 .archive-entry-title {
-    margin: 3px 0;
-    font-weight: 400;
+    margin: 2px 0;
+    font-weight: 500;
 }
 
 .archive-entry:hover .archive-entry-title {
@@ -59,5 +60,5 @@
 .archive-count,
 .archive-meta {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 13px;
 }
