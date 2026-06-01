@@ -9,15 +9,15 @@
     --transition: 0.2s ease;
     --theme: rgb(255, 255, 255);
     --entry: rgb(255, 255, 255);
-    --primary: rgb(30, 30, 30);
-    --secondary: rgb(108, 108, 108);
-    --tertiary: rgb(214, 214, 214);
-    --content: rgb(31, 31, 31);
+    --primary: rgb(51, 51, 51);
+    --secondary: rgb(140, 140, 140);
+    --tertiary: rgb(210, 210, 210);
+    --content: rgb(51, 51, 51);
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
-    --border: rgb(238, 238, 238);
-    --accent: #2563eb;
-    --accent2: #f59e0b;
+    --border: rgb(232, 232, 232);
+    --accent: #e6162d;
+    --accent2: #ff9933;
     --tag-1: #ef4444;
     --tag-2: #f97316;
     --tag-3: #eab308;
@@ -30,17 +30,17 @@
 }
 
 :root[data-theme="dark"] {
-    --theme: rgb(29, 30, 32);
-    --entry: rgb(46, 46, 51);
+    --theme: rgb(22, 22, 22);
+    --entry: rgb(35, 35, 38);
     --primary: rgb(218, 218, 219);
-    --secondary: rgb(155, 156, 157);
-    --tertiary: rgb(65, 66, 68);
+    --secondary: rgb(140, 140, 140);
+    --tertiary: rgb(60, 60, 62);
     --content: rgb(196, 196, 197);
-    --code-block-bg: rgb(46, 46, 51);
-    --code-bg: rgb(55, 56, 62);
-    --border: rgb(51, 51, 51);
-    --accent: #60a5fa;
-    --accent2: #fbbf24;
+    --code-block-bg: rgb(35, 35, 38);
+    --code-bg: rgb(42, 42, 45);
+    --border: rgb(48, 48, 48);
+    --accent: #e6162d;
+    --accent2: #ff9933;
     --tag-1: #fca5a5;
     --tag-2: #fdba74;
     --tag-3: #fde047;
