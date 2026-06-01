@@ -1,6 +1,6 @@
 baseURL = 'https://newmo.tech/'
 title = '新墨韬'
-theme = 'PaperMod'
+theme = 'PaperUI'
 defaultContentLanguage = 'zh-cn'
 enableRobotsTXT = true
 enableEmoji = true
