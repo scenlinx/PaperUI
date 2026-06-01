@@ -3,12 +3,11 @@ date: '2026-06-01'
 title: '关于'
 ---
 
-这是一个使用 Hugo 和 Blonde 主题搭建的个人博客网站。
+这是一个使用 Hugo 和 PaperMod 主题搭建的个人博客网站。
 
 ## 技术栈
 
 - **Hugo** - 静态网站生成器
-- **Blonde** - 简洁的 Hugo 主题
-- **Tailwind CSS** - 样式框架
+- **PaperMod** - 简洁的 Hugo 主题
 
 欢迎通过评论或社交媒体与我联系！

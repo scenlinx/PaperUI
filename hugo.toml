@@ -1,43 +1,48 @@
 baseURL = 'https://example.org/'
-locale = 'zh-CN'
-title = '我的新 Hugo 网站'
-theme = "PaperMod"
-paginate = 10
-mainSections = ["posts"]
-defaultContentLanguage = "zh-CN"
+title = '新墨韬'
+theme = 'PaperMod'
+defaultContentLanguage = 'zh-cn'
+enableRobotsTXT = true
+enableEmoji = true
 
 [params]
-paginator_pages = 10
-recentLimit = 5
-tagslimit = 15
-archive_dropdown = "false"
+env = 'development'
+description = '新墨韬 - 个人博客'
+keywords = ['博客', 'Hugo', 'PaperMod']
+defaultTheme = 'auto'
+disableThemeToggle = false
+disableScrollToTop = false
 
-[params.widgets]
-display = true
-mobile = true
-widgets = ["search", "recent", "category", "tags", "archive"]
+[params.footer]
+hideCopyright = false
 
-[languages.zh-CN]
-locale = "zh-CN"
-label = "中文"
-title = "新墨韬"
-
-[[languages.zh-CN.menu.main]]
-name = "首页"
-url = "/"
+[languages.zh-cn]
+locale = 'zh-CN'
+label = '中文'
+title = '新墨韬'
 weight = 1
 
-[[languages.zh-CN.menu.main]]
-name = "文章"
-url = "/posts/"
+[[languages.zh-cn.menu.main]]
+name = '首页'
+url = '/'
+weight = 1
+
+[[languages.zh-cn.menu.main]]
+name = '文章'
+url = '/posts/'
 weight = 2
 
-[[languages.zh-CN.menu.main]]
-name = "归档"
-url = "/archives/"
+[[languages.zh-cn.menu.main]]
+name = '归档'
+url = '/archives/'
 weight = 3
 
-[[languages.zh-CN.menu.main]]
-name = "关于"
-url = "/about/"
+[[languages.zh-cn.menu.main]]
+name = '搜索'
+url = '/search/'
 weight = 4
+
+[[languages.zh-cn.menu.main]]
+name = '关于'
+url = '/about/'
+weight = 5
