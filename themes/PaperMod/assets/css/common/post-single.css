@@ -5,6 +5,15 @@
     border: 1px solid var(--border);
 }
 
+.page-header h1 {
+    display: none;
+}
+
+.page-header .rss-icon {
+    display: inline-flex;
+    vertical-align: middle;
+}
+
 .page-header,
 .post-header {
     margin: 24px auto var(--content-gap) auto;
