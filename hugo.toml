@@ -7,11 +7,26 @@ enableEmoji = true
 
 [params]
 env = 'development'
-description = '新墨韬 - 个人博客'
-keywords = ['博客', 'Hugo', 'PaperMod']
+description = '新墨韬 - 个人技术博客'
+keywords = ['博客', 'Hugo', 'PaperMod', '技术']
 defaultTheme = 'auto'
 disableThemeToggle = false
 disableScrollToTop = false
+ShowReadingTime = true
+ShowWordCount = true
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = false
+ShowCodeCopyButtons = true
+ShowToc = true
+ShowPageNums = true
+ShowRssButtonInSectionTermList = false
+ShowAllPagesInArchive = false
+ShowFullTextinRSS = false
+
+[params.homeInfoParams]
+Title = '欢迎来到新墨韬'
+Content = '这里是一个技术博客，分享编程、开源和生活中的思考。'
 
 [params.footer]
 hideCopyright = false
