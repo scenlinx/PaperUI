@@ -488,19 +488,11 @@
     .hero-carousel {
         flex-direction: column;
     }
-    .hero-left, .hero-middle, .hero-right {
+    .hero-left {
         flex: none;
         width: 100%;
     }
-    .hero-middle {
-        flex-direction: row;
-    }
-    .hero-square {
-        aspect-ratio: 1 / 1;
-        flex: 1;
-    }
-    .hero-right {
-        aspect-ratio: 3 / 4;
-        max-height: 400px;
+    .hero-middle, .hero-right {
+        display: none;
     }
 }

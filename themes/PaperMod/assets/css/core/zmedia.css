@@ -14,7 +14,8 @@
         max-width: calc(var(--main-width) + var(--gap) * 2);
     }
     
-    .main:has(.sidebar) .page-main-content {
+    .main:has(.sidebar) .page-main-content,
+    .main:has(.sidebar) .post-single {
         grid-column: 1;
     }
     
@@ -29,6 +30,23 @@
     
     .main:has(.home-layout) {
         max-width: calc(var(--main-width) + var(--gap) * 2);
+    }
+    
+    /* post content overflow fix for small screens */
+    .post-single {
+        overflow-x: hidden;
+    }
+    
+    .md-content pre,
+    .md-content div.highlight {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .md-content table {
+        display: block;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     /* profile-mode */
