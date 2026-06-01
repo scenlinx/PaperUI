@@ -50,6 +50,7 @@
     display: block;
     padding: 2px 0;
     border-bottom: none;
+    transition: color var(--transition);
 }
 
 .sidebar .toc a:hover {
@@ -140,6 +141,7 @@
 
 .breadcrumbs a {
     font-size: 16px;
+    transition: color var(--transition);
 }
 
 .breadcrumbs svg {
@@ -164,6 +166,7 @@
 .post-meta a {
     color: var(--secondary);
     text-decoration-style: dotted;
+    transition: color var(--transition);
 }
 
 details.toc {
@@ -204,8 +207,8 @@ details::details-content {
     height: 0;
     opacity: 0;
     overflow: clip;
-    transition: height 150ms ease,
-        opacity 150ms ease,
+    transition: height var(--transition),
+        opacity var(--transition),
         content-visibility 150ms allow-discrete;
 }
 
@@ -260,11 +263,12 @@ details li ul {
     font-size: 14px;
     line-height: 34px;
     background: var(--code-bg);
+    transition: background var(--transition);
 }
 
-.post-tags a:hover,
-.paginav a:hover {
+.post-tags a:hover {
     background: var(--border);
+    border-color: var(--tertiary);
 }
 
 .share-buttons {
@@ -306,10 +310,12 @@ details li ul {
     background: var(--code-bg);
     border: 1px solid var(--border);
     border-radius: var(--radius);
+    transition: background var(--transition), border-color var(--transition);
 }
 
 .paginav a:hover {
     background: var(--border);
+    border-color: var(--tertiary);
 }
 
 .paginav span:hover:not(.title) {

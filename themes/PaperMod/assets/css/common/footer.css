@@ -25,6 +25,7 @@
     color: #ccc;
     text-underline-offset: 0.25rem;
     text-decoration: underline;
+    transition: color var(--transition);
 }
 
 .top-link {
@@ -37,7 +38,7 @@
     height: 2.5rem;
     padding: 10px;
     border-radius: 64px;
-    transition: visibility .3s, opacity .3s cubic-bezier(0.4, 0, 1, 1);
+    transition: visibility var(--transition), opacity var(--transition), color var(--transition);
 }
 
 .hidden {

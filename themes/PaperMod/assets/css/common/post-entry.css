@@ -50,7 +50,7 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform 0.25s ease;
+    transition: transform var(--transition), border-color var(--transition);
     border: 1px solid var(--border);
 }
 
@@ -200,6 +200,7 @@
 .home-sidebar-section li a {
     font-size: 13px;
     color: var(--secondary);
+    transition: color var(--transition);
 }
 
 .home-sidebar-section li a:hover {
@@ -218,6 +219,7 @@
     background: var(--code-bg);
     border-radius: var(--radius);
     color: var(--secondary);
+    transition: color var(--transition);
 }
 
 .sidebar-tag:hover {
@@ -231,6 +233,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    transition: color var(--transition);
 }
 
 .sidebar-posts li a:hover {
@@ -247,6 +250,7 @@
     color: var(--primary);
     font-size: 14px;
     box-sizing: border-box;
+    transition: border-color var(--transition);
 }
 
 .sidebar-search-input:focus {

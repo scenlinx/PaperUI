@@ -15,5 +15,5 @@
     padding: 4px 10px;
     background: var(--tertiary);
     border-radius: var(--radius);
-    transition: transform 0.1s;
+    transition: transform var(--transition);
 }
