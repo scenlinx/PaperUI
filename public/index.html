@@ -238,37 +238,13 @@
 <span title='2026-05-22 00:00:00 +0000 UTC'>May 22, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>55 words</span></footer>
   <a class="entry-link" aria-label="post link to VS Code 高效配置指南" href="http://localhost:1313/posts/vs-code-setup/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Linux 命令行实用技巧
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Linux 命令行是程序员的重要工具，掌握这些技巧能让你事半功倍。
-文件操作 # 查找文件 find . -name &#34;*.py&#34; # 查找文件内容 grep -r &#34;keyword&#34; . # 查看文件前10行 head filename # 查看文件后10行 tail -f filename 权限管理 # 修改文件权限 chmod 755 script.sh # 修改文件所有者 chown user:group filename # 查看权限 ls -la 系统信息 # 查看磁盘使用 df -h # 查看内存使用 free -h # 查看进程 ps aux | grep nginx # 查看端口占用 netstat -tlnp # 或 ss -tlnp 小技巧 # 历史命令搜索（Ctrl&#43;R） # 上次使用的参数 mkdir newdir cd !$ # 管道组合 cat access.log | awk &#39;{print $1}&#39; | sort | uniq -c | sort -nr </p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-05-20 00:00:00 +0000 UTC'>May 20, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>88 words</span></footer>
-  <a class="entry-link" aria-label="post link to Linux 命令行实用技巧" href="http://localhost:1313/posts/linux-commands/"></a>
-</article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">Docker 容器化入门
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>Docker 改变了应用的部署方式，让&#34;在我机器上能运行&#34;成为过去。
-什么是 Docker？ Docker 是一个容器化平台，可以将应用及其依赖打包到一个轻量级的容器中。
-基本概念 镜像 (Image) - 应用的只读模板 容器 (Container) - 镜像的运行实例 Dockerfile - 构建镜像的脚本 仓库 (Registry) - 存储镜像的地方 常用命令 # 拉取镜像 docker pull nginx:latest # 运行容器 docker run -d -p 80:80 --name my-nginx nginx # 查看运行中的容器 docker ps # 停止容器 docker stop my-nginx # 查看日志 docker logs my-nginx Dockerfile 示例 FROM node:18-alpine WORKDIR /app COPY package*.json ./ RUN npm install COPY . . EXPOSE 3000 CMD [&#34;npm&#34;, &#34;start&#34;] </p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-05-18 00:00:00 +0000 UTC'>May 18, 2026</span>&nbsp;·&nbsp;<span>1 min</span>&nbsp;·&nbsp;<span>72 words</span></footer>
-  <a class="entry-link" aria-label="post link to Docker 容器化入门" href="http://localhost:1313/posts/docker-intro/"></a>
-</article>
+<footer class="page-footer">
+  <nav class="pagination">
+    <a class="next" href="http://localhost:1313/posts/">
+      更多文章&nbsp;»
+    </a>
+  </nav>
+</footer>
     </main>
     
 <footer class="footer">
