@@ -2,8 +2,7 @@ import * as params from '@params';
 
 const searchPairs = [
     { input: 'searchInput', results: 'searchResults' },
-    { input: 'modalSearchInput', results: 'modalSearchResults' },
-    { input: 'homeSearchInput', results: 'homeSearchResults' }
+    { input: 'modalSearchInput', results: 'modalSearchResults' }
 ];
 
 const instances = [];
@@ -48,24 +47,6 @@ const debounce = (fn, delay) => {
     };
 };
 
-const showSearchOverlay = (resList) => {
-    const overlay = document.getElementById('homeSearchOverlay');
-    if (overlay) {
-        overlay.classList.add('active');
-    }
-    resList.classList.add('active');
-};
-
-const hideSearchOverlay = () => {
-    const overlay = document.getElementById('homeSearchOverlay');
-    if (overlay) {
-        overlay.classList.remove('active');
-    }
-    for (const inst of instances) {
-        inst.resList.classList.remove('active');
-    }
-};
-
 const closeSearchModal = () => {
     const modal = document.getElementById('searchModal');
     if (modal) {
@@ -81,7 +62,6 @@ const reset = () => {
         inst.resList.innerHTML = '';
         inst.sInput.value = '';
     }
-    hideSearchOverlay();
     closeSearchModal();
 };
 
@@ -158,9 +138,6 @@ const performSearch = (sInput, resList) => {
     const searchOptions = params.fuseOpts?.limit ? { limit: params.fuseOpts.limit } : undefined;
     const results = searchOptions ? fuse.search(query, searchOptions) : fuse.search(query);
     renderResults(results, resList);
-    if (results.length > 0) {
-        showSearchOverlay(resList);
-    }
 };
 
 const initSearch = async () => {
@@ -174,11 +151,6 @@ const initSearch = async () => {
                 sInput.focus();
             }
             sInput.addEventListener('input', debounce(() => performSearch(sInput, resList), 150));
-            sInput.addEventListener('focus', () => {
-                if (sInput.value.trim()) {
-                    showSearchOverlay(resList);
-                }
-            });
             sInput.addEventListener('search', () => {
                 if (!sInput.value) {
                     resList.innerHTML = '';
@@ -190,18 +162,6 @@ const initSearch = async () => {
 
     if (instances.length === 0) {
         return;
-    }
-
-    const overlay = document.getElementById('homeSearchOverlay');
-    if (overlay) {
-        overlay.addEventListener('click', () => {
-            hideSearchOverlay();
-            for (const inst of instances) {
-                if (inst.sInput.id === 'homeSearchInput') {
-                    inst.sInput.blur();
-                }
-            }
-        });
     }
 
     const modal = document.getElementById('searchModal');

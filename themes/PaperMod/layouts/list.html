@@ -109,7 +109,7 @@
 <aside class="home-sidebar">
   <div class="home-sidebar-section">
     <h3>搜索</h3>
-    <input id="homeSearchInput" type="search" placeholder="搜索文章..." autocomplete="off" maxlength="64">
+    <button class="sidebar-search-btn" onclick="const m = document.getElementById('searchModal'); if(m) { m.classList.add('active'); m.querySelector('#modalSearchInput').focus(); }">搜索文章</button>
   </div>
 
   <div class="home-sidebar-section">
@@ -176,9 +176,6 @@
   </nav>
 </footer>
 {{- end }}
-
-<ul id="homeSearchResults" class="home-search-results"></ul>
-<div id="homeSearchOverlay" class="home-search-overlay"></div>
 
 {{- end }}{{/* end profileMode */}}
 
