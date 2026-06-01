@@ -2,7 +2,8 @@ import * as params from '@params';
 
 const searchPairs = [
     { input: 'searchInput', results: 'searchResults' },
-    { input: 'modalSearchInput', results: 'modalSearchResults' }
+    { input: 'modalSearchInput', results: 'modalSearchResults' },
+    { input: 'homeSearchInput', results: 'modalSearchResults' }
 ];
 
 const instances = [];
@@ -131,7 +132,6 @@ const performSearch = (sInput, resList) => {
     const query = sInput.value.trim();
     if (!query) {
         renderResults([], resList);
-        hideSearchOverlay();
         return;
     }
 
@@ -150,13 +150,30 @@ const initSearch = async () => {
             if (sInput.id === 'searchInput') {
                 sInput.focus();
             }
-            sInput.addEventListener('input', debounce(() => performSearch(sInput, resList), 150));
-            sInput.addEventListener('search', () => {
-                if (!sInput.value) {
-                    resList.innerHTML = '';
-                    hideSearchOverlay();
-                }
-            });
+            if (sInput.id === 'homeSearchInput') {
+                sInput.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const modal = document.getElementById('searchModal');
+                        const modalInput = document.getElementById('modalSearchInput');
+                        const modalResults = document.getElementById('modalSearchResults');
+                        if (modal && modalInput && modalResults) {
+                            modal.classList.add('active');
+                            modalInput.value = sInput.value;
+                            performSearch(modalInput, modalResults);
+                            modalInput.focus();
+                            modalInput.setSelectionRange(modalInput.value.length, modalInput.value.length);
+                        }
+                    }
+                });
+            } else {
+                sInput.addEventListener('input', debounce(() => performSearch(sInput, resList), 150));
+                sInput.addEventListener('search', () => {
+                    if (!sInput.value) {
+                        resList.innerHTML = '';
+                    }
+                });
+            }
         }
     }
 
