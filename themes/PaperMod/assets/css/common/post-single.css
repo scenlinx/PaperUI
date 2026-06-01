@@ -247,8 +247,7 @@ details li ul {
 }
 
 .post-tags a,
-.share-buttons,
-.paginav {
+.share-buttons {
     border-radius: var(--radius);
     background: var(--code-bg);
     border: 1px solid var(--border);
@@ -304,6 +303,8 @@ details li ul {
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.8rem;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
     border-radius: var(--radius);
 }
 
