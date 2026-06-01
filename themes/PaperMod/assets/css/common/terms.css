@@ -13,7 +13,14 @@
 .terms-tags a {
     display: block;
     padding: 4px 10px;
-    background: var(--tertiary);
+    background: color-mix(in srgb, var(--accent) 12%, var(--code-bg));
+    color: var(--accent);
     border-radius: var(--radius);
-    transition: transform var(--transition);
+    transition: transform var(--transition), background var(--transition), color var(--transition);
+}
+
+.terms-tags a:hover {
+    background: var(--accent);
+    color: #fff;
+    transform: translateY(-2px);
 }

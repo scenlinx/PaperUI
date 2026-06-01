@@ -94,6 +94,7 @@
 
 .menu a {
     font-size: 16px;
+    transition: color var(--transition);
 }
 
 .menu .active {
@@ -101,6 +102,7 @@
     text-decoration: underline;
     text-underline-offset: 0.3rem;
     text-decoration-thickness: 2px;
+    text-decoration-color: var(--accent);
 }
 
 .header {
@@ -108,7 +110,7 @@
     top: 0;
     z-index: 100;
     background: var(--theme);
-    transition: background var(--transition), backdrop-filter var(--transition);
+    transition: background var(--transition), backdrop-filter var(--transition), box-shadow var(--transition);
     box-shadow: 0 1px 4px rgba(0,0,0,0.08);
 }
 
@@ -116,6 +118,10 @@
     background: color-mix(in srgb, var(--theme) 85%, transparent);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
+}
+
+.menu a:hover {
+    color: var(--accent);
 }
 
 .logo-switches .search-btn .search-icon {
@@ -217,7 +223,7 @@
 }
 
 .search-modal-results li:hover {
-    background: var(--border);
+    background: color-mix(in srgb, var(--accent) 8%, var(--entry));
 }
 
 .search-modal-results li svg {

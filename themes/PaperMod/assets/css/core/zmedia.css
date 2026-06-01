@@ -45,6 +45,7 @@
 @media (prefers-reduced-motion) {
     /* terms; profile-mode; post-single; post-entry; post-entry; search; search */
     .terms-tags a:active,
+    .terms-tags a:hover,
     .button:active,
     .post-entry:active,
     .top-link,

@@ -16,6 +16,8 @@
     --code-block-bg: rgb(28, 29, 33);
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
+    --accent: #2563eb;
+    --accent2: #f59e0b;
     color-scheme: light;
 }
 
@@ -29,9 +31,21 @@
     --code-block-bg: rgb(46, 46, 51);
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
+    --accent: #60a5fa;
+    --accent2: #fbbf24;
     color-scheme: dark;
 }
 
 [data-theme="dark"] html {
     background: var(--theme);
+}
+
+::selection {
+    background: color-mix(in srgb, var(--accent) 30%, transparent);
+    color: var(--primary);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
 }

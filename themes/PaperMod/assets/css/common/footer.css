@@ -52,9 +52,9 @@
 }
 
 .footer a:hover {
-    color: #fff;
+    color: var(--accent);
 }
 
 .top-link:hover {
-    color: var(--primary);
+    color: var(--accent);
 }

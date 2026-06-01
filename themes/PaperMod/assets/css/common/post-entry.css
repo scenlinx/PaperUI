@@ -50,14 +50,16 @@
     padding: var(--gap);
     background: var(--entry);
     border-radius: var(--radius);
-    transition: transform var(--transition), border-color var(--transition);
+    transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
     border: 1px solid var(--border);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 .post-entry:hover,
 .post-entry:focus-within {
-    transform: translateY(-2px);
-    border-color: var(--tertiary);
+    transform: translateY(-3px);
+    border-color: var(--accent);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
 }
 
 .tag-entry .entry-cover {
@@ -140,6 +142,7 @@
     background: var(--entry);
     border-bottom: 1px solid var(--border);
     border-radius: var(--radius);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 .first-entry.home-info .entry-header h1 {
@@ -168,6 +171,7 @@
     padding: 12px;
     margin-bottom: var(--gap);
     position: relative;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.04);
 }
 
 .home-sidebar-section h3 {
@@ -175,6 +179,8 @@
     font-weight: 600;
     margin: 0 0 8px;
     color: var(--primary);
+    padding-left: 8px;
+    border-left: 3px solid var(--accent);
 }
 
 .home-sidebar-section input[type="search"] {
@@ -204,7 +210,7 @@
 }
 
 .home-sidebar-section li a:hover {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .sidebar-tags {
@@ -215,15 +221,16 @@
 
 .sidebar-tag {
     font-size: 12px;
-    padding: 2px 6px;
-    background: var(--code-bg);
+    padding: 2px 8px;
+    background: color-mix(in srgb, var(--accent) 12%, var(--code-bg));
     border-radius: var(--radius);
-    color: var(--secondary);
-    transition: color var(--transition);
+    color: var(--accent);
+    transition: background var(--transition), color var(--transition);
 }
 
 .sidebar-tag:hover {
-    color: var(--primary);
+    background: var(--accent);
+    color: #fff;
 }
 
 .sidebar-posts li a {
@@ -237,7 +244,7 @@
 }
 
 .sidebar-posts li a:hover {
-    color: var(--primary);
+    color: var(--accent);
 }
 
 .sidebar-search-input {
@@ -254,6 +261,6 @@
 }
 
 .sidebar-search-input:focus {
-    border-color: var(--tertiary);
+    border-color: var(--accent);
     outline: none;
 }
