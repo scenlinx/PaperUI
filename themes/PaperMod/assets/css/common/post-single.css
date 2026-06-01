@@ -22,7 +22,7 @@
     border-radius: var(--radius);
     border: 1px solid var(--border);
     padding: 8px 12px;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 .sidebar .toc .title {
@@ -86,7 +86,7 @@
 }
 
 .rss-label {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--secondary);
 }
 
