@@ -7,14 +7,14 @@
     --footer-height: 60px;
     --radius: 4px;
     --transition: 0.2s ease;
-    --theme: rgb(255, 255, 255);
-    --entry: rgb(255, 255, 255);
+    --theme: #fff;
+    --entry: #fff;
     --primary: rgb(51, 51, 51);
     --secondary: rgb(140, 140, 140);
     --tertiary: rgb(210, 210, 210);
     --content: rgb(51, 51, 51);
     --code-block-bg: rgb(28, 29, 33);
-    --code-bg: rgb(245, 245, 245);
+    --code-bg: #f1f2f5;
     --border: rgb(232, 232, 232);
     --accent: #f87c45;
     --tag-1: #ef4444;
@@ -30,13 +30,13 @@
 
 :root[data-theme="dark"] {
     --theme: rgb(22, 22, 22);
-    --entry: rgb(35, 35, 38);
+    --entry: #191919;
     --primary: rgb(218, 218, 219);
     --secondary: rgb(140, 140, 140);
     --tertiary: rgb(60, 60, 62);
     --content: rgb(196, 196, 197);
     --code-block-bg: rgb(35, 35, 38);
-    --code-bg: rgb(42, 42, 45);
+    --code-bg: #111;
     --border: rgb(48, 48, 48);
     --accent: #f87c45;
     --tag-1: #fca5a5;
