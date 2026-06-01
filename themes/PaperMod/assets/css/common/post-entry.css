@@ -213,6 +213,17 @@
     color: var(--accent);
 }
 
+.sidebar-categories li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-categories li .count {
+    color: var(--secondary);
+    font-size: 13px;
+}
+
 .sidebar-tags {
     display: flex;
     flex-wrap: wrap;
