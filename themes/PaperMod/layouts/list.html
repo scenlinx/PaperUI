@@ -31,6 +31,28 @@
     {{- end }}
     {{- end }}
   </div>
+
+  <div class="sidebar-section">
+    <h3>分类</h3>
+    <ul class="sidebar-categories">
+      {{- range $name, $taxonomy := site.Taxonomies.categories }}
+      {{- with site.GetPage (printf "/categories/%s" $name) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a><span class="count">{{ $taxonomy.Count }}篇</span></li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="sidebar-section">
+    <h3>标签</h3>
+    <div class="sidebar-tags">
+      {{- range $name, $taxonomy := site.Taxonomies.tags }}
+      {{- with site.GetPage (printf "/tags/%s" $name) }}
+      <a href="{{ .Permalink }}" class="sidebar-tag">{{ .LinkTitle }}</a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
 </aside>
 <div class="page-main-content">
   {{- partial "breadcrumbs.html" . }}
