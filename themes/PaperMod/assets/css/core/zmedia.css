@@ -4,6 +4,33 @@
         --gap: 14px;
     }
 
+    /* sidebar */
+    .sidebar {
+        display: none;
+    }
+    
+    .main:has(.sidebar) {
+        grid-template-columns: 1fr;
+        max-width: calc(var(--main-width) + var(--gap) * 2);
+    }
+    
+    .main:has(.sidebar) .page-main-content {
+        grid-column: 1;
+    }
+    
+    /* home layout sidebar */
+    .home-sidebar {
+        display: none !important;
+    }
+    
+    .home-layout .home-content {
+        width: 100%;
+    }
+    
+    .main:has(.home-layout) {
+        max-width: calc(var(--main-width) + var(--gap) * 2);
+    }
+
     /* profile-mode */
     .profile img {
         transform: scale(0.85);
