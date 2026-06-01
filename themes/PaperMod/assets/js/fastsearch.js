@@ -30,6 +30,12 @@ const buildFuseOptions = () => {
     };
 };
 
+/**
+ * Creates a debounced version of a function.
+ * @param {Function} fn - The function to debounce.
+ * @param {number} delay - Delay in milliseconds.
+ * @returns {Function} Debounced function.
+ */
 const debounce = (fn, delay) => {
     let timeout;
     return (...args) => {
@@ -38,10 +44,28 @@ const debounce = (fn, delay) => {
     };
 };
 
+let lastFocusedEl = null;
+
+const openSearchModal = () => {
+    const modal = document.getElementById('searchModal');
+    const searchBtn = document.getElementById('searchBtn');
+    const modalInput = document.getElementById('modalSearchInput');
+    if (!modal || !modalInput) return;
+    lastFocusedEl = document.activeElement;
+    modal.classList.add('active');
+    if (searchBtn) searchBtn.setAttribute('aria-expanded', 'true');
+    setTimeout(() => modalInput.focus(), 100);
+};
+
 const closeSearchModal = () => {
     const modal = document.getElementById('searchModal');
+    const searchBtn = document.getElementById('searchBtn');
     if (modal) {
         modal.classList.remove('active');
+    }
+    if (searchBtn) searchBtn.setAttribute('aria-expanded', 'false');
+    if (lastFocusedEl && typeof lastFocusedEl.focus === 'function') {
+        lastFocusedEl.focus();
     }
 };
 
@@ -177,13 +201,20 @@ const initSearch = async () => {
 
     if (instances.length === 0) return;
 
+    // Search button click handler
+    const searchBtn = document.getElementById('searchBtn');
+    if (searchBtn) {
+        searchBtn.addEventListener('click', openSearchModal);
+    }
+
+    // Modal backdrop click to close
     const modal = document.getElementById('searchModal');
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
-                modal.classList.remove('active');
                 const modalInst = instances.find(i => i.sInput.id === 'modalSearchInput');
                 if (modalInst) clearInstance(modalInst);
+                closeSearchModal();
             }
         });
     }
@@ -203,15 +234,25 @@ const initSearch = async () => {
 window.addEventListener('load', initSearch);
 
 document.addEventListener('keydown', (event) => {
-    const { key } = event;
+    const { key, ctrlKey, metaKey } = event;
     const active = document.activeElement;
-    const currentInst = instances.find(inst => inst.sInput === active || inst.resList.contains(active));
+    const modal = document.getElementById('searchModal');
 
-    if (key === 'Escape') {
-        reset();
+    // Ctrl+K / Cmd+K to open search modal
+    if ((ctrlKey || metaKey) && key === 'k') {
+        event.preventDefault();
+        openSearchModal();
         return;
     }
 
+    if (key === 'Escape') {
+        if (modal && modal.classList.contains('active')) {
+            reset();
+        }
+        return;
+    }
+
+    const currentInst = instances.find(inst => inst.sInput === active || inst.resList.contains(active));
     if (!currentInst || !currentInst.firstResult) return;
 
     const { sInput, resList, firstResult, lastResult } = currentInst;

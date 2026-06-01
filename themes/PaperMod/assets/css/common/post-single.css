@@ -1,5 +1,5 @@
 .main:has(.sidebar) {
-    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+    max-width: calc(var(--main-width) + var(--gap) * 2 + var(--sidebar-width) + var(--gap));
     display: grid;
     grid-template-columns: 220px 1fr;
     gap: 8px;
@@ -170,7 +170,7 @@
 }
 
 .main:has(.post-single.wide-layout) {
-    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+    max-width: calc(var(--main-width) + var(--gap) * 2 + var(--sidebar-width) + var(--gap));
 }
 
 .page-header h1 {
@@ -368,23 +368,15 @@ details li ul {
     transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
-.post-tags li:nth-child(8n+1) a { background: color-mix(in srgb, var(--tag-1) 20%, white); color: var(--tag-1); }
-.post-tags li:nth-child(8n+2) a { background: color-mix(in srgb, var(--tag-2) 20%, white); color: var(--tag-2); }
-.post-tags li:nth-child(8n+3) a { background: color-mix(in srgb, var(--tag-3) 20%, white); color: var(--tag-3); }
-.post-tags li:nth-child(8n+4) a { background: color-mix(in srgb, var(--tag-4) 20%, white); color: var(--tag-4); }
-.post-tags li:nth-child(8n+5) a { background: color-mix(in srgb, var(--tag-5) 20%, white); color: var(--tag-5); }
-.post-tags li:nth-child(8n+6) a { background: color-mix(in srgb, var(--tag-6) 20%, white); color: var(--tag-6); }
-.post-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 20%, white); color: var(--tag-7); }
-.post-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
+.post-tags li:nth-child(8n+1) a { background: var(--tag-bg-1); color: var(--tag-1); }
+.post-tags li:nth-child(8n+2) a { background: var(--tag-bg-2); color: var(--tag-2); }
+.post-tags li:nth-child(8n+3) a { background: var(--tag-bg-3); color: var(--tag-3); }
+.post-tags li:nth-child(8n+4) a { background: var(--tag-bg-4); color: var(--tag-4); }
+.post-tags li:nth-child(8n+5) a { background: var(--tag-bg-5); color: var(--tag-5); }
+.post-tags li:nth-child(8n+6) a { background: var(--tag-bg-6); color: var(--tag-6); }
+.post-tags li:nth-child(8n+7) a { background: var(--tag-bg-7); color: var(--tag-7); }
+.post-tags li:nth-child(8n+8) a { background: var(--tag-bg-8); color: var(--tag-8); }
 
-:root[data-theme="dark"] .post-tags li:nth-child(8n+1) a { background: color-mix(in srgb, var(--tag-1) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+2) a { background: color-mix(in srgb, var(--tag-2) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+3) a { background: color-mix(in srgb, var(--tag-3) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+4) a { background: color-mix(in srgb, var(--tag-4) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+5) a { background: color-mix(in srgb, var(--tag-5) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+6) a { background: color-mix(in srgb, var(--tag-6) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 25%, var(--entry)); }
-:root[data-theme="dark"] .post-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 25%, var(--entry)); }
 
 .post-tags a:hover {
     background: var(--accent) !important;

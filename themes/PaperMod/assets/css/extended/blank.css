@@ -1,5 +1,38 @@
 /*
-This is just a placeholder blank stylesheet so as to support adding custom styles budled with theme's default styles
+ * Tag color system - centralized color definitions
+ * Used by sidebar-tags, post-tags, and terms-tags across the theme
+ */
 
-Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-css-with-themes-assets for more info
-*/
+/* Light mode: tag background mix variables */
+:root {
+    --tag-bg-1: color-mix(in srgb, var(--tag-1) 20%, white);
+    --tag-bg-2: color-mix(in srgb, var(--tag-2) 20%, white);
+    --tag-bg-3: color-mix(in srgb, var(--tag-3) 20%, white);
+    --tag-bg-4: color-mix(in srgb, var(--tag-4) 20%, white);
+    --tag-bg-5: color-mix(in srgb, var(--tag-5) 20%, white);
+    --tag-bg-6: color-mix(in srgb, var(--tag-6) 20%, white);
+    --tag-bg-7: color-mix(in srgb, var(--tag-7) 20%, white);
+    --tag-bg-8: color-mix(in srgb, var(--tag-8) 20%, white);
+}
+
+/* Dark mode: tag background mix variables */
+[data-theme="dark"] {
+    --tag-bg-1: color-mix(in srgb, var(--tag-1) 25%, var(--entry));
+    --tag-bg-2: color-mix(in srgb, var(--tag-2) 25%, var(--entry));
+    --tag-bg-3: color-mix(in srgb, var(--tag-3) 25%, var(--entry));
+    --tag-bg-4: color-mix(in srgb, var(--tag-4) 25%, var(--entry));
+    --tag-bg-5: color-mix(in srgb, var(--tag-5) 25%, var(--entry));
+    --tag-bg-6: color-mix(in srgb, var(--tag-6) 25%, var(--entry));
+    --tag-bg-7: color-mix(in srgb, var(--tag-7) 25%, var(--entry));
+    --tag-bg-8: color-mix(in srgb, var(--tag-8) 25%, var(--entry));
+}
+
+/* Generic tag color application - use nth-child(8n+X) to cycle 8 colors */
+.tag-color-1 { background: var(--tag-bg-1); color: var(--tag-1); }
+.tag-color-2 { background: var(--tag-bg-2); color: var(--tag-2); }
+.tag-color-3 { background: var(--tag-bg-3); color: var(--tag-3); }
+.tag-color-4 { background: var(--tag-bg-4); color: var(--tag-4); }
+.tag-color-5 { background: var(--tag-bg-5); color: var(--tag-5); }
+.tag-color-6 { background: var(--tag-bg-6); color: var(--tag-6); }
+.tag-color-7 { background: var(--tag-bg-7); color: var(--tag-7); }
+.tag-color-8 { background: var(--tag-bg-8); color: var(--tag-8); }

@@ -34,16 +34,37 @@
     right: 2rem;
     z-index: 999;
     background: var(--accent);
-    color: white;
+    color: #fff;
     width: 2.5rem;
     height: 2.5rem;
     padding: 10px;
     border-radius: 64px;
-    transition: visibility var(--transition), opacity var(--transition), color var(--transition), transform var(--transition);
+    transition: visibility var(--transition), opacity var(--transition), background var(--transition), color var(--transition), transform var(--transition);
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    outline-offset: 3px;
+}
+
+.top-link:visited {
+    color: #fff;
+}
+
+.top-link:hover {
+    background: color-mix(in srgb, var(--accent) 85%, black);
+    color: #fff;
+}
+
+.top-link:active {
+    background: color-mix(in srgb, var(--accent) 70%, black);
+    color: #fff;
+    transform: scale(0.95);
+}
+
+.top-link:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
 }
 
 .hidden {
@@ -57,9 +78,5 @@
 }
 
 .footer a:hover {
-    color: var(--accent);
-}
-
-.top-link:hover {
     color: var(--accent);
 }

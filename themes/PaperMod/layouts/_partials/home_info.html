@@ -1,28 +1,28 @@
 {{- with site.Params.homeCarousel }}
-<div class="first-entry home-info hero-carousel-wrap">
+<div class="first-entry home-info hero-carousel-wrap" role="region" aria-roledescription="carousel" aria-label="精选文章">
   <div class="hero-carousel">
     <div class="hero-left">
-      <div class="hero-inner hero-inner-16x9">
+      <div class="hero-inner hero-inner-16x9" aria-live="polite">
         <button class="carousel-prev" aria-label="上一张">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M15 18l-6-6 6-6"/>
           </svg>
         </button>
         <button class="carousel-next" aria-label="下一张">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
             <path d="M9 18l6-6-6-6"/>
           </svg>
         </button>
         <div class="carousel-slides">
           {{- range $i, $slide := .slides }}
-          <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }}>
+          <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }} role="group" aria-roledescription="slide" aria-label="幻灯片 {{ add $i 1 }}">
             <img src="{{ $slide.image | relURL }}" alt="" loading="lazy">
           </a>
           {{- end }}
         </div>
-        <div class="carousel-dots">
+        <div class="carousel-dots" role="tablist" aria-label="幻灯片导航">
           {{- range $i, $_ := .slides }}
-          <span class="carousel-dot{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}"></span>
+          <button class="carousel-dot{{ if eq $i 0 }} active{{ end }}" data-index="{{ $i }}" role="tab" aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}" aria-label="幻灯片 {{ add $i 1 }}"></button>
           {{- end }}
         </div>
       </div>
@@ -45,40 +45,6 @@
     </div>
   </div>
 </div>
-<script>
-(function(){
-  const container = document.querySelector('.hero-carousel-wrap .carousel-slides');
-  if (!container) return;
-  const slides = container.querySelectorAll('.carousel-slide');
-  const dots = container.parentElement.querySelectorAll('.carousel-dot');
-  const prevBtn = container.parentElement.querySelector('.carousel-prev');
-  const nextBtn = container.parentElement.querySelector('.carousel-next');
-  if (slides.length < 2) return;
-  let current = 0;
-  const total = slides.length;
-  function goTo(idx) {
-    slides[current].classList.remove('active');
-    slides[current].setAttribute('aria-hidden', 'true');
-    if (dots.length) dots[current].classList.remove('active');
-    current = (idx + total) % total;
-    slides[current].classList.add('active');
-    slides[current].removeAttribute('aria-hidden');
-    if (dots.length) dots[current].classList.add('active');
-  }
-  setInterval(function(){ goTo(current + 1); }, 4000);
-  if (dots.length) {
-    dots.forEach(function(dot, i) {
-      dot.addEventListener('click', function(){ goTo(i); });
-    });
-  }
-  if (prevBtn) {
-    prevBtn.addEventListener('click', function(){ goTo(current - 1); });
-  }
-  if (nextBtn) {
-    nextBtn.addEventListener('click', function(){ goTo(current + 1); });
-  }
-})();
-</script>
 {{- else }}
 {{- with site.Params.homeInfoParams }}
 <article class="first-entry home-info">

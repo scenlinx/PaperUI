@@ -44,6 +44,11 @@ middle = [
 ]
 right = { image = '/images/portrait-1.jpg', url = '/about/' }
 
+[params.assets]
+favicon = '/favicon.svg'
+favicon16x16 = '/favicon.svg'
+favicon32x32 = '/favicon.svg'
+
 [params.footer]
 hideCopyright = false
 

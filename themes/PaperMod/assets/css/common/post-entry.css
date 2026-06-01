@@ -347,7 +347,7 @@
 }
 
 .home-sidebar {
-    width: 240px;
+    width: var(--sidebar-width);
     flex-shrink: 0;
     position: sticky;
     top: calc(var(--header-height) + var(--gap));
@@ -428,14 +428,14 @@
     transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 
-.sidebar-tag:nth-child(8n+1) { background: color-mix(in srgb, var(--tag-1) 20%, white); color: var(--tag-1); }
-.sidebar-tag:nth-child(8n+2) { background: color-mix(in srgb, var(--tag-2) 20%, white); color: var(--tag-2); }
-.sidebar-tag:nth-child(8n+3) { background: color-mix(in srgb, var(--tag-3) 20%, white); color: var(--tag-3); }
-.sidebar-tag:nth-child(8n+4) { background: color-mix(in srgb, var(--tag-4) 20%, white); color: var(--tag-4); }
-.sidebar-tag:nth-child(8n+5) { background: color-mix(in srgb, var(--tag-5) 20%, white); color: var(--tag-5); }
-.sidebar-tag:nth-child(8n+6) { background: color-mix(in srgb, var(--tag-6) 20%, white); color: var(--tag-6); }
-.sidebar-tag:nth-child(8n+7) { background: color-mix(in srgb, var(--tag-7) 20%, white); color: var(--tag-7); }
-.sidebar-tag:nth-child(8n+8) { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
+.sidebar-tag:nth-child(8n+1) { background: var(--tag-bg-1); color: var(--tag-1); }
+.sidebar-tag:nth-child(8n+2) { background: var(--tag-bg-2); color: var(--tag-2); }
+.sidebar-tag:nth-child(8n+3) { background: var(--tag-bg-3); color: var(--tag-3); }
+.sidebar-tag:nth-child(8n+4) { background: var(--tag-bg-4); color: var(--tag-4); }
+.sidebar-tag:nth-child(8n+5) { background: var(--tag-bg-5); color: var(--tag-5); }
+.sidebar-tag:nth-child(8n+6) { background: var(--tag-bg-6); color: var(--tag-6); }
+.sidebar-tag:nth-child(8n+7) { background: var(--tag-bg-7); color: var(--tag-7); }
+.sidebar-tag:nth-child(8n+8) { background: var(--tag-bg-8); color: var(--tag-8); }
 
 .sidebar-tag:hover {
     background: var(--accent) !important;
@@ -443,14 +443,6 @@
     transform: translateY(-1px);
 }
 
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+1) { background: color-mix(in srgb, var(--tag-1) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+2) { background: color-mix(in srgb, var(--tag-2) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+3) { background: color-mix(in srgb, var(--tag-3) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+4) { background: color-mix(in srgb, var(--tag-4) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+5) { background: color-mix(in srgb, var(--tag-5) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+6) { background: color-mix(in srgb, var(--tag-6) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+7) { background: color-mix(in srgb, var(--tag-7) 25%, var(--entry)); }
-:root[data-theme="dark"] .sidebar-tag:nth-child(8n+8) { background: color-mix(in srgb, var(--tag-8) 25%, var(--entry)); }
 
 .sidebar-posts li a {
     font-size: 14px;

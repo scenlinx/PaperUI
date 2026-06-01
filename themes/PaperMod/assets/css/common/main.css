@@ -14,11 +14,11 @@
 }
 
 .main:has(.home-layout) {
-    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+    max-width: calc(var(--main-width) + var(--gap) * 2 + var(--sidebar-width) + var(--gap));
 }
 
 .main:has(.hero-carousel-wrap) {
-    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+    max-width: calc(var(--main-width) + var(--gap) * 2 + var(--sidebar-width) + var(--gap));
 }
 
 ::-webkit-scrollbar {

@@ -33,7 +33,12 @@
     display: flex;
     align-items: center;
     column-gap: 0.55rem;
+    color: var(--primary);
     transition: color var(--transition);
+}
+
+.logo a:visited {
+    color: var(--primary);
 }
 
 .logo a:hover {
@@ -48,6 +53,7 @@
 
 .theme-toggle {
     padding: 0 0.4rem;
+    color: var(--primary);
     transition: color var(--transition);
 }
 
@@ -57,7 +63,13 @@
     cursor: pointer;
 }
 
+.theme-toggle:active,
+.search-btn:active {
+    color: var(--accent);
+}
+
 .search-btn {
+    color: var(--primary);
     transition: color var(--transition);
 }
 
@@ -73,7 +85,7 @@
     display: inline-flex;
     gap: 0.6rem;
     align-items: inherit;
-    min-height: stretch;
+    min-height: 100%;
     flex-wrap: inherit;
 }
 
