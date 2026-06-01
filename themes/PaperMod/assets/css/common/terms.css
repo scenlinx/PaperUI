@@ -26,6 +26,15 @@
 .terms-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 20%, white); color: var(--tag-7); }
 .terms-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
 
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+1) a { background: color-mix(in srgb, var(--tag-1) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+2) a { background: color-mix(in srgb, var(--tag-2) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+3) a { background: color-mix(in srgb, var(--tag-3) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+4) a { background: color-mix(in srgb, var(--tag-4) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+5) a { background: color-mix(in srgb, var(--tag-5) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+6) a { background: color-mix(in srgb, var(--tag-6) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 25%, var(--entry)); }
+:root[data-theme="dark"] .terms-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 25%, var(--entry)); }
+
 .terms-tags a:hover {
     background: var(--accent) !important;
     color: #fff !important;

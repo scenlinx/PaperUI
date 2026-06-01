@@ -280,6 +280,9 @@ details li ul {
 .post-tags a,
 .share-buttons {
     border-radius: var(--radius);
+}
+
+.share-buttons {
     background: var(--code-bg);
     border: 1px solid var(--border);
 }
@@ -295,17 +298,35 @@ details li ul {
 .post-tags a {
     display: block;
     padding: 0 14px;
-    color: var(--secondary);
     font-size: 14px;
     line-height: 34px;
-    background: var(--code-bg);
-    transition: background var(--transition);
+    border-radius: 4px;
+    border: 1px solid transparent;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
+.post-tags li:nth-child(8n+1) a { background: color-mix(in srgb, var(--tag-1) 20%, white); color: var(--tag-1); }
+.post-tags li:nth-child(8n+2) a { background: color-mix(in srgb, var(--tag-2) 20%, white); color: var(--tag-2); }
+.post-tags li:nth-child(8n+3) a { background: color-mix(in srgb, var(--tag-3) 20%, white); color: var(--tag-3); }
+.post-tags li:nth-child(8n+4) a { background: color-mix(in srgb, var(--tag-4) 20%, white); color: var(--tag-4); }
+.post-tags li:nth-child(8n+5) a { background: color-mix(in srgb, var(--tag-5) 20%, white); color: var(--tag-5); }
+.post-tags li:nth-child(8n+6) a { background: color-mix(in srgb, var(--tag-6) 20%, white); color: var(--tag-6); }
+.post-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 20%, white); color: var(--tag-7); }
+.post-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 20%, white); color: var(--tag-8); }
+
+:root[data-theme="dark"] .post-tags li:nth-child(8n+1) a { background: color-mix(in srgb, var(--tag-1) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+2) a { background: color-mix(in srgb, var(--tag-2) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+3) a { background: color-mix(in srgb, var(--tag-3) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+4) a { background: color-mix(in srgb, var(--tag-4) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+5) a { background: color-mix(in srgb, var(--tag-5) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+6) a { background: color-mix(in srgb, var(--tag-6) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+7) a { background: color-mix(in srgb, var(--tag-7) 25%, var(--entry)); }
+:root[data-theme="dark"] .post-tags li:nth-child(8n+8) a { background: color-mix(in srgb, var(--tag-8) 25%, var(--entry)); }
+
 .post-tags a:hover {
-    background: color-mix(in srgb, var(--accent) 10%, var(--code-bg));
+    background: var(--accent) !important;
     border-color: var(--accent);
-    color: var(--accent);
+    color: #fff !important;
 }
 
 .share-buttons {

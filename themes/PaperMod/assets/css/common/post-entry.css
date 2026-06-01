@@ -252,10 +252,14 @@
     transform: translateY(-1px);
 }
 
-.sidebar-tag:hover {
-    background: var(--accent);
-    color: #fff;
-}
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+1) { background: color-mix(in srgb, var(--tag-1) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+2) { background: color-mix(in srgb, var(--tag-2) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+3) { background: color-mix(in srgb, var(--tag-3) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+4) { background: color-mix(in srgb, var(--tag-4) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+5) { background: color-mix(in srgb, var(--tag-5) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+6) { background: color-mix(in srgb, var(--tag-6) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+7) { background: color-mix(in srgb, var(--tag-7) 25%, var(--entry)); }
+:root[data-theme="dark"] .sidebar-tag:nth-child(8n+8) { background: color-mix(in srgb, var(--tag-8) 25%, var(--entry)); }
 
 .sidebar-posts li a {
     font-size: 14px;
