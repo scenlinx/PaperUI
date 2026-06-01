@@ -51,21 +51,11 @@ url = '/posts/'
 weight = 2
 
 [[languages.zh-cn.menu.main]]
-name = '分类'
-url = '/categories/'
-weight = 3
-
-[[languages.zh-cn.menu.main]]
-name = '标签'
-url = '/tags/'
-weight = 4
-
-[[languages.zh-cn.menu.main]]
 name = '归档'
 url = '/archives/'
-weight = 5
+weight = 3
 
 [[languages.zh-cn.menu.main]]
 name = '关于'
 url = '/about/'
-weight = 7
+weight = 4
