@@ -31,12 +31,6 @@
     color-scheme: dark;
 }
 
-body,
-body.list {
-    background: var(--code-bg);
-}
-
-[data-theme="dark"] body,
-[data-theme="dark"] body.list {
+[data-theme="dark"] html {
     background: var(--theme);
 }

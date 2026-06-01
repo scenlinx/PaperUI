@@ -6,9 +6,10 @@
 
 html {
     -webkit-tap-highlight-color: transparent;
-    overflow-y: scroll;
+    overflow-y: auto;
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
+    background: var(--code-bg);
 }
 
 a,
@@ -28,6 +29,7 @@ body {
     font-size: 18px;
     line-height: 1.6;
     word-break: break-word;
+    min-height: 100vh;
 }
 
 article,
