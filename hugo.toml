@@ -26,6 +26,7 @@ ShowPageNums = true
 ShowRssButtonInSectionTermList = true
 ShowAllPagesInArchive = false
 ShowFullTextinRSS = false
+homePostCount = 10
 
 [params.homeInfoParams]
 Title = '欢迎来到新墨韬'
@@ -63,11 +64,16 @@ url = '/posts/'
 weight = 2
 
 [[languages.zh-cn.menu.main]]
+name = '分类'
+url = '/categories/'
+weight = 3
+
+[[languages.zh-cn.menu.main]]
 name = '归档'
 url = '/archives/'
-weight = 3
+weight = 4
 
 [[languages.zh-cn.menu.main]]
 name = '关于'
 url = '/about/'
-weight = 4
+weight = 5

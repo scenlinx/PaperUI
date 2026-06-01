@@ -78,7 +78,7 @@
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
 {{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
-{{- $pages = first 5 $pages }}
+{{- $pages = first (site.Params.homePostCount | default 5) $pages }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
