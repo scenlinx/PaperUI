@@ -287,6 +287,7 @@ details li ul {
 
 .paginav {
     display: flex;
+    gap: var(--gap);
     line-height: 1.2;
 }
 
@@ -298,12 +299,16 @@ details li ul {
 }
 
 .paginav a {
-    width: 50%;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     padding: 0.8rem;
     border-radius: var(--radius);
+}
+
+.paginav a:hover {
+    background: var(--border);
 }
 
 .paginav span:hover:not(.title) {
@@ -312,7 +317,6 @@ details li ul {
 }
 
 .paginav .next {
-    margin-inline-start: auto;
     text-align: right;
 }
 
