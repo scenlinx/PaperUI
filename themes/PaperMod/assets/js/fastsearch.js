@@ -2,7 +2,6 @@ import * as params from '@params';
 
 const searchPairs = [
     { input: 'searchInput', results: 'searchResults' },
-    { input: 'headerSearchInput', results: 'headerSearchResults' },
     { input: 'homeSearchInput', results: 'homeSearchResults' }
 ];
 

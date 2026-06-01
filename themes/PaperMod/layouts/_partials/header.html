@@ -32,11 +32,6 @@
             </a>
             {{- end }}
         </div>
-        <div class="header-search">
-            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input id="headerSearchInput" type="search" placeholder="搜索" autocomplete="off" maxlength="64">
-            <ul id="headerSearchResults" class="header-search-results"></ul>
-        </div>
         {{- $currentPage := . }}
         <ul id="menu" class="menu">
             {{- range site.Menus.main }}
@@ -66,6 +61,9 @@
         {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
         {{- if $lsenabled }}
         <div class="logo-switches">
+            <a href="{{ "search" | absLangURL }}" class="search-btn" title="搜索" aria-label="搜索">
+                <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            </a>
             {{- if (not site.Params.disableThemeToggle) }}
             <button id="theme-toggle" class="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="切换主题">
                 <svg class="moon" xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
