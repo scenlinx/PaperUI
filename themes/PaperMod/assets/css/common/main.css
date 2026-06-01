@@ -6,6 +6,13 @@
     padding: var(--gap);
 }
 
+/* 卡片占据剩余页面高度 */
+.main:not(:has(.sidebar)) .post-single,
+.main:has(.sidebar) .page-main-content,
+.main:has(.sidebar) .page-main-content .post-single {
+    min-height: calc(100vh - var(--header-height) - var(--footer-height) - var(--gap) * 3);
+}
+
 .main:has(.home-layout) {
     max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
 }
