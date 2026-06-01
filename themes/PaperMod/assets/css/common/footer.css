@@ -10,7 +10,6 @@
     padding: calc((var(--footer-height) - var(--gap)) / 2) var(--gap);
     text-align: center;
     line-height: 24px;
-    border-top: 1px solid var(--border);
 }
 
 .footer span {
