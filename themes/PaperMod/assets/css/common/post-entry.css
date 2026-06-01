@@ -154,6 +154,7 @@
     border: 1px solid var(--border);
     padding: 12px;
     margin-bottom: var(--gap);
+    position: relative;
 }
 
 .home-sidebar-section h3 {
@@ -221,4 +222,41 @@
 
 .sidebar-posts li a:hover {
     color: var(--primary);
+}
+
+.home-search-results {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    max-height: 240px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    background: var(--theme);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 4px;
+}
+
+.home-search-results:empty {
+    display: none;
+}
+
+.home-search-results li {
+    list-style: none;
+    border-radius: calc(var(--radius) - 2px);
+    padding: 6px 8px;
+    font-size: 13px;
+    font-weight: 500;
+    background: var(--entry);
+    cursor: pointer;
+    color: var(--primary);
+}
+
+.home-search-results li:hover {
+    background: var(--border);
 }

@@ -1,8 +1,12 @@
 import * as params from '@params';
 
-const resList = document.getElementById('searchResults') || document.getElementById('headerSearchResults');
-const sInput = document.getElementById('searchInput') || document.getElementById('headerSearchInput');
-const searchBox = document.getElementById('searchbox') || document.getElementById('headerSearch');
+const searchPairs = [
+    { input: 'searchInput', results: 'searchResults' },
+    { input: 'headerSearchInput', results: 'headerSearchResults' },
+    { input: 'homeSearchInput', results: 'homeSearchResults' }
+];
+
+const instances = [];
 
 let fuse;
 let currentElement = null;
@@ -48,9 +52,10 @@ const reset = () => {
     currentElement = null;
     firstResult = null;
     lastResult = null;
-    resList.innerHTML = '';
-    sInput.value = '';
-    sInput.focus();
+    for (const inst of instances) {
+        inst.resList.innerHTML = '';
+        inst.sInput.value = '';
+    }
 };
 
 const setActiveResult = (element) => {
@@ -65,10 +70,12 @@ const setActiveResult = (element) => {
     currentElement = element;
 };
 
-const renderResults = (results) => {
+const renderResults = (results, resList) => {
     if (!Array.isArray(results) || results.length === 0) {
         resList.innerHTML = '';
-        firstResult = lastResult = currentElement = null;
+        if (resList === instances[0]?.resList) {
+            firstResult = lastResult = currentElement = null;
+        }
         return;
     }
 
@@ -103,34 +110,49 @@ const renderResults = (results) => {
 
     resList.innerHTML = '';
     resList.appendChild(fragment);
-    firstResult = resList.firstElementChild;
-    lastResult = resList.lastElementChild;
+    if (resList === instances[0]?.resList) {
+        firstResult = resList.firstElementChild;
+        lastResult = resList.lastElementChild;
+    }
 };
 
-const performSearch = () => {
+const performSearch = (sInput, resList) => {
     if (!fuse) {
         return;
     }
 
     const query = sInput.value.trim();
     if (!query) {
-        renderResults([]);
+        renderResults([], resList);
         return;
     }
 
     const searchOptions = params.fuseOpts?.limit ? { limit: params.fuseOpts.limit } : undefined;
     const results = searchOptions ? fuse.search(query, searchOptions) : fuse.search(query);
-    renderResults(results);
+    renderResults(results, resList);
 };
 
 const initSearch = async () => {
-    if (!sInput || !resList) {
-        return;
+    for (const pair of searchPairs) {
+        const sInput = document.getElementById(pair.input);
+        const resList = document.getElementById(pair.results);
+        if (sInput && resList) {
+            instances.push({ sInput, resList });
+            sInput.disabled = false;
+            if (sInput.id === 'searchInput') {
+                sInput.focus();
+            }
+            sInput.addEventListener('input', debounce(() => performSearch(sInput, resList), 150));
+            sInput.addEventListener('search', () => {
+                if (!sInput.value) {
+                    resList.innerHTML = '';
+                }
+            });
+        }
     }
 
-    sInput.disabled = false;
-    if (sInput.id === 'searchInput') {
-        sInput.focus();
+    if (instances.length === 0) {
+        return;
     }
 
     try {
@@ -150,27 +172,21 @@ const initSearch = async () => {
 
 window.addEventListener('load', initSearch);
 
-sInput?.addEventListener('input', debounce(performSearch, 150));
-
-sInput?.addEventListener('search', () => {
-    if (!sInput.value) {
-        reset();
-    }
-});
-
 document.addEventListener('keydown', (event) => {
     const { key } = event;
     const active = document.activeElement;
-    const isInSearchBox = searchBox?.contains(active);
+    const currentInst = instances.find(inst => inst.sInput === active || inst.resList.contains(active));
 
     if (key === 'Escape') {
         reset();
         return;
     }
 
-    if (!firstResult || !isInSearchBox) {
+    if (!firstResult || !currentInst) {
         return;
     }
+
+    const { sInput, resList } = currentInst;
 
     if (key === 'ArrowDown') {
         event.preventDefault();

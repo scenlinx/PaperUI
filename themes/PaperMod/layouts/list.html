@@ -109,8 +109,8 @@
 <aside class="home-sidebar">
   <div class="home-sidebar-section">
     <h3>搜索</h3>
-    <input id="homeSearchInput" type="search" placeholder="搜索文章..." autocomplete="off"
-      onkeydown="if(event.key==='Enter'&&this.value)window.location='/search/?q='+encodeURIComponent(this.value)">
+    <input id="homeSearchInput" type="search" placeholder="搜索文章..." autocomplete="off" maxlength="64">
+    <ul id="homeSearchResults" class="home-search-results"></ul>
   </div>
 
   <div class="home-sidebar-section">
