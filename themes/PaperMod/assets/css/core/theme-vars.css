@@ -31,10 +31,12 @@
     color-scheme: dark;
 }
 
-.list {
+body,
+body.list {
     background: var(--code-bg);
 }
 
-[data-theme="dark"] .list {
+[data-theme="dark"] body,
+[data-theme="dark"] body.list {
     background: var(--theme);
 }

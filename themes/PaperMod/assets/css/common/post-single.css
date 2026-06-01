@@ -1,3 +1,10 @@
+.post-single {
+    background: var(--entry);
+    border-radius: var(--radius);
+    padding: var(--gap);
+    border: 1px solid var(--border);
+}
+
 .page-header,
 .post-header {
     margin: 24px auto var(--content-gap) auto;
