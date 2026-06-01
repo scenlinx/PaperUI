@@ -59,6 +59,9 @@
             </li>
             {{- end }}
         </ul>
+        <button id="menu-toggle" class="menu-toggle" aria-label="菜单">
+            <span></span><span></span><span></span>
+        </button>
         {{- $lsenabled := (or (not site.Params.disableThemeToggle) (and (not site.Params.disableLangToggle) (hugo.IsMultilingual))) }}
         {{- if $lsenabled }}
         <div class="logo-switches">
@@ -132,4 +135,20 @@
         <ul id="modalSearchResults" class="search-modal-results" role="listbox" aria-label="搜索结果"></ul>
     </div>
 </div>
+<div id="menu-overlay" class="menu-overlay"></div>
+<nav id="mobile-menu" class="mobile-menu">
+    <ul>
+        {{- range site.Menus.main }}
+        {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
+        {{- $page_url:= $currentPage.Permalink | absLangURL }}
+        <li>
+            <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }}">
+                <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                    {{- .Pre }}{{- .Name -}}{{ .Post -}}
+                </span>
+            </a>
+        </li>
+        {{- end }}
+    </ul>
+</nav>
 </header>

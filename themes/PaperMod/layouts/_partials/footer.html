@@ -156,3 +156,18 @@
     });
 </script>
 {{- end }}
+
+<script>
+(function(){
+    var btn = document.getElementById('menu-toggle');
+    var menu = document.getElementById('mobile-menu');
+    var overlay = document.getElementById('menu-overlay');
+    if(!btn||!menu)return;
+    function open(){ menu.classList.add('active'); overlay.classList.add('active'); btn.classList.add('active'); document.documentElement.style.overflow='hidden'; document.body.style.overflow='hidden'; }
+    function close(){ menu.classList.remove('active'); overlay.classList.remove('active'); btn.classList.remove('active'); document.documentElement.style.overflow=''; document.body.style.overflow=''; }
+    btn.onclick=open;
+    overlay.onclick=close;
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&menu.classList.contains('active'))close(); });
+    menu.querySelectorAll('a').forEach(function(a){ a.onclick=close; });
+})();
+</script>
