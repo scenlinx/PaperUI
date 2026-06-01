@@ -1,12 +1,15 @@
 .header-nav {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
     margin: auto;
     line-height: var(--header-height);
     padding: 0 var(--gap);
     column-gap: var(--gap);
+}
+
+.header-nav .menu {
+    margin-left: auto;
 }
 
 .header-nav a {
