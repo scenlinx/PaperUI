@@ -22,14 +22,28 @@
     width: 200px;
 }
 
+.archive-header-link {
+    transition: color var(--transition);
+}
+
+.archive-header-link:hover {
+    color: var(--accent);
+}
+
 .archive-month:not(:last-of-type) {
     border-bottom: 1px solid var(--border);
 }
 
 .archive-entry {
     position: relative;
-    padding: 3px 5px;
-    margin: 6px 0;
+    padding: 5px 10px;
+    margin: 4px 0;
+    border-radius: var(--radius);
+    transition: background var(--transition);
+}
+
+.archive-entry:hover {
+    background: color-mix(in srgb, var(--accent) 8%, var(--entry));
 }
 
 .archive-entry:not(:last-of-type) {

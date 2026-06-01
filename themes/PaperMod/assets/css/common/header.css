@@ -33,6 +33,11 @@
     display: flex;
     align-items: center;
     column-gap: 0.55rem;
+    transition: color var(--transition);
+}
+
+.logo a:hover {
+    color: var(--accent);
 }
 
 .logo a img,
@@ -43,6 +48,17 @@
 
 .theme-toggle {
     padding: 0 0.4rem;
+    transition: color var(--transition);
+}
+
+.theme-toggle:hover,
+.search-btn:hover {
+    color: var(--accent);
+    cursor: pointer;
+}
+
+.search-btn {
+    transition: color var(--transition);
 }
 
 [data-theme="dark"] .moon {
@@ -81,7 +97,12 @@
     font-size: 1rem;
     font-weight: 500;
     padding: 0 0.4rem;
-    display: inline-flex
+    display: inline-flex;
+    transition: color var(--transition);
+}
+
+.lang-menu a:hover {
+    color: var(--accent);
 }
 
 .menu {

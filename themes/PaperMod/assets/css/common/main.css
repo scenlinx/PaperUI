@@ -64,6 +64,11 @@
 .social-icons a {
     display: inline-flex;
     padding: 10px;
+    transition: color var(--transition);
+}
+
+.social-icons a:hover {
+    color: var(--accent);
 }
 
 .social-icons a svg {

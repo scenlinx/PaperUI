@@ -90,6 +90,14 @@
     color: var(--secondary);
 }
 
+.rss-icon {
+    transition: color var(--transition);
+}
+
+.rss-icon:hover {
+    color: var(--accent);
+}
+
 .post-single {
     background: var(--entry);
     border-radius: var(--radius);
@@ -151,6 +159,10 @@
     transition: color var(--transition);
 }
 
+.breadcrumbs a:hover {
+    color: var(--accent);
+}
+
 .breadcrumbs svg {
     height: 1em;
 }
@@ -176,6 +188,10 @@
     transition: color var(--transition);
 }
 
+.post-meta a:hover {
+    color: var(--accent);
+}
+
 details.toc {
     margin-bottom: var(--content-gap);
     background: var(--code-bg);
@@ -198,6 +214,11 @@ details summary {
     width: 100%;
     margin-inline-start: 0;
     user-select: none;
+    transition: color var(--transition);
+}
+
+details summary:hover {
+    color: var(--accent);
 }
 
 details .title {
@@ -261,6 +282,14 @@ details li ul {
     border-radius: var(--radius);
     background: var(--code-bg);
     border: 1px solid var(--border);
+}
+
+.share-buttons a {
+    transition: color var(--transition);
+}
+
+.share-buttons a:hover {
+    color: var(--accent);
 }
 
 .post-tags a {

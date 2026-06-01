@@ -219,7 +219,7 @@
 }
 
 .anchor:hover {
-    color: var(--content) !important;
+    color: var(--accent) !important;
 }
 
 .md-content img.in-text {

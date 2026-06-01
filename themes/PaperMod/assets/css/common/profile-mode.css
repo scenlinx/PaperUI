@@ -31,4 +31,10 @@
     background: var(--tertiary);
     border-radius: var(--radius);
     padding: 0.4rem 0.8rem;
+    transition: background var(--transition), color var(--transition);
+}
+
+.button:hover {
+    background: var(--accent);
+    color: #fff;
 }
