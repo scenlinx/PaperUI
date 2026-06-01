@@ -374,7 +374,7 @@
 .sidebar-tag {
     font-size: 13px;
     padding: 2px 8px;
-    border-radius: 4px;
+    border-radius: var(--radius);
     transition: background var(--transition), color var(--transition), transform var(--transition);
 }
 

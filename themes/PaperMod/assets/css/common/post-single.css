@@ -300,7 +300,7 @@ details li ul {
     padding: 0 14px;
     font-size: 14px;
     line-height: 34px;
-    border-radius: 4px;
+    border-radius: var(--radius);
     border: 1px solid transparent;
     transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
