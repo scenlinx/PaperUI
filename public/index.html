@@ -11,7 +11,7 @@
 <meta name="description" content="新墨韬 - 个人技术博客">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.e266fa2e2e9b42828fd7d14bfe72ddbc1b338c0d5a808b89561d23531bc53d6d.css" integrity="sha256-4mb6Li6bQoKP19FL/nLdvBszjA1agIuJVh0jUxvFPW0=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6933c5b36871cb9ed298497e7c845b1419035e69bf457bd09351a48f5c2948b7.css" integrity="sha256-aTPFs2hxy57SmEl&#43;fIRbFBkDXmm/RXvQk1Gkj1wpSLc=" rel="preload stylesheet" as="style">
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
 <script defer crossorigin="anonymous" src="/assets/js/search.dbfab4cc757eead4e402c4df65baab6f71f2a16a41cd87819f32a0a8a5e81809.js" integrity="sha256-2/q0zHV&#43;6tTkAsTfZbqrb3HyoWpBzYeBnzKgqKXoGAk="></script>
 <link rel="icon" href="http://localhost:1313/favicon.ico">
@@ -149,6 +149,16 @@
   <div class="hero-carousel">
     <div class="hero-left">
       <div class="hero-inner hero-inner-16x9">
+        <button class="carousel-prev" aria-label="上一张">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="carousel-next" aria-label="下一张">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
         <div class="carousel-slides">
           <a href="/posts/getting-started/" class="carousel-slide active">
             <img src="/images/hero-1.jpg" alt="" loading="lazy">
@@ -190,6 +200,8 @@
   if (!container) return;
   const slides = container.querySelectorAll('.carousel-slide');
   const dots = container.parentElement.querySelectorAll('.carousel-dot');
+  const prevBtn = container.parentElement.querySelector('.carousel-prev');
+  const nextBtn = container.parentElement.querySelector('.carousel-next');
   if (slides.length < 2) return;
   let current = 0;
   const total = slides.length;
@@ -207,6 +219,12 @@
     dots.forEach(function(dot, i) {
       dot.addEventListener('click', function(){ goTo(i); });
     });
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(){ goTo(current + 1); });
   }
 })();
 </script>
@@ -337,7 +355,7 @@
       <li><a href="http://localhost:1313/posts/git-guide/">Git 常用命令速查手册</a></li>
       <li><a href="http://localhost:1313/posts/getting-started/">Hugo 快速入门指南</a></li>
       <li><a href="http://localhost:1313/posts/docker-intro/">Docker 容器化入门</a></li>
-      <li><a href="http://localhost:1313/posts/linux-commands/">Linux 命令行实用技巧</a></li>
+      <li><a href="http://localhost:1313/posts/python-tips/">Python 开发实用技巧</a></li>
     </ul>
   </div>
 

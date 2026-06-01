@@ -3,6 +3,16 @@
   <div class="hero-carousel">
     <div class="hero-left">
       <div class="hero-inner hero-inner-16x9">
+        <button class="carousel-prev" aria-label="上一张">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 18l-6-6 6-6"/>
+          </svg>
+        </button>
+        <button class="carousel-next" aria-label="下一张">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
         <div class="carousel-slides">
           {{- range $i, $slide := .slides }}
           <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }}>
@@ -41,6 +51,8 @@
   if (!container) return;
   const slides = container.querySelectorAll('.carousel-slide');
   const dots = container.parentElement.querySelectorAll('.carousel-dot');
+  const prevBtn = container.parentElement.querySelector('.carousel-prev');
+  const nextBtn = container.parentElement.querySelector('.carousel-next');
   if (slides.length < 2) return;
   let current = 0;
   const total = slides.length;
@@ -58,6 +70,12 @@
     dots.forEach(function(dot, i) {
       dot.addEventListener('click', function(){ goTo(i); });
     });
+  }
+  if (prevBtn) {
+    prevBtn.addEventListener('click', function(){ goTo(current - 1); });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', function(){ goTo(current + 1); });
   }
 })();
 </script>
