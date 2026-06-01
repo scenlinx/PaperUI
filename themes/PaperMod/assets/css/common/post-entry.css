@@ -206,6 +206,11 @@
     height: 100%;
     object-fit: cover;
     display: block;
+    transition: transform var(--transition);
+}
+
+.hero-left:hover .carousel-slide.active img {
+    transform: scale(1.05);
 }
 
 .carousel-dots {
