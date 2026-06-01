@@ -121,7 +121,7 @@
     <ul class="sidebar-categories">
       {{- range $name, $taxonomy := site.Taxonomies.categories }}
       {{- with site.GetPage (printf "/categories/%s" $name) }}
-      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a><span class="count">{{ $taxonomy.Count }}</span></li>
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a><span class="count">{{ $taxonomy.Count }}篇</span></li>
       {{- end }}
       {{- end }}
     </ul>
