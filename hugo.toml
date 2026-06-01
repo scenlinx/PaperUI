@@ -23,7 +23,7 @@ ShowBreadCrumbs = false
 ShowCodeCopyButtons = true
 ShowToc = true
 ShowPageNums = true
-ShowRssButtonInSectionTermList = false
+ShowRssButtonInSectionTermList = true
 ShowAllPagesInArchive = false
 ShowFullTextinRSS = false
 
