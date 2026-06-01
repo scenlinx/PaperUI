@@ -1,3 +1,60 @@
+.main:has(.sidebar) {
+    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: var(--gap);
+}
+
+.main:has(.sidebar) .post-single {
+    grid-column: 2;
+}
+
+.sidebar {
+    position: sticky;
+    top: calc(var(--header-height) + var(--gap));
+    max-height: calc(100vh - var(--header-height) - var(--gap) * 2);
+    overflow-y: auto;
+}
+
+.sidebar .toc {
+    background: var(--entry);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+.sidebar .toc .title {
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: block;
+    color: var(--primary);
+}
+
+.sidebar .toc ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar .toc ul ul {
+    padding-left: 12px;
+}
+
+.sidebar .toc li {
+    margin: 3px 0;
+}
+
+.sidebar .toc a {
+    color: var(--secondary);
+    display: block;
+    padding: 2px 0;
+    border-bottom: none;
+}
+
+.sidebar .toc a:hover {
+    color: var(--primary);
+}
+
 .post-single {
     background: var(--entry);
     border-radius: var(--radius);

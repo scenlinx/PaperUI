@@ -4,6 +4,11 @@
 {{- partial "index_profile.html" . }}
 {{- else }} {{/* if not profileMode */}}
 
+{{- if .IsHome }}
+<div class="home-layout">
+  <div class="home-content">
+{{- end }}
+
 {{- if not .IsHome | and .Title }}
 <header class="page-header">
   {{- partial "breadcrumbs.html" . }}
@@ -100,6 +105,55 @@
     </a>
   </nav>
 </footer>
+</div>{{- /* close home-content */}}
+<aside class="home-sidebar">
+  <div class="home-sidebar-section">
+    <h3>搜索</h3>
+    <input id="homeSearchInput" type="search" placeholder="搜索文章..." autocomplete="off">
+  </div>
+
+  <div class="home-sidebar-section">
+    <h3>分类</h3>
+    <ul class="sidebar-categories">
+      {{- range $name, $taxonomy := site.Taxonomies.categories }}
+      {{- with site.GetPage (printf "/categories/%s" $name) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="home-sidebar-section">
+    <h3>标签</h3>
+    <div class="sidebar-tags">
+      {{- range $name, $taxonomy := site.Taxonomies.tags }}
+      {{- with site.GetPage (printf "/tags/%s" $name) }}
+      <a href="{{ .Permalink }}" class="sidebar-tag">{{ .LinkTitle }}</a>
+      {{- end }}
+      {{- end }}
+    </div>
+  </div>
+
+  <div class="home-sidebar-section">
+    <h3>随机文章</h3>
+    <ul class="sidebar-posts">
+      {{- $all := where site.RegularPages "Type" "in" site.Params.mainSections }}
+      {{- range first 5 (shuffle $all) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+
+  <div class="home-sidebar-section">
+    <h3>近期文章</h3>
+    <ul class="sidebar-posts">
+      {{- range first 5 (where site.RegularPages "Type" "in" site.Params.mainSections) }}
+      <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+      {{- end }}
+    </ul>
+  </div>
+</aside>
+</div>{{- /* close home-layout */}}
 {{- else if gt $paginator.TotalPages 1 }}
 <footer class="page-footer">
   <nav class="pagination">

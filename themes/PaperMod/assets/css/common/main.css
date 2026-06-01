@@ -6,6 +6,10 @@
     padding: var(--gap);
 }
 
+.main:has(.home-layout) {
+    max-width: calc(var(--main-width) + var(--gap) * 2 + 240px + var(--gap));
+}
+
 .page-header h1 {
     font-size: 40px;
 }
