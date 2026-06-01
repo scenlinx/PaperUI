@@ -42,10 +42,6 @@
     transition: background var(--transition);
 }
 
-.archive-entry:hover {
-    background: color-mix(in srgb, var(--accent) 8%, var(--entry));
-}
-
 .archive-entry:not(:last-of-type) {
     border-bottom: 1px solid var(--border);
     padding-bottom: 6px;
@@ -54,6 +50,10 @@
 .archive-entry-title {
     margin: 3px 0;
     font-weight: 400;
+}
+
+.archive-entry:hover .archive-entry-title {
+    color: var(--accent) !important;
 }
 
 .archive-count,
