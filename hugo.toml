@@ -5,6 +5,9 @@ defaultContentLanguage = 'zh-cn'
 enableRobotsTXT = true
 enableEmoji = true
 
+[outputs]
+home = ['HTML', 'RSS', 'JSON']
+
 [params]
 env = 'development'
 description = '新墨韬 - 个人技术博客'
