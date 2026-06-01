@@ -27,17 +27,7 @@
     background: color-mix(in srgb, var(--accent) 50%, var(--tertiary));
 }
 
-.page-footer a {
-    color: var(--accent);
-    font-size: 14px;
-    font-weight: 500;
-    transition: color var(--transition);
-}
-
-.page-footer a:hover {
-    color: color-mix(in srgb, var(--accent) 70%, black);
-    text-decoration: underline;
-}
+.pagination {
     display: flex;
 }
 
