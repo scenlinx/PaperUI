@@ -1,8 +1,6 @@
 ---
 date: '2026-05-28'
 title: '为什么我选择在 PaperMod 基础上开发 PaperUI'
-cover:
-  image: '/images/hero-3.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "PaperMod", "开源"]
 description: '从实际使用场景出发，分析在 PaperMod 基础上做二次开发的技术决策过程：保留什么、改进什么、为什么这样做'

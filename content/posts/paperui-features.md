@@ -1,8 +1,6 @@
 ---
 date: '2026-05-27'
 title: 'PaperUI 新增功能全面解析'
-cover:
-  image: '/images/hero-1.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "功能"]
 description: '逐一详解 PaperUI 相比 PaperMod 新增的每个功能：首页轮播、双栏布局、彩色标签、搜索增强、移动端优化等'

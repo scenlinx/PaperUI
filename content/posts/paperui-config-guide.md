@@ -1,8 +1,6 @@
 ---
 date: '2026-05-25'
 title: 'PaperUI 完整配置指南与参数说明'
-cover:
-  image: '/images/hero-2.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "配置"]
 description: 'PaperUI 主题的完整配置参数参考手册，包含基础参数、轮播配置、侧边栏小部件、SEO 相关等所有可配置项'

@@ -1,8 +1,6 @@
 ---
 date: '2026-05-21'
 title: 'PaperUI 常见问题与最佳实践'
-cover:
-  image: '/images/hero-3.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "FAQ", "最佳实践"]
 description: 'PaperUI 使用过程中常见问题的解答，以及搭建 Hugo 博客的最佳实践建议，涵盖内容管理、图片优化、版本控制等'

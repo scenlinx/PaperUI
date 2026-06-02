@@ -1,8 +1,6 @@
 ---
 date: '2026-05-31'
 title: 'Hugo + PaperUI 配置文件逐行详解'
-cover:
-  image: '/images/hero-2.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "配置", "教程"]
 description: '基于本博客真实 hugo.toml 配置，逐段拆解每个参数的作用、生效逻辑和调整建议，附带模板渲染源码分析。'

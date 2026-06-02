@@ -1,8 +1,6 @@
 ---
 date: '2026-05-26'
 title: 'PaperUI 安装与快速上手指南'
-cover:
-  image: '/images/hero-1.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "教程"]
 description: '从零开始，5 分钟完成 PaperUI 主题的安装和基础配置，包含 Git Submodule 和 Hugo Modules 两种安装方式'
