@@ -262,6 +262,26 @@
 <div class="home-layout">
   <div class="home-content">
 
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>写在前面 本文分享一个个人技术项目：PaperUI —— 基于 Hugo 社区主题 PaperMod 进行的二次开发实践。项目针对个人中文博客的使用场景，添加了一些自用的功能和调整。
+PaperMod 是 Hugo 生态中非常优秀的主题，作者 Aditya Telange 和社区贡献者做了大量出色的工作。PaperUI 只是在 PaperMod 的基础上做了一些个人化的补充，并非替代或竞争关系。
+一、为什么选择基于 PaperMod 二次开发 1.1 PaperMod 的优势 选择 PaperMod 作为基础，主要看中以下几点：
+零外部依赖，性能表现出色 CSS 变量驱动的主题系统，便于定制和覆盖 完善的 SEO 支持（Open Graph、Twitter Cards、JSON-LD） 多语言支持，内置 46 种语言翻译 社区成熟，文档完善，问题排查方便 1.2 二次开发的出发点 在使用过程中，个人有一些额外的需求：
+首页希望有更丰富的内容展示形式 想增加侧边栏放置分类、标签等导航元素 移动端导航体验想做一些调整 部分 UI 文字想适配中文语境 这些需求属于个人偏好，并非 PaperMod 的不足。PaperMod 面向全球用户，设计上追求简洁通用，这是它的设计选择。
+1.3 开发原则 保持兼容：PaperMod 用户的配置文件切换到 PaperUI 后应基本可用 性能优先：新功能不显著增加页面加载体积 增量修改：尽可能通过参数控制，不破坏原有功能 可回退：新功能都是可选的，不配置就不启用 二、主要功能的技术实现 2.1 首页轮播布局 在首页增加了一个三栏展示区，通过 Hugo 模板和 CSS Grid 实现：
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-06-02 00:00:00 +0000 UTC'>2026-06-02</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>489 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer>
+  <a class="entry-link" aria-label="post link to 基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享" href="http://localhost:1313/posts/paperui-csdn-intro/"></a>
+</article>
+
 <article class="post-entry"><div class="post-entry-layout"> 
 <figure class="entry-cover">
         <img loading="lazy" src="http://localhost:1313/images/hero-3.jpg" alt="">
@@ -413,23 +433,6 @@ hugo version # 应显示: hugo v0.146.0 或更高版本 方式一：Git Submodul
 <span title='2026-05-26 00:00:00 +0000 UTC'>2026-05-26</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>361 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer>
   <a class="entry-link" aria-label="post link to PaperUI 安装与快速上手指南" href="http://localhost:1313/posts/paperui-quickstart/"></a>
 </article>
-
-<article class="post-entry"> 
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">PaperUI 完整配置指南与参数说明
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>这篇文章是 PaperUI 主题的完整配置参考手册。你可以把它当作速查表来查阅。
-如果你想知道每个参数在模板层面的具体作用逻辑，推荐阅读 Hugo &#43; PaperUI 配置文件逐行详解，它以本博客真实配置为例，结合模板源码进行拆解。
-基础站点配置 baseURL = &#39;https://你的域名.com/&#39; # 站点 URL，上线前务必修改 title = &#39;站点标题&#39; # 显示在浏览器标签页和 header 中 theme = &#39;PaperUI&#39; # 主题名称 defaultContentLanguage = &#39;zh-cn&#39; # 默认语言 enableRobotsTXT = true # 自动生成 robots.txt enableEmoji = true # 支持 Emoji 输出格式 [outputs] home = [&#39;HTML&#39;, &#39;RSS&#39;, &#39;JSON&#39;] # 首页输出 HTML、RSS 和搜索索引 JSON 全局参数 [params] env = &#39;production&#39; # 环境：development 或 production description = &#39;站点描述&#39; # SEO 描述，显示在搜索引擎结果中 keywords = [&#39;博客&#39;, &#39;Hugo&#39;] # SEO 关键词 defaultTheme = &#39;auto&#39; # 默认主题：auto / dark / light disableThemeToggle = false # 禁用主题切换按钮 disableScrollToTop = false # 禁用回到顶部按钮 # 文章展示相关 ShowReadingTime = true # 显示阅读时间估算 ShowWordCount = true # 显示字数统计 ShowShareButtons = false # 显示分享按钮 ShowPostNavLinks = true # 显示上一篇/下一篇文章链接 ShowBreadCrumbs = false # 显示面包屑导航 ShowCodeCopyButtons = true # 显示代码块复制按钮 ShowToc = true # 显示文章目录（侧边栏） ShowPageNums = true # 分页显示页码 ShowRssButtonInSectionTermList = true # 分类/标签页显示 RSS 按钮 ShowAllPagesInArchive = false # 归档页显示所有文章（不推荐大量文章时开启） ShowFullTextinRSS = false # RSS 中显示全文 homePostCount = 8 # 首页显示文章数量 首页信息 [params.homeInfoParams] Title = &#39;欢迎来到我的博客&#39; # 首页标题 Content = &#39;分享技术和思考&#39; # 首页简介 首页轮播配置 [params.homeCarousel] # 左侧主轮播（16:9 比例） slides = [ { image = &#39;/images/hero-1.jpg&#39;, url = &#39;/posts/post-1/&#39; }, { image = &#39;/images/hero-2.jpg&#39;, url = &#39;/posts/post-2/&#39; }, { image = &#39;/images/hero-3.jpg&#39;, url = &#39;/posts/post-3/&#39; }, ] # 中部正方形卡片（1:1 比例） middle = [ { image = &#39;/images/square-1.jpg&#39;, url = &#39;/posts/post-4/&#39; }, { image = &#39;/images/square-2.jpg&#39;, url = &#39;/posts/post-5/&#39; }, ] # 右侧竖版图片（3:4 比例） right = { image = &#39;/images/portrait-1.jpg&#39;, url = &#39;/about/&#39; } 不配置 homeCarousel 时，首页使用标准的 homeInfoParams 模式。
-...</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-05-25 00:00:00 +0000 UTC'>2026-05-25</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>434 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer>
-  <a class="entry-link" aria-label="post link to PaperUI 完整配置指南与参数说明" href="http://localhost:1313/posts/paperui-config-guide/"></a>
-</article>
 <footer class="page-footer">
   <nav class="pagination">
     <a class="next" href="http://localhost:1313/posts/">
@@ -447,7 +450,7 @@ hugo version # 应显示: hugo v0.146.0 或更高版本 方式一：Git Submodul
 <div class="home-sidebar-section">
   <h3>分类</h3>
   <ul class="sidebar-categories">
-    <li><a href="http://localhost:1313/categories/paperui/">PaperUI</a><span class="count">11篇</span></li>
+    <li><a href="http://localhost:1313/categories/paperui/">PaperUI</a><span class="count">12篇</span></li>
     <li><a href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="count">4篇</span></li>
   </ul>
 </div>
@@ -470,6 +473,7 @@ hugo version # 应显示: hugo v0.146.0 或更高版本 方式一：Git Submodul
     <a href="http://localhost:1313/tags/seo/" class="sidebar-tag">SEO</a>
     <a href="http://localhost:1313/tags/%E4%B8%BB%E9%A2%98/" class="sidebar-tag">主题</a>
     <a href="http://localhost:1313/tags/%E5%8A%9F%E8%83%BD/" class="sidebar-tag">功能</a>
+    <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="sidebar-tag">博客搭建</a>
     <a href="http://localhost:1313/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="sidebar-tag">命令行</a>
     <a href="http://localhost:1313/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/" class="sidebar-tag">团队协作</a>
     <a href="http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="sidebar-tag">开发流程</a>
@@ -491,10 +495,10 @@ hugo version # 应显示: hugo v0.146.0 或更高版本 方式一：Git Submodul
   <div class="sidebar-section">
     <h3>随机文章</h3>
     <ul class="sidebar-posts">
-      <li><a href="http://localhost:1313/posts/modern-development-workflow/">现代软件开发完整工作流</a></li>
-      <li><a href="http://localhost:1313/posts/hugo-toml-config-guide/">Hugo &#43; PaperUI 配置文件逐行详解</a></li>
-      <li><a href="http://localhost:1313/posts/linux-commands/">Linux 命令行：从开发到运维的常用技巧</a></li>
-      <li><a href="http://localhost:1313/posts/paperui-introduction/">PaperUI：一个更懂中文博客的 Hugo 主题</a></li>
+      <li><a href="http://localhost:1313/posts/paperui-customization/">PaperUI 自定义与二次开发指南</a></li>
+      <li><a href="http://localhost:1313/posts/paperui-faq-best-practices/">PaperUI 常见问题与最佳实践</a></li>
+      <li><a href="http://localhost:1313/posts/paperui-config-guide/">PaperUI 完整配置指南与参数说明</a></li>
+      <li><a href="http://localhost:1313/posts/paperui-csdn-intro/">基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享</a></li>
       <li><a href="http://localhost:1313/posts/paperui-deployment/">PaperUI 博客部署到生产环境的完整方案</a></li>
     </ul>
   </div>
@@ -502,11 +506,11 @@ hugo version # 应显示: hugo v0.146.0 或更高版本 方式一：Git Submodul
   <div class="sidebar-section">
     <h3>近期文章</h3>
     <ul class="sidebar-posts">
+      <li><a href="http://localhost:1313/posts/paperui-csdn-intro/">基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享</a></li>
       <li><a href="http://localhost:1313/posts/modern-development-workflow/">现代软件开发完整工作流</a></li>
       <li><a href="http://localhost:1313/posts/hugo-toml-config-guide/">Hugo &#43; PaperUI 配置文件逐行详解</a></li>
       <li><a href="http://localhost:1313/posts/paperui-introduction/">PaperUI：一个更懂中文博客的 Hugo 主题</a></li>
       <li><a href="http://localhost:1313/posts/papermod-advantages/">PaperMod 为什么是 Hugo 社区最受欢迎的主题</a></li>
-      <li><a href="http://localhost:1313/posts/why-paperui/">为什么我选择在 PaperMod 基础上开发 PaperUI</a></li>
     </ul>
   </div>
 </aside>

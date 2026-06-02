@@ -227,7 +227,7 @@
 <div class="sidebar-section">
   <h3>分类</h3>
   <ul class="sidebar-categories">
-    <li><a href="http://localhost:1313/categories/paperui/">PaperUI</a><span class="count">11篇</span></li>
+    <li><a href="http://localhost:1313/categories/paperui/">PaperUI</a><span class="count">12篇</span></li>
     <li><a href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">技术</a><span class="count">4篇</span></li>
   </ul>
 </div>
@@ -250,6 +250,7 @@
     <a href="http://localhost:1313/tags/seo/" class="sidebar-tag">SEO</a>
     <a href="http://localhost:1313/tags/%E4%B8%BB%E9%A2%98/" class="sidebar-tag">主题</a>
     <a href="http://localhost:1313/tags/%E5%8A%9F%E8%83%BD/" class="sidebar-tag">功能</a>
+    <a href="http://localhost:1313/tags/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="sidebar-tag">博客搭建</a>
     <a href="http://localhost:1313/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/" class="sidebar-tag">命令行</a>
     <a href="http://localhost:1313/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/" class="sidebar-tag">团队协作</a>
     <a href="http://localhost:1313/tags/%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="sidebar-tag">开发流程</a>
@@ -269,6 +270,26 @@
 
 </aside>
 <div class="page-main-content">
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>写在前面 本文分享一个个人技术项目：PaperUI —— 基于 Hugo 社区主题 PaperMod 进行的二次开发实践。项目针对个人中文博客的使用场景，添加了一些自用的功能和调整。
+PaperMod 是 Hugo 生态中非常优秀的主题，作者 Aditya Telange 和社区贡献者做了大量出色的工作。PaperUI 只是在 PaperMod 的基础上做了一些个人化的补充，并非替代或竞争关系。
+一、为什么选择基于 PaperMod 二次开发 1.1 PaperMod 的优势 选择 PaperMod 作为基础，主要看中以下几点：
+零外部依赖，性能表现出色 CSS 变量驱动的主题系统，便于定制和覆盖 完善的 SEO 支持（Open Graph、Twitter Cards、JSON-LD） 多语言支持，内置 46 种语言翻译 社区成熟，文档完善，问题排查方便 1.2 二次开发的出发点 在使用过程中，个人有一些额外的需求：
+首页希望有更丰富的内容展示形式 想增加侧边栏放置分类、标签等导航元素 移动端导航体验想做一些调整 部分 UI 文字想适配中文语境 这些需求属于个人偏好，并非 PaperMod 的不足。PaperMod 面向全球用户，设计上追求简洁通用，这是它的设计选择。
+1.3 开发原则 保持兼容：PaperMod 用户的配置文件切换到 PaperUI 后应基本可用 性能优先：新功能不显著增加页面加载体积 增量修改：尽可能通过参数控制，不破坏原有功能 可回退：新功能都是可选的，不配置就不启用 二、主要功能的技术实现 2.1 首页轮播布局 在首页增加了一个三栏展示区，通过 Hugo 模板和 CSS Grid 实现：
+...</p>
+  </div>
+  <footer class="entry-footer">
+
+<span title='2026-06-02 00:00:00 +0000 UTC'>2026-06-02</span>&nbsp;·&nbsp;<span>3 min</span>&nbsp;·&nbsp;<span>489 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer>
+  <a class="entry-link" aria-label="post link to 基于 Hugo PaperMod 的二次开发实践：PaperUI 主题的技术实现分享" href="http://localhost:1313/posts/paperui-csdn-intro/"></a>
+</article>
 
 <article class="post-entry"><div class="post-entry-layout"> 
 <figure class="entry-cover">
@@ -460,32 +481,6 @@ PaperUI 内置的 SEO 能力 1. Open Graph 标签 每篇文章自动生成完整
 
 <span title='2026-05-24 00:00:00 +0000 UTC'>2026-05-24</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>296 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
   <a class="entry-link" aria-label="post link to PaperUI 的 SEO 优化实践指南" href="http://localhost:1313/posts/paperui-seo/"></a>
-</article>
-
-<article class="post-entry"><div class="post-entry-layout"> 
-<figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/hero-2.jpg" alt="">
-</figure><div class="post-entry-body">
-  <header class="entry-header">
-    <h2 class="entry-hint-parent">PaperUI 博客部署到生产环境的完整方案
-    </h2>
-  </header>
-  <div class="entry-content">
-    <p>上一篇聊了 SEO 优化，这篇我们讲部署 —— 把本地写好的 PaperUI 博客发布到互联网上。
-构建静态文件 在部署之前，先生成静态文件：
-# 清理旧文件并重新构建（--cleanDestinationDir 自动清理废弃文件） hugo --minify --cleanDestinationDir --minify 参数会压缩 HTML、CSS、JS，减小文件体积。构建后的文件在 public/ 目录中。
-方案一：GitHub Pages（免费） 适用场景 使用 GitHub 管理博客源代码 免费托管 自定义域名支持 步骤 1. 创建部署仓库
-在 GitHub 上创建 用户名.github.io 仓库（用于用户/组织站点）。
-2. 推送代码
-cd my-blog git init git remote add origin https://github.com/用户名/用户名.github.io.git git add . git commit -m &#34;初始化博客&#34; git push -u origin main 3. 配置 GitHub Actions
-创建 .github/workflows/deploy.yml：
-name: Deploy Hugo site on: push: branches: [main] jobs: deploy: runs-on: ubuntu-latest steps: - uses: actions/checkout@v4 with: submodules: true fetch-depth: 0 - name: Setup Hugo uses: peaceiris/actions-hugo@v3 with: hugo-version: &#39;0.146.0&#39; extended: true - name: Build run: hugo --minify --cleanDestinationDir - name: Deploy uses: peaceiris/actions-gh-pages@v4 with: github_token: ${{ secrets.GITHUB_TOKEN }} publish_dir: ./public 4. 设置 GitHub Pages
-...</p>
-  </div>
-  <footer class="entry-footer">
-
-<span title='2026-05-23 00:00:00 +0000 UTC'>2026-05-23</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>363 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
-  <a class="entry-link" aria-label="post link to PaperUI 博客部署到生产环境的完整方案" href="http://localhost:1313/posts/paperui-deployment/"></a>
 </article>
 <footer class="page-footer">
   <nav class="pagination">
