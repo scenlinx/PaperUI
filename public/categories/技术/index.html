@@ -10,8 +10,8 @@
 <meta name="description" content="新墨韬 - 个人技术博客">
 <meta name="author" content="新墨韬">
 <link rel="canonical" href="http://localhost:1313/categories/%E6%8A%80%E6%9C%AF/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.dd290a5e83cbd9f312aa53b2d9d6f5ef44ab38e07202c785a54e29b76cfd9565.css" integrity="sha256-3SkKXoPL2fMSqlOy2db170SrOOByAseFpU4pt2z9lWU=" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/search.15a9e35db3ccf2a67ab3085ed902fe076c588ad42cc78b157b9a61ef883cc296.js" integrity="sha256-FanjXbPM8qZ6swhe2QL&#43;B2xYitQsx4sVe5ph74g8wpY="></script>
+<link crossorigin="anonymous" href="/assets/css/stylesheet.6ef049477eb4db8268a3c4f508cb4c249edfecb5006ff39071aab8cfed431cac.css" integrity="sha256-bvBJR36024Joo8T1CMtMJJ7f7LUAb/OQcaq4z&#43;1DHKw=" rel="preload stylesheet" as="style">
+<script defer crossorigin="anonymous" src="/assets/js/search.a984c7865ea98ba242110420e5e3740fd9b1723b0d4791fd03f2f9899beb6352.js" integrity="sha256-qYTHhl6pi6JCEQQg5eN0D9mxcjsNR5H9A/L5iZvrY1I="></script>
 <link rel="icon" href="http://localhost:1313/favicon.svg">
 <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon.svg">
@@ -84,8 +84,8 @@
     <nav class="header-nav">
         <div class="logo">
             <a href="http://localhost:1313/" accesskey="h" title="新墨韬 (Alt + H)">
-                <img src="http://localhost:1313/images/logo.svg" alt="" aria-label="标识"
-                    height="24">新墨韬</a>
+                    <img src="http://localhost:1313/images/logo.svg" alt="" aria-label="标识"
+                        height="24">新墨韬</a>
         </div>
         <ul id="menu" class="menu">
             <li>
@@ -278,24 +278,22 @@
 
 <article class="post-entry tag-entry"><div class="post-entry-layout"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/hero-3.jpg" alt="">
+        <img loading="lazy" src="http://localhost:1313/images/square-2.jpg" alt="">
 </figure><div class="post-entry-body">
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Git 实用指南：从日常操作到团队协作
+    <h2 class="entry-hint-parent">Linux 命令行：从开发到运维的常用技巧
     </h2>
   </header>
   <div class="entry-content">
-    <p>Git 是目前最主流的分布式版本控制系统。但学会 Git 不只是记住命令——理解背后的工作流才能真正高效协作。
-三个关键区域 每次操作 Git，数据在四个区域流转：
-工作目录 → 暂存区 → 本地仓库 → 远程仓库 理解这个模型后，add、commit、push 的关系就很清晰了：
-git add . # 工作目录 → 暂存区 git commit -m &#34;...&#34; # 暂存区 → 本地仓库 git push origin main # 本地仓库 → 远程仓库 分支策略 日常开发中最常用的分支模型是 GitHub Flow：
-main — 始终可部署 feature/* — 每个功能独立分支 hotfix/* — 紧急修复 # 从 main 切出功能分支 git checkout -b feature/add-login # 开发过程中频繁小提交 git commit -m &#34;feat: add login form&#34; git commit -m &#34;feat: add form validation&#34; # 完成后推送到远程 git push origin feature/add-login 合并 vs 变基 这是 Git 中最容易困惑的地方。简单原则：
+    <p>不管做开发还是运维，熟练使用 Linux 命令行都能让工作效率提升数倍。以下是我在开发、部署和排错中最常用的操作。
+文件与目录操作 # 递归查找所有 .log 文件 find /var/log -name &#34;*.log&#34; -type f # 查找大于 100MB 的文件 find . -type f -size &#43;100M # 在指定目录搜索包含关键词的文件 grep -r &#34;ERROR&#34; /var/log/nginx/ --include=&#34;*.log&#34; # 统计代码行数 find src/ -name &#34;*.py&#34; | xargs wc -l 权限管理 # 给脚本添加执行权限 chmod &#43;x deploy.sh # 递归修改目录权限 chmod -R 755 public/ chmod -R 644 public/*.html # 修改所有者（常用于 Web 目录） sudo chown -R www-data:www-data /var/www/site/ 一个常见的坑：文件能否执行看权限位，能否被读取看父目录的 x 权限——目录没有执行权限时，即使文件权限正确也无法访问。
+系统监控与排错 # 查看磁盘使用情况 df -h # 查看某个目录占用 du -sh /var/log/* | sort -hr | head -10 # 内存使用 free -h # 实时进程信息 top htop # 如果安装了的话，更友好 # 查看特定进程 ps aux | grep nginx # 查看端口占用 ss -tlnp | grep :80 管道与文本处理 管道的核心思想是小工具组合：
 ...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-05-28 00:00:00 +0000 UTC'>2026-05-28</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>269 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
-  <a class="entry-link" aria-label="post link to Git 实用指南：从日常操作到团队协作" href="http://localhost:1313/posts/git-guide/"></a>
+<span title='2026-05-20 00:00:00 +0000 UTC'>2026-05-20</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>265 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
+  <a class="entry-link" aria-label="post link to Linux 命令行：从开发到运维的常用技巧" href="http://localhost:1313/posts/linux-commands/"></a>
 </article>
 
 <article class="post-entry tag-entry"><div class="post-entry-layout"> 
@@ -315,28 +313,30 @@ main — 始终可部署 feature/* — 每个功能独立分支 hotfix/* — 紧
   </div>
   <footer class="entry-footer">
 
-<span title='2026-05-25 00:00:00 +0000 UTC'>2026-05-25</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>253 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
+<span title='2026-05-20 00:00:00 +0000 UTC'>2026-05-20</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>253 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
   <a class="entry-link" aria-label="post link to Python 开发中值得养成的 8 个编码习惯" href="http://localhost:1313/posts/python-tips/"></a>
 </article>
 
 <article class="post-entry tag-entry"><div class="post-entry-layout"> 
 <figure class="entry-cover">
-        <img loading="lazy" src="http://localhost:1313/images/square-2.jpg" alt="">
+        <img loading="lazy" src="http://localhost:1313/images/hero-3.jpg" alt="">
 </figure><div class="post-entry-body">
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Linux 命令行：从开发到运维的常用技巧
+    <h2 class="entry-hint-parent">Git 实用指南：从日常操作到团队协作
     </h2>
   </header>
   <div class="entry-content">
-    <p>不管做开发还是运维，熟练使用 Linux 命令行都能让工作效率提升数倍。以下是我在开发、部署和排错中最常用的操作。
-文件与目录操作 # 递归查找所有 .log 文件 find /var/log -name &#34;*.log&#34; -type f # 查找大于 100MB 的文件 find . -type f -size &#43;100M # 在指定目录搜索包含关键词的文件 grep -r &#34;ERROR&#34; /var/log/nginx/ --include=&#34;*.log&#34; # 统计代码行数 find src/ -name &#34;*.py&#34; | xargs wc -l 权限管理 # 给脚本添加执行权限 chmod &#43;x deploy.sh # 递归修改目录权限 chmod -R 755 public/ chmod -R 644 public/*.html # 修改所有者（常用于 Web 目录） sudo chown -R www-data:www-data /var/www/site/ 一个常见的坑：文件能否执行看权限位，能否被读取看父目录的 x 权限——目录没有执行权限时，即使文件权限正确也无法访问。
-系统监控与排错 # 查看磁盘使用情况 df -h # 查看某个目录占用 du -sh /var/log/* | sort -hr | head -10 # 内存使用 free -h # 实时进程信息 top htop # 如果安装了的话，更友好 # 查看特定进程 ps aux | grep nginx # 查看端口占用 ss -tlnp | grep :80 管道与文本处理 管道的核心思想是小工具组合：
+    <p>Git 是目前最主流的分布式版本控制系统。但学会 Git 不只是记住命令——理解背后的工作流才能真正高效协作。
+三个关键区域 每次操作 Git，数据在四个区域流转：
+工作目录 → 暂存区 → 本地仓库 → 远程仓库 理解这个模型后，add、commit、push 的关系就很清晰了：
+git add . # 工作目录 → 暂存区 git commit -m &#34;...&#34; # 暂存区 → 本地仓库 git push origin main # 本地仓库 → 远程仓库 分支策略 日常开发中最常用的分支模型是 GitHub Flow：
+main — 始终可部署 feature/* — 每个功能独立分支 hotfix/* — 紧急修复 # 从 main 切出功能分支 git checkout -b feature/add-login # 开发过程中频繁小提交 git commit -m &#34;feat: add login form&#34; git commit -m &#34;feat: add form validation&#34; # 完成后推送到远程 git push origin feature/add-login 合并 vs 变基 这是 Git 中最容易困惑的地方。简单原则：
 ...</p>
   </div>
   <footer class="entry-footer">
 
-<span title='2026-05-20 00:00:00 +0000 UTC'>2026-05-20</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>265 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
-  <a class="entry-link" aria-label="post link to Linux 命令行：从开发到运维的常用技巧" href="http://localhost:1313/posts/linux-commands/"></a>
+<span title='2026-05-18 00:00:00 +0000 UTC'>2026-05-18</span>&nbsp;·&nbsp;<span>2 min</span>&nbsp;·&nbsp;<span>269 words</span>&nbsp;·&nbsp;<span>新墨韬</span></footer></div></div>
+  <a class="entry-link" aria-label="post link to Git 实用指南：从日常操作到团队协作" href="http://localhost:1313/posts/git-guide/"></a>
 </article>
 </div>
     </main>

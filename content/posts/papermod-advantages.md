@@ -31,17 +31,9 @@ PaperMod 在性能方面做了大量细致的工作：
 
 ## SEO：开箱即用的搜索引擎优化
 
-PaperMod 对 SEO 的支持非常全面：
+PaperMod 内置了完善的 SEO 支持：Open Graph、Twitter Cards、JSON-LD 结构化数据、Canonical URL、robots.txt、RSS 等。PaperUI 完全继承了这些能力。
 
-| 特性 | 说明 |
-|------|------|
-| Open Graph 标签 | 完整的 og:title、og:description、og:image 等 |
-| Twitter Cards | 支持 summary 和 summary_large_image |
-| JSON-LD 结构化数据 | Schema.org 的 BlogPosting 标记 |
-| Canonical URL | 避免重复内容问题 |
-| robots.txt | 自动生成，区分开发/生产环境 |
-| RSS 订阅 | 完整的 RSS 2.0 输出 |
-| 面包屑导航 | 提升搜索引擎对网站结构的理解 |
+> 详细的 SEO 优化实践请参考 [PaperUI 的 SEO 优化实践指南](/posts/paperui-seo/)。
 
 ## 多语言支持
 

@@ -1,5 +1,5 @@
 ---
-date: '2026-05-25'
+date: '2026-05-20'
 title: 'Python 开发中值得养成的 8 个编码习惯'
 categories: ["技术"]
 tags: ["Python", "编程", "最佳实践"]

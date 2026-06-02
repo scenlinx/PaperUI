@@ -1,12 +1,16 @@
 ---
 date: '2026-05-25'
 title: 'PaperUI 完整配置指南与参数说明'
+cover:
+  image: '/images/hero-2.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "配置"]
 description: 'PaperUI 主题的完整配置参数参考手册，包含基础参数、轮播配置、侧边栏小部件、SEO 相关等所有可配置项'
 ---
 
-这篇文章是 PaperUI 主题的完整配置参考。你可以把它当作手册来查阅。
+这篇文章是 PaperUI 主题的完整配置参考手册。你可以把它当作速查表来查阅。
+
+> 如果你想知道**每个参数在模板层面的具体作用逻辑**，推荐阅读 [Hugo + PaperUI 配置文件逐行详解](/posts/hugo-toml-config-guide/)，它以本博客真实配置为例，结合模板源码进行拆解。
 
 ## 基础站点配置
 

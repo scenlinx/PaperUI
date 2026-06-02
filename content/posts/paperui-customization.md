@@ -1,6 +1,8 @@
 ---
 date: '2026-05-22'
 title: 'PaperUI 自定义与二次开发指南'
+cover:
+  image: '/images/hero-2.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "自定义", "CSS"]
 description: '如何在不修改主题源码的情况下自定义 PaperUI 的外观和行为，包括颜色定制、布局调整、添加新功能模块等'

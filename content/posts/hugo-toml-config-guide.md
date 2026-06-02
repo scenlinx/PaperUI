@@ -1,12 +1,16 @@
 ---
 date: '2026-05-31'
 title: 'Hugo + PaperUI 配置文件逐行详解'
+cover:
+  image: '/images/hero-2.jpg'
 categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "配置", "教程"]
 description: '基于本博客真实 hugo.toml 配置，逐段拆解每个参数的作用、生效逻辑和调整建议，附带模板渲染源码分析。'
 ---
 
 `hugo.toml` 是 Hugo 站点的核心配置文件。本文以本博客当前使用的配置为基础，结合 PaperUI 主题的模板源码，逐段说明每个配置项的实际作用。
+
+> 如果你只需要**快速查阅所有配置参数**，推荐先看 [PaperUI 完整配置指南与参数说明](/posts/paperui-config-guide/)，那是更紧凑的参考手册。
 
 ## 站点基础
 
