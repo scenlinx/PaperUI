@@ -9,47 +9,6 @@
     <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 快速入门指南</title>
-      <link>http://localhost:1313/posts/getting-started/</link>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/getting-started/</guid>
-      <description>&lt;p&gt;Hugo 是一个用 Go 语言编写的静态网站生成器，以其构建速度快而闻名。&lt;/p&gt;
-&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 Hugo&lt;/h2&gt;
-&lt;p&gt;Hugo 的安装非常简单，你可以在官方网站下载对应平台的二进制文件。&lt;/p&gt;
-&lt;h3 id=&#34;基本用法&#34;&gt;基本用法&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建新站点&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site my-site
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建新文章&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-post.md
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 启动开发服务器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;为什么选择-hugo&#34;&gt;为什么选择 Hugo？&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;构建速度快&lt;/li&gt;
-&lt;li&gt;部署简单&lt;/li&gt;
-&lt;li&gt;主题丰富&lt;/li&gt;
-&lt;li&gt;社区活跃&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
-      <title>你好，世界！</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;欢迎来到我的新网站！这是使用 &lt;strong&gt;Hugo&lt;/strong&gt; 和 &lt;strong&gt;PaperMod&lt;/strong&gt; 主题构建的第一篇文章。&lt;/p&gt;
-&lt;h2 id=&#34;关于这个网站&#34;&gt;关于这个网站&lt;/h2&gt;
-&lt;p&gt;这是一个使用 Hugo 静态网站生成器构建的个人博客网站。&lt;/p&gt;
-&lt;h3 id=&#34;功能特点&#34;&gt;功能特点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;支持深色/浅色模式切换&lt;/li&gt;
-&lt;li&gt;响应式设计&lt;/li&gt;
-&lt;li&gt;快速加载&lt;/li&gt;
-&lt;li&gt;代码高亮&lt;/li&gt;
-&lt;/ul&gt;</description>
-    </item>
-    <item>
       <title>现代软件开发完整工作流</title>
       <link>http://localhost:1313/posts/modern-development-workflow/</link>
       <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
@@ -57,256 +16,109 @@
       <description>从代码编写到生产部署的完整现代开发工作流实践指南</description>
     </item>
     <item>
-      <title>Git 常用命令速查手册</title>
+      <title>Hugo &#43; PaperUI 配置文件逐行详解</title>
+      <link>http://localhost:1313/posts/hugo-toml-config-guide/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-toml-config-guide/</guid>
+      <description>基于本博客真实 hugo.toml 配置，逐段拆解每个参数的作用、生效逻辑和调整建议，附带模板渲染源码分析。</description>
+    </item>
+    <item>
+      <title>PaperUI：一个更懂中文博客的 Hugo 主题</title>
+      <link>http://localhost:1313/posts/paperui-introduction/</link>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-introduction/</guid>
+      <description>PaperUI 是基于 PaperMod 深度优化的 Hugo 主题，专为中文博客场景打造，支持首页轮播、双栏布局、彩色标签等现代特性</description>
+    </item>
+    <item>
+      <title>PaperMod 为什么是 Hugo 社区最受欢迎的主题</title>
+      <link>http://localhost:1313/posts/papermod-advantages/</link>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/papermod-advantages/</guid>
+      <description>深度分析 PaperMod 主题的设计哲学：极简美学、出色的性能优化、完善的 SEO 支持，以及为什么它在全球范围内被广泛使用</description>
+    </item>
+    <item>
+      <title>Git 实用指南：从日常操作到团队协作</title>
       <link>http://localhost:1313/posts/git-guide/</link>
       <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/git-guide/</guid>
-      <description>&lt;p&gt;Git 是目前最流行的分布式版本控制系统，掌握常用命令是每个开发者的必备技能。&lt;/p&gt;
-&lt;h2 id=&#34;基础操作&#34;&gt;基础操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 初始化仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git init
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 克隆仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git clone https://github.com/user/repo.git
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加文件到暂存区&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add .
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git add filename.txt
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提交更改&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git commit -m &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;提交信息&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;分支管理&#34;&gt;分支管理&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看分支&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建新分支&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git branch feature-a
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 切换分支&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout feature-a
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 或&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git switch feature-a
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建并切换&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git checkout -b feature-b
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;远程操作&#34;&gt;远程操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看远程仓库&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git remote -v
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 推送代码&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git push origin main
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 拉取更新&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git pull origin main
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 合并分支&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;git merge feature-a
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>一份面向日常开发的 Git 实用指南，涵盖分支管理、合并冲突解决、提交规范与团队协作流程。</description>
     </item>
     <item>
-      <title>Python 开发实用技巧</title>
+      <title>为什么我选择在 PaperMod 基础上开发 PaperUI</title>
+      <link>http://localhost:1313/posts/why-paperui/</link>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-paperui/</guid>
+      <description>从实际使用场景出发，分析在 PaperMod 基础上做二次开发的技术决策过程：保留什么、改进什么、为什么这样做</description>
+    </item>
+    <item>
+      <title>PaperUI 新增功能全面解析</title>
+      <link>http://localhost:1313/posts/paperui-features/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-features/</guid>
+      <description>逐一详解 PaperUI 相比 PaperMod 新增的每个功能：首页轮播、双栏布局、彩色标签、搜索增强、移动端优化等</description>
+    </item>
+    <item>
+      <title>PaperUI 安装与快速上手指南</title>
+      <link>http://localhost:1313/posts/paperui-quickstart/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-quickstart/</guid>
+      <description>从零开始，5 分钟完成 PaperUI 主题的安装和基础配置，包含 Git Submodule 和 Hugo Modules 两种安装方式</description>
+    </item>
+    <item>
+      <title>PaperUI 完整配置指南与参数说明</title>
+      <link>http://localhost:1313/posts/paperui-config-guide/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-config-guide/</guid>
+      <description>PaperUI 主题的完整配置参数参考手册，包含基础参数、轮播配置、侧边栏小部件、SEO 相关等所有可配置项</description>
+    </item>
+    <item>
+      <title>Python 开发中值得养成的 8 个编码习惯</title>
       <link>http://localhost:1313/posts/python-tips/</link>
       <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/python-tips/</guid>
-      <description>&lt;p&gt;Python 是一门优雅且强大的编程语言，这里分享一些日常开发中的实用技巧。&lt;/p&gt;
-&lt;h2 id=&#34;列表推导式&#34;&gt;列表推导式&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 传统写法&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;squares &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    squares&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(i &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; i)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 列表推导式&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;squares &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [i &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; i &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(&lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt;)]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;字典合并&#34;&gt;字典合并&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Python 3.9+&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dict1 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;b&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;dict2 &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;c&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;d&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;merged &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; dict1 &lt;span style=&#34;color:#f92672&#34;&gt;|&lt;/span&gt; dict2
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# {&amp;#39;a&amp;#39;: 1, &amp;#39;b&amp;#39;: 2, &amp;#39;c&amp;#39;: 3, &amp;#39;d&amp;#39;: 4}&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;上下文管理器&#34;&gt;上下文管理器&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 使用 with 语句自动管理资源&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; open(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;file.txt&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;r&amp;#34;&lt;/span&gt;) &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; f:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    content &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; f&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;read()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 文件会自动关闭&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;自定义上下文管理器&#34;&gt;自定义上下文管理器&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; contextlib &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; contextmanager
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;@contextmanager&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;timer&lt;/span&gt;():
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; time
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    start &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;time()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;yield&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    end &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; time&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;time()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;耗时: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;end &lt;span style=&#34;color:#f92672&#34;&gt;-&lt;/span&gt; start&lt;span style=&#34;color:#e6db74&#34;&gt;:&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;.2f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;秒&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;with&lt;/span&gt; timer():
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# 要计时的代码&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sum(range(&lt;span style=&#34;color:#ae81ff&#34;&gt;1000000&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <description>分享日常 Python 开发中实用且容易上手的编码技巧，涵盖列表推导、字典操作、上下文管理器、类型提示等。</description>
     </item>
     <item>
-      <title>VS Code 高效配置指南</title>
-      <link>http://localhost:1313/posts/vs-code-setup/</link>
+      <title>PaperUI 的 SEO 优化实践指南</title>
+      <link>http://localhost:1313/posts/paperui-seo/</link>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-seo/</guid>
+      <description>如何利用 PaperUI 主题的内置 SEO 功能提升博客在搜索引擎中的表现，包括结构化数据、性能优化、Sitemap 配置等实用技巧</description>
+    </item>
+    <item>
+      <title>PaperUI 博客部署到生产环境的完整方案</title>
+      <link>http://localhost:1313/posts/paperui-deployment/</link>
+      <pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-deployment/</guid>
+      <description>从本地开发到线上部署的完整流程，涵盖 GitHub Pages、Cloudflare Pages、Netlify 等主流部署平台的操作步骤</description>
+    </item>
+    <item>
+      <title>PaperUI 自定义与二次开发指南</title>
+      <link>http://localhost:1313/posts/paperui-customization/</link>
       <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/vs-code-setup/</guid>
-      <description>&lt;p&gt;Visual Studio Code 是目前最受欢迎的代码编辑器之一，通过合理配置可以极大提升开发效率。&lt;/p&gt;
-&lt;h2 id=&#34;必备扩展&#34;&gt;必备扩展&lt;/h2&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Prettier&lt;/strong&gt; - 代码格式化&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;ESLint&lt;/strong&gt; - JavaScript 代码检查&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;GitLens&lt;/strong&gt; - Git 增强功能&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Live Server&lt;/strong&gt; - 本地开发服务器&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Material Icon Theme&lt;/strong&gt; - 文件图标主题&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h2 id=&#34;常用快捷键&#34;&gt;常用快捷键&lt;/h2&gt;
-&lt;table&gt;
-	&lt;thead&gt;
-			&lt;tr&gt;
-					&lt;th&gt;快捷键&lt;/th&gt;
-					&lt;th&gt;功能&lt;/th&gt;
-			&lt;/tr&gt;
-	&lt;/thead&gt;
-	&lt;tbody&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;Ctrl+P&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;快速打开文件&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;Ctrl+Shift+P&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;打开命令面板&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;`Ctrl+``&lt;/td&gt;
-					&lt;td&gt;打开终端&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;Ctrl+D&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;选中下一个相同词&lt;/td&gt;
-			&lt;/tr&gt;
-			&lt;tr&gt;
-					&lt;td&gt;&lt;code&gt;Alt+↑/↓&lt;/code&gt;&lt;/td&gt;
-					&lt;td&gt;移动行&lt;/td&gt;
-			&lt;/tr&gt;
-	&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;用户设置&#34;&gt;用户设置&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-json&#34; data-lang=&#34;json&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;{
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;editor.fontSize&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;14&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;editor.fontFamily&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JetBrains Mono, Consolas&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;editor.formatOnSave&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;editor.minimap.enabled&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;&amp;#34;workbench.colorTheme&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;One Dark Pro&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
+      <guid>http://localhost:1313/posts/paperui-customization/</guid>
+      <description>如何在不修改主题源码的情况下自定义 PaperUI 的外观和行为，包括颜色定制、布局调整、添加新功能模块等</description>
     </item>
     <item>
-      <title>Linux 命令行实用技巧</title>
+      <title>PaperUI 常见问题与最佳实践</title>
+      <link>http://localhost:1313/posts/paperui-faq-best-practices/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-faq-best-practices/</guid>
+      <description>PaperUI 使用过程中常见问题的解答，以及搭建 Hugo 博客的最佳实践建议，涵盖内容管理、图片优化、版本控制等</description>
+    </item>
+    <item>
+      <title>Linux 命令行：从开发到运维的常用技巧</title>
       <link>http://localhost:1313/posts/linux-commands/</link>
       <pubDate>Wed, 20 May 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/linux-commands/</guid>
-      <description>&lt;p&gt;Linux 命令行是程序员的重要工具，掌握这些技巧能让你事半功倍。&lt;/p&gt;
-&lt;h2 id=&#34;文件操作&#34;&gt;文件操作&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查找文件&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;find . -name &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;*.py&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查找文件内容&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grep -r &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;keyword&amp;#34;&lt;/span&gt; .
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看文件前10行&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;head filename
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看文件后10行&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;tail -f filename
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;权限管理&#34;&gt;权限管理&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 修改文件权限&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chmod &lt;span style=&#34;color:#ae81ff&#34;&gt;755&lt;/span&gt; script.sh
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 修改文件所有者&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chown user:group filename
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看权限&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls -la
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;系统信息&#34;&gt;系统信息&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看磁盘使用&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;df -h
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看内存使用&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;free -h
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看进程&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ps aux | grep nginx
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看端口占用&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;netstat -tlnp
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 或&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ss -tlnp
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;小技巧&#34;&gt;小技巧&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 历史命令搜索（Ctrl+R）&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 上次使用的参数&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mkdir newdir
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cd !$
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 管道组合&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat access.log | awk &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;{print $1}&amp;#39;&lt;/span&gt; | sort | uniq -c | sort -nr
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>Docker 容器化入门</title>
-      <link>http://localhost:1313/posts/docker-intro/</link>
-      <pubDate>Mon, 18 May 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/docker-intro/</guid>
-      <description>&lt;p&gt;Docker 改变了应用的部署方式，让&amp;quot;在我机器上能运行&amp;quot;成为过去。&lt;/p&gt;
-&lt;h2 id=&#34;什么是-docker&#34;&gt;什么是 Docker？&lt;/h2&gt;
-&lt;p&gt;Docker 是一个容器化平台，可以将应用及其依赖打包到一个轻量级的容器中。&lt;/p&gt;
-&lt;h2 id=&#34;基本概念&#34;&gt;基本概念&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;镜像 (Image)&lt;/strong&gt; - 应用的只读模板&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;容器 (Container)&lt;/strong&gt; - 镜像的运行实例&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Dockerfile&lt;/strong&gt; - 构建镜像的脚本&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;仓库 (Registry)&lt;/strong&gt; - 存储镜像的地方&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&#34;常用命令&#34;&gt;常用命令&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 拉取镜像&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker pull nginx:latest
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 运行容器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker run -d -p 80:80 --name my-nginx nginx
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看运行中的容器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker ps
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 停止容器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker stop my-nginx
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 查看日志&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs my-nginx
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;dockerfile-示例&#34;&gt;Dockerfile 示例&lt;/h2&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-dockerfile&#34; data-lang=&#34;dockerfile&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;FROM&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;node:18-alpine&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;WORKDIR&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;/app&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;COPY&lt;/span&gt; package*.json ./&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;RUN&lt;/span&gt; npm install&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;COPY&lt;/span&gt; . .&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;EXPOSE&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;3000&lt;/span&gt;&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CMD&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;npm&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;start&amp;#34;&lt;/span&gt;]&lt;span style=&#34;color:#960050;background-color:#1e0010&#34;&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description>
-    </item>
-    <item>
-      <title>测试超长文章</title>
-      <link>http://localhost:1313/posts/test-long-post/</link>
-      <pubDate>Mon, 01 Jan 2024 10:00:00 +0800</pubDate>
-      <guid>http://localhost:1313/posts/test-long-post/</guid>
-      <description>&lt;p&gt;这是一篇测试用的超长文章，用于测试置顶按钮是否正常显示。&lt;/p&gt;
-&lt;h2 id=&#34;章节-1&#34;&gt;章节 1&lt;/h2&gt;
-&lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.&lt;/p&gt;
-&lt;p&gt;Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;</description>
+      <description>整理 Linux 命令行中日常开发和服务器运维的常用操作，包括文件处理、权限管理、进程监控和管道组合。</description>
     </item>
     <item>
       <title>关于</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>关于新墨韬</description>
+      <description>关于新墨韬 - 一个专注技术分享与开源实践的个人博客</description>
     </item>
   </channel>
 </rss>

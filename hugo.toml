@@ -10,8 +10,16 @@ home = ['HTML', 'RSS', 'JSON']
 
 [params]
 env = 'production'
+author = '新墨韬'
 description = '新墨韬 - 个人技术博客'
+DateFormat = '2006-01-02'
 keywords = ['博客', 'Hugo', 'PaperMod', '技术']
+mainSections = ['posts']
+
+[params.label]
+icon = '/images/logo.svg'
+iconHeight = 24
+images = ['/images/hero-1.jpg']
 defaultTheme = 'auto'
 disableThemeToggle = false
 disableScrollToTop = false
@@ -34,23 +42,41 @@ Content = '这里是一个技术博客，分享编程、开源和生活中的思
 
 [params.homeCarousel]
 slides = [
-  { image = '/images/hero-1.jpg', url = '/posts/getting-started/' },
-  { image = '/images/hero-2.jpg', url = '/posts/hello-world/' },
-  { image = '/images/hero-3.jpg', url = '/posts/git-guide/' },
+  { image = '/images/hero-1.jpg', url = '/posts/paperui-introduction/', alt = 'PaperUI 主题介绍' },
+  { image = '/images/hero-2.jpg', url = '/posts/papermod-advantages/', alt = 'PaperMod 优势详解' },
+  { image = '/images/hero-3.jpg', url = '/posts/git-guide/', alt = 'Git 使用指南' },
 ]
 middle = [
-  { image = '/images/square-1.jpg', url = '/posts/python-tips/' },
-  { image = '/images/square-2.jpg', url = '/posts/linux-commands/' },
+  { image = '/images/square-1.jpg', url = '/posts/python-tips/', alt = 'Python 技巧分享' },
+  { image = '/images/square-2.jpg', url = '/posts/linux-commands/', alt = 'Linux 命令速查' },
 ]
-right = { image = '/images/portrait-1.jpg', url = '/about/' }
+right = { image = '/images/portrait-1.jpg', url = '/about/', alt = '关于作者' }
 
 [params.assets]
 favicon = '/favicon.svg'
 favicon16x16 = '/favicon.svg'
 favicon32x32 = '/favicon.svg'
 
+# [params.giscus]
+# 在 https://giscus.app 配置后填入以下信息
+# repo = ''
+# repoId = ''
+# category = 'Announcements'
+# categoryId = ''
+# mapping = 'pathname'
+# lang = 'zh-CN'
+
 [params.footer]
 hideCopyright = false
+
+# [params.analytics.google]
+# SiteVerificationTag = ''  # Google Search Console 验证标签
+# [params.analytics.bing]
+# SiteVerificationTag = ''  # Bing Webmaster 验证标签
+# [params.analytics.yandex]
+# SiteVerificationTag = ''  # Yandex 验证标签
+# [params.analytics.naver]
+# SiteVerificationTag = ''  # Naver 验证标签
 
 [languages.zh-cn]
 locale = 'zh-CN'

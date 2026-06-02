@@ -167,6 +167,8 @@
     padding: var(--gap);
     border: 1px solid var(--border);
     box-shadow: 0 1px 2px rgba(0,0,0,0.04);
+    min-width: 0;
+    overflow-x: hidden;
 }
 
 .main:has(.post-single.wide-layout) {
@@ -368,16 +370,6 @@ details li ul {
     transition: background var(--transition), color var(--transition), border-color var(--transition);
 }
 
-.post-tags li:nth-child(8n+1) a { background: var(--tag-bg-1); color: var(--tag-1); }
-.post-tags li:nth-child(8n+2) a { background: var(--tag-bg-2); color: var(--tag-2); }
-.post-tags li:nth-child(8n+3) a { background: var(--tag-bg-3); color: var(--tag-3); }
-.post-tags li:nth-child(8n+4) a { background: var(--tag-bg-4); color: var(--tag-4); }
-.post-tags li:nth-child(8n+5) a { background: var(--tag-bg-5); color: var(--tag-5); }
-.post-tags li:nth-child(8n+6) a { background: var(--tag-bg-6); color: var(--tag-6); }
-.post-tags li:nth-child(8n+7) a { background: var(--tag-bg-7); color: var(--tag-7); }
-.post-tags li:nth-child(8n+8) a { background: var(--tag-bg-8); color: var(--tag-8); }
-
-
 .post-tags a:hover {
     background: var(--accent) !important;
     border-color: var(--accent);
@@ -409,7 +401,25 @@ details li ul {
 }
 
 .paginav a {
+    flex: 1;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+    padding: 0.8rem;
+    background: var(--code-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.paginav a span {
+    display: block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .paginav .title {
@@ -419,31 +429,12 @@ details li ul {
     color: var(--secondary);
 }
 
-.paginav a {
-    flex: 1;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.8rem;
-    background: var(--code-bg);
-    border: 1px solid var(--border);
-    border-radius: var(--radius);
-    transition: background var(--transition), border-color var(--transition);
-}
-
-.paginav a span {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
 .paginav .next {
-    justify-content: flex-end;
+    align-items: flex-end;
 }
 
-.paginav .next span:first-of-type {
-    order: 2;
+.paginav .next span {
+    text-align: right;
 }
 
 .paginav a:hover {
@@ -454,10 +445,6 @@ details li ul {
 .paginav span:hover:not(.title) {
     text-underline-offset: 0.2rem;
     text-decoration: underline;
-}
-
-.paginav .next {
-    text-align: right;
 }
 
 [dir="rtl"] .paginav .next {

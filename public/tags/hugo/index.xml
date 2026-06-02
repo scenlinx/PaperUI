@@ -6,48 +6,84 @@
     <description>Recent content in Hugo on 新墨韬</description>
     <generator>Hugo</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Mon, 01 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Hugo 快速入门指南</title>
-      <link>http://localhost:1313/posts/getting-started/</link>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/getting-started/</guid>
-      <description>&lt;p&gt;Hugo 是一个用 Go 语言编写的静态网站生成器，以其构建速度快而闻名。&lt;/p&gt;
-&lt;h2 id=&#34;安装-hugo&#34;&gt;安装 Hugo&lt;/h2&gt;
-&lt;p&gt;Hugo 的安装非常简单，你可以在官方网站下载对应平台的二进制文件。&lt;/p&gt;
-&lt;h3 id=&#34;基本用法&#34;&gt;基本用法&lt;/h3&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建新站点&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new site my-site
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 创建新文章&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo new posts/my-post.md
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 启动开发服务器&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;为什么选择-hugo&#34;&gt;为什么选择 Hugo？&lt;/h2&gt;
-&lt;ul&gt;
-&lt;li&gt;构建速度快&lt;/li&gt;
-&lt;li&gt;部署简单&lt;/li&gt;
-&lt;li&gt;主题丰富&lt;/li&gt;
-&lt;li&gt;社区活跃&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <title>Hugo &#43; PaperUI 配置文件逐行详解</title>
+      <link>http://localhost:1313/posts/hugo-toml-config-guide/</link>
+      <pubDate>Sun, 31 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/hugo-toml-config-guide/</guid>
+      <description>基于本博客真实 hugo.toml 配置，逐段拆解每个参数的作用、生效逻辑和调整建议，附带模板渲染源码分析。</description>
     </item>
     <item>
-      <title>你好，世界！</title>
-      <link>http://localhost:1313/posts/hello-world/</link>
-      <pubDate>Mon, 01 Jun 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/hello-world/</guid>
-      <description>&lt;p&gt;欢迎来到我的新网站！这是使用 &lt;strong&gt;Hugo&lt;/strong&gt; 和 &lt;strong&gt;PaperMod&lt;/strong&gt; 主题构建的第一篇文章。&lt;/p&gt;
-&lt;h2 id=&#34;关于这个网站&#34;&gt;关于这个网站&lt;/h2&gt;
-&lt;p&gt;这是一个使用 Hugo 静态网站生成器构建的个人博客网站。&lt;/p&gt;
-&lt;h3 id=&#34;功能特点&#34;&gt;功能特点&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;支持深色/浅色模式切换&lt;/li&gt;
-&lt;li&gt;响应式设计&lt;/li&gt;
-&lt;li&gt;快速加载&lt;/li&gt;
-&lt;li&gt;代码高亮&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <title>PaperUI：一个更懂中文博客的 Hugo 主题</title>
+      <link>http://localhost:1313/posts/paperui-introduction/</link>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-introduction/</guid>
+      <description>PaperUI 是基于 PaperMod 深度优化的 Hugo 主题，专为中文博客场景打造，支持首页轮播、双栏布局、彩色标签等现代特性</description>
+    </item>
+    <item>
+      <title>PaperMod 为什么是 Hugo 社区最受欢迎的主题</title>
+      <link>http://localhost:1313/posts/papermod-advantages/</link>
+      <pubDate>Fri, 29 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/papermod-advantages/</guid>
+      <description>深度分析 PaperMod 主题的设计哲学：极简美学、出色的性能优化、完善的 SEO 支持，以及为什么它在全球范围内被广泛使用</description>
+    </item>
+    <item>
+      <title>为什么我选择在 PaperMod 基础上开发 PaperUI</title>
+      <link>http://localhost:1313/posts/why-paperui/</link>
+      <pubDate>Thu, 28 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/why-paperui/</guid>
+      <description>从实际使用场景出发，分析在 PaperMod 基础上做二次开发的技术决策过程：保留什么、改进什么、为什么这样做</description>
+    </item>
+    <item>
+      <title>PaperUI 新增功能全面解析</title>
+      <link>http://localhost:1313/posts/paperui-features/</link>
+      <pubDate>Wed, 27 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-features/</guid>
+      <description>逐一详解 PaperUI 相比 PaperMod 新增的每个功能：首页轮播、双栏布局、彩色标签、搜索增强、移动端优化等</description>
+    </item>
+    <item>
+      <title>PaperUI 安装与快速上手指南</title>
+      <link>http://localhost:1313/posts/paperui-quickstart/</link>
+      <pubDate>Tue, 26 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-quickstart/</guid>
+      <description>从零开始，5 分钟完成 PaperUI 主题的安装和基础配置，包含 Git Submodule 和 Hugo Modules 两种安装方式</description>
+    </item>
+    <item>
+      <title>PaperUI 完整配置指南与参数说明</title>
+      <link>http://localhost:1313/posts/paperui-config-guide/</link>
+      <pubDate>Mon, 25 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-config-guide/</guid>
+      <description>PaperUI 主题的完整配置参数参考手册，包含基础参数、轮播配置、侧边栏小部件、SEO 相关等所有可配置项</description>
+    </item>
+    <item>
+      <title>PaperUI 的 SEO 优化实践指南</title>
+      <link>http://localhost:1313/posts/paperui-seo/</link>
+      <pubDate>Sun, 24 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-seo/</guid>
+      <description>如何利用 PaperUI 主题的内置 SEO 功能提升博客在搜索引擎中的表现，包括结构化数据、性能优化、Sitemap 配置等实用技巧</description>
+    </item>
+    <item>
+      <title>PaperUI 博客部署到生产环境的完整方案</title>
+      <link>http://localhost:1313/posts/paperui-deployment/</link>
+      <pubDate>Sat, 23 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-deployment/</guid>
+      <description>从本地开发到线上部署的完整流程，涵盖 GitHub Pages、Cloudflare Pages、Netlify 等主流部署平台的操作步骤</description>
+    </item>
+    <item>
+      <title>PaperUI 自定义与二次开发指南</title>
+      <link>http://localhost:1313/posts/paperui-customization/</link>
+      <pubDate>Fri, 22 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-customization/</guid>
+      <description>如何在不修改主题源码的情况下自定义 PaperUI 的外观和行为，包括颜色定制、布局调整、添加新功能模块等</description>
+    </item>
+    <item>
+      <title>PaperUI 常见问题与最佳实践</title>
+      <link>http://localhost:1313/posts/paperui-faq-best-practices/</link>
+      <pubDate>Thu, 21 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/paperui-faq-best-practices/</guid>
+      <description>PaperUI 使用过程中常见问题的解答，以及搭建 Hugo 博客的最佳实践建议，涵盖内容管理、图片优化、版本控制等</description>
     </item>
   </channel>
 </rss>

@@ -29,16 +29,6 @@
     line-height: 1;
 }
 
-.terms-tags li:nth-child(8n+1) a { background: var(--tag-bg-1); color: var(--tag-1); }
-.terms-tags li:nth-child(8n+2) a { background: var(--tag-bg-2); color: var(--tag-2); }
-.terms-tags li:nth-child(8n+3) a { background: var(--tag-bg-3); color: var(--tag-3); }
-.terms-tags li:nth-child(8n+4) a { background: var(--tag-bg-4); color: var(--tag-4); }
-.terms-tags li:nth-child(8n+5) a { background: var(--tag-bg-5); color: var(--tag-5); }
-.terms-tags li:nth-child(8n+6) a { background: var(--tag-bg-6); color: var(--tag-6); }
-.terms-tags li:nth-child(8n+7) a { background: var(--tag-bg-7); color: var(--tag-7); }
-.terms-tags li:nth-child(8n+8) a { background: var(--tag-bg-8); color: var(--tag-8); }
-
-
 .terms-tags a:hover {
     background: var(--accent) !important;
     color: #fff !important;

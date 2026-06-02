@@ -59,6 +59,14 @@
         min-height: 260px;
     }
 
+    /* Mobile: hide cover image, keep full-width content */
+    .post-entry-layout .entry-cover {
+        display: none;
+    }
+    .post-entry-layout {
+        display: block;
+    }
+
     /* archive */
     .archive-month {
         flex-direction: column;

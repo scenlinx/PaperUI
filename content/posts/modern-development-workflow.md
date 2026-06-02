@@ -4,6 +4,8 @@ title: '现代软件开发完整工作流'
 categories: ["技术"]
 tags: ["开发流程", "Git", "Docker", "CI/CD"]
 description: '从代码编写到生产部署的完整现代开发工作流实践指南'
+cover:
+  image: '/images/hero-3.jpg'
 ---
 
 在现代软件开发中，高效的工作流（Workflow）是提高团队开发效率和保证代码质量的关键。本文将分享一套完整的现代开发工作流实践，涵盖从本地开发到生产部署的各个环节。

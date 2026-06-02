@@ -28,6 +28,33 @@
 }
 
 /* Generic tag color application - use nth-child(8n+X) to cycle 8 colors */
+/* Unified 8-color nth-child rules, shared by sidebar-tag, post-tags, and terms-tags */
+.sidebar-tag:nth-child(8n+1),
+.post-tags li:nth-child(8n+1) a,
+.terms-tags li:nth-child(8n+1) a { background: var(--tag-bg-1); color: var(--tag-1); }
+.sidebar-tag:nth-child(8n+2),
+.post-tags li:nth-child(8n+2) a,
+.terms-tags li:nth-child(8n+2) a { background: var(--tag-bg-2); color: var(--tag-2); }
+.sidebar-tag:nth-child(8n+3),
+.post-tags li:nth-child(8n+3) a,
+.terms-tags li:nth-child(8n+3) a { background: var(--tag-bg-3); color: var(--tag-3); }
+.sidebar-tag:nth-child(8n+4),
+.post-tags li:nth-child(8n+4) a,
+.terms-tags li:nth-child(8n+4) a { background: var(--tag-bg-4); color: var(--tag-4); }
+.sidebar-tag:nth-child(8n+5),
+.post-tags li:nth-child(8n+5) a,
+.terms-tags li:nth-child(8n+5) a { background: var(--tag-bg-5); color: var(--tag-5); }
+.sidebar-tag:nth-child(8n+6),
+.post-tags li:nth-child(8n+6) a,
+.terms-tags li:nth-child(8n+6) a { background: var(--tag-bg-6); color: var(--tag-6); }
+.sidebar-tag:nth-child(8n+7),
+.post-tags li:nth-child(8n+7) a,
+.terms-tags li:nth-child(8n+7) a { background: var(--tag-bg-7); color: var(--tag-7); }
+.sidebar-tag:nth-child(8n+8),
+.post-tags li:nth-child(8n+8) a,
+.terms-tags li:nth-child(8n+8) a { background: var(--tag-bg-8); color: var(--tag-8); }
+
+/* Utility classes for manual tag color assignment */
 .tag-color-1 { background: var(--tag-bg-1); color: var(--tag-1); }
 .tag-color-2 { background: var(--tag-bg-2); color: var(--tag-2); }
 .tag-color-3 { background: var(--tag-bg-3); color: var(--tag-3); }

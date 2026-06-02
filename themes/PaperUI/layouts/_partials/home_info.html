@@ -15,8 +15,12 @@
         </button>
         <div class="carousel-slides">
           {{- range $i, $slide := .slides }}
-          <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }} role="group" aria-roledescription="slide" aria-label="幻灯片 {{ add $i 1 }}">
-            <img src="{{ $slide.image | relURL }}" alt="" loading="lazy">
+          <a href="{{ $slide.url | relURL }}" class="carousel-slide{{ if eq $i 0 }} active{{ end }}"{{ if gt $i 0 }} aria-hidden="true"{{ end }} role="group" aria-roledescription="slide" aria-label="幻灯片 {{ add $i 1 }}: {{ $slide.alt }}">
+            {{- if eq $i 0 }}
+            <img src="{{ $slide.image | relURL }}" alt="{{ $slide.alt }}" fetchpriority="high" loading="eager">
+            {{- else }}
+            <img src="{{ $slide.image | relURL }}" alt="{{ $slide.alt }}" loading="lazy">
+            {{- end }}
           </a>
           {{- end }}
         </div>
@@ -30,7 +34,7 @@
     <div class="hero-middle">
       {{- range .middle }}
       <a href="{{ .url | relURL }}" class="hero-square">
-        <img src="{{ .image | relURL }}" alt="" loading="lazy">
+        <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
       </a>
       {{- end }}
     </div>
@@ -38,7 +42,7 @@
       <div class="hero-inner hero-inner-3x4">
         {{- with .right }}
         <a href="{{ .url | relURL }}" class="hero-portrait">
-          <img src="{{ .image | relURL }}" alt="" loading="lazy">
+          <img src="{{ .image | relURL }}" alt="{{ .alt }}" loading="lazy">
         </a>
         {{- end }}
       </div>

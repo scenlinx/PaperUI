@@ -1,17 +1,28 @@
-{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- if and (gt (len $pages) 1) (in $pages . ) }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}  
+{{- if gt (len $pages) 1 }}
+{{- $sorted := sort $pages "Date" "desc" }}
+{{- $currentIndex := -1 }}
+{{- range $index, $page := $sorted }}
+  {{- if eq $page.File.UniqueID $.File.UniqueID }}
+    {{- $currentIndex = $index }}
+  {{- end }}
+{{- end }}
+{{- if ne $currentIndex -1 }}
 <nav class="paginav">
-  {{- with $pages.Next . }}
-  <a class="prev" href="{{ .Permalink }}">
-    <span class="title">« {{ i18n "prev_page" }}</span>
-    <span>{{- .Name -}}</span>
+  {{- if lt $currentIndex (sub (len $sorted) 1) }}
+  {{- $nextPage := index $sorted (add $currentIndex 1) }}
+  <a class="prev" href="{{ $nextPage.Permalink }}">
+    <span class="title">« {{ i18n "prev_page" | default "上一页" }}</span>
+    <span>{{- $nextPage.Title -}}</span>
   </a>
   {{- end }}
-  {{- with $pages.Prev . }}
-  <a class="next" href="{{ .Permalink }}">
-    <span class="title">{{ i18n "next_page" }} »</span>
-    <span>{{- .Name -}}</span>
+  {{- if gt $currentIndex 0 }}
+  {{- $prevPage := index $sorted (sub $currentIndex 1) }}
+  <a class="next" href="{{ $prevPage.Permalink }}">
+    <span class="title">{{ i18n "next_page" | default "下一页" }} »</span>
+    <span>{{- $prevPage.Title -}}</span>
   </a>
   {{- end }}
 </nav>
+{{- end }}
 {{- end }}

@@ -70,7 +70,9 @@
 {{- end }}
 
 {{- /* Search */}}
+{{- if .IsHome }}
 <link crossorigin="anonymous" rel="preload" as="fetch" href="/index.json">
+{{- end }}
 {{- $fastsearch := resources.Get "js/fastsearch.js" | js.Build (dict "params" (dict "fuseOpts" site.Params.fuseOpts)) | resources.Minify }}
 {{- $fusejs := resources.Get "js/fuse.basic.min.js" }}
 {{- $license_js := resources.Get "js/license.js" }}
@@ -186,7 +188,6 @@
 
 {{- /* Misc */}}
 {{- if hugo.IsProduction | or (eq site.Params.env "production") }}
-{{- partial "google_analytics.html" . }}
 {{- partial "templates/opengraph.html" . }}
 {{- partial "templates/twitter_cards.html" . }}
 {{- partial "templates/schema_json.html" . }}
