@@ -15,11 +15,6 @@ description = '新墨韬 - 个人技术博客'
 DateFormat = '2006-01-02'
 keywords = ['博客', 'Hugo', 'PaperMod', '技术']
 mainSections = ['posts']
-
-[params.label]
-icon = '/images/logo.svg'
-iconHeight = 24
-images = ['/images/hero-1.jpg']
 defaultTheme = 'auto'
 disableThemeToggle = false
 disableScrollToTop = false
@@ -35,6 +30,11 @@ ShowRssButtonInSectionTermList = true
 ShowAllPagesInArchive = false
 ShowFullTextinRSS = false
 homePostCount = 8
+
+[params.label]
+icon = '/images/logo.svg'
+iconHeight = 24
+images = ['/images/hero-1.jpg']
 
 [params.homeInfoParams]
 Title = '欢迎来到新墨韬'

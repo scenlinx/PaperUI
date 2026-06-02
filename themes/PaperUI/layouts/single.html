@@ -1,8 +1,10 @@
 {{- define "main" }}
 
+{{- if (.Param "ShowToc") }}
 <aside class="sidebar">
   {{- partial "toc.html" . }}
 </aside>
+{{- end }}
 
 <article class="post-single{{ if (.Param "wideLayout") }} wide-layout{{ end }}">
   <header class="post-header">

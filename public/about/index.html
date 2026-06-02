@@ -241,20 +241,6 @@
 </header>
 <main class="main">
 
-<aside class="sidebar"><div class="toc">
-    <div class="title">目录</div>
-    <div class="inner"><nav id="TableOfContents">
-  <ul>
-    <li><a href="#关于本站">关于本站</a></li>
-    <li><a href="#技术栈">技术栈</a></li>
-    <li><a href="#为什么写博客">为什么写博客</a></li>
-    <li><a href="#联系我">联系我</a></li>
-    <li><a href="#关于-paperui-主题">关于 PaperUI 主题</a></li>
-  </ul>
-</nav></div>
-</div>
-</aside>
-
 <article class="post-single wide-layout">
   <header class="post-header">
     
@@ -266,7 +252,7 @@
     </div>
     <div class="post-meta">
 
-<span>新墨韬</span>
+<span>1 min</span>&nbsp;·&nbsp;<span>93 words</span>&nbsp;·&nbsp;<span>新墨韬</span>
 
 </div>
   </header> 
@@ -420,6 +406,40 @@
             }
         });
     }
+    
+    document.querySelectorAll('pre > code').forEach(function(codeblock) {
+        var container = codeblock.parentNode.parentNode;
+        var copybutton = document.createElement('button');
+        copybutton.classList.add('copy-code');
+        copybutton.innerHTML = 'copy';
+        function copyingDone() {
+            copybutton.innerHTML = 'copied!';
+            setTimeout(function () { copybutton.innerHTML = 'copy'; }, 2000);
+        }
+        copybutton.addEventListener('click', function () {
+            if ('clipboard' in navigator) {
+                navigator.clipboard.writeText(codeblock.textContent);
+                copyingDone();
+                return;
+            }
+            var range = document.createRange();
+            range.selectNodeContents(codeblock);
+            var selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+            try { document.execCommand('copy'); copyingDone(); } catch (e) {}
+            selection.removeRange(range);
+        });
+        if (container.classList.contains("highlight")) {
+            container.appendChild(copybutton);
+        } else if (container.parentNode.firstChild == container) {
+            
+        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
+            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
+        } else {
+            codeblock.parentNode.appendChild(copybutton);
+        }
+    });
 
     
     var mbtn = document.getElementById('menu-toggle');
