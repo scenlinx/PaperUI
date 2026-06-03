@@ -9,6 +9,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/scenlinx/NewMT-hugo?style=social)](https://github.com/scenlinx/NewMT-hugo)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
+![PaperUI Theme Preview](https://paperui.newmt.fun/images/image.png)
+
 ---
 
 ## 目录

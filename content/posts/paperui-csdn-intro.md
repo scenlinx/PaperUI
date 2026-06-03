@@ -6,6 +6,8 @@ tags: ["Hugo", "PaperUI", "PaperMod", "静态网站", "博客搭建", "开源"]
 description: '分享一个基于 Hugo PaperMod 进行二次开发的技术实践：PaperUI 主题。文章从技术实现角度介绍轮播系统、侧边栏、彩色标签等功能的开发思路。'
 ---
 
+![PaperUI 主题预览](https://paperui.newmt.fun/images/image.png)
+
 ## 写在前面
 
 本文分享一个个人技术项目：[PaperUI](https://github.com/scenlinx/PaperUI) —— 基于 Hugo 社区主题 PaperMod 进行的二次开发实践。项目针对个人中文博客的使用场景，添加了一些自用的功能和调整。
