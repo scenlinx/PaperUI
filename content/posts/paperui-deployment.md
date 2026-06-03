@@ -5,7 +5,7 @@ categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "部署", "GitHub Pages", "Cloudflare"]
 description: '从本地开发到线上部署的完整流程，涵盖 GitHub Pages、Cloudflare Pages、Netlify 等主流部署平台的操作步骤'
 cover:
-  image: '/images/hero-2.jpg'
+  image: '/images/hero-2.webp'
 ---
 
 上一篇聊了 SEO 优化，这篇我们讲部署 —— 把本地写好的 PaperUI 博客发布到互联网上。

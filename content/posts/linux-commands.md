@@ -5,7 +5,7 @@ categories: ["技术"]
 tags: ["Linux", "命令行", "运维"]
 description: '整理 Linux 命令行中日常开发和服务器运维的常用操作，包括文件处理、权限管理、进程监控和管道组合。'
 cover:
-  image: '/images/square-2.jpg'
+  image: '/images/square-2.webp'
 ---
 
 不管做开发还是运维，熟练使用 Linux 命令行都能让工作效率提升数倍。以下是我在开发、部署和排错中最常用的操作。

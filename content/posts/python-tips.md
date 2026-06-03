@@ -5,7 +5,7 @@ categories: ["技术"]
 tags: ["Python", "编程", "最佳实践"]
 description: '分享日常 Python 开发中实用且容易上手的编码技巧，涵盖列表推导、字典操作、上下文管理器、类型提示等。'
 cover:
-  image: '/images/square-1.jpg'
+  image: '/images/square-1.webp'
 ---
 
 Python 以简洁优雅著称，但写出真正的 Pythonic 代码需要刻意练习。以下是日常开发中最值得养成的几个习惯。

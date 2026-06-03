@@ -5,7 +5,7 @@ categories: ["PaperUI"]
 tags: ["Hugo", "PaperMod", "静态网站"]
 description: '深度分析 PaperMod 主题的设计哲学：极简美学、出色的性能优化、完善的 SEO 支持，以及为什么它在全球范围内被广泛使用'
 cover:
-  image: '/images/hero-2.jpg'
+  image: '/images/hero-2.webp'
 ---
 
 在 Hugo 官方主题库中，PaperMod 长期占据着最受欢迎的位置。截至 2026 年，它在 GitHub 上的 Star 数超过 15,000，被数万个个人博客和文档站点使用。这篇文章来分析它为什么能获得如此广泛认可。

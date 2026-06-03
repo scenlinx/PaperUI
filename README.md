@@ -54,7 +54,7 @@
 | 分类数 | 2 个（PaperUI、技术） |
 | 标签数 | 29 个 |
 
-**站点地址：** [https://newmo.tech](https://newmo.tech)
+**站点地址：** [https://paperui.newmt.fun](https://paperui.newmt.fun)
 
 ---
 
@@ -233,7 +233,7 @@ hugo --minify                    # 强制压缩 HTML/CSS/JS
 本博客当前使用的完整配置文件：
 
 ```toml
-baseURL = 'https://newmo.tech/'
+baseURL = 'https://paperui.newmt.fun/'
 title = '新墨韬'
 theme = 'PaperUI'
 defaultContentLanguage = 'zh-cn'
@@ -334,7 +334,7 @@ weight = 5
 
 | 参数 | 示例值 | 说明 |
 |------|--------|------|
-| `baseURL` | `https://newmo.tech/` | 站点域名，末尾 `/` 不可少 |
+| `baseURL` | `https://paperui.newmt.fun/` | 站点域名，末尾 `/` 不可少 |
 | `title` | `新墨韬` | 浏览器标签页标题、RSS 标题 |
 | `theme` | `PaperUI` | 主题名称，对应 `themes/PaperUI/` |
 | `defaultContentLanguage` | `zh-cn` | 默认语言 |
@@ -717,7 +717,7 @@ hugo --renderToMemory
 
 - **GitHub：** [@scenlinx](https://github.com/scenlinx) — 关注项目动态和更新
 - **邮箱：** scenlinx@163.com
-- **博客：** [https://newmo.tech](https://newmo.tech)
+- **博客：** [https://paperui.newmt.fun](https://paperui.newmt.fun)
 
 ---
 

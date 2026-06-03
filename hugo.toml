@@ -1,4 +1,4 @@
-baseURL = 'https://newmo.tech/'
+baseURL = 'https://paperui.newmt.fun/'
 title = '新墨韬'
 theme = 'PaperUI'
 defaultContentLanguage = 'zh-cn'
@@ -38,7 +38,7 @@ homePostCount = 8
 [params.label]
 icon = '/images/logo.svg'
 iconHeight = 24
-images = ['/images/hero-1.jpg']
+images = ['/images/hero-1.webp']
 
 [params.homeInfoParams]
 Title = '欢迎来到新墨韬'
@@ -46,15 +46,15 @@ Content = '这里是一个技术博客，分享编程、开源和生活中的思
 
 [params.homeCarousel]
 slides = [
-  { image = '/images/hero-1.jpg', url = '/posts/paperui-introduction/', alt = 'PaperUI 主题介绍' },
-  { image = '/images/hero-2.jpg', url = '/posts/papermod-advantages/', alt = 'PaperMod 优势详解' },
-  { image = '/images/hero-3.jpg', url = '/posts/git-guide/', alt = 'Git 使用指南' },
+  { image = '/images/hero-1.webp', url = '/posts/paperui-introduction/', alt = 'PaperUI 主题介绍' },
+  { image = '/images/hero-2.webp', url = '/posts/papermod-advantages/', alt = 'PaperMod 优势详解' },
+  { image = '/images/hero-3.webp', url = '/posts/git-guide/', alt = 'Git 使用指南' },
 ]
 middle = [
-  { image = '/images/square-1.jpg', url = '/posts/python-tips/', alt = 'Python 技巧分享' },
-  { image = '/images/square-2.jpg', url = '/posts/linux-commands/', alt = 'Linux 命令速查' },
+  { image = '/images/square-1.webp', url = '/posts/python-tips/', alt = 'Python 技巧分享' },
+  { image = '/images/square-2.webp', url = '/posts/linux-commands/', alt = 'Linux 命令速查' },
 ]
-right = { image = '/images/portrait-1.jpg', url = '/about/', alt = '关于作者' }
+right = { image = '/images/portrait-1.webp', url = '/about/', alt = '关于作者' }
 
 [params.assets]
 favicon = '/favicon.svg'

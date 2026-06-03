@@ -5,7 +5,7 @@ categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "SEO", "性能优化"]
 description: '如何利用 PaperUI 主题的内置 SEO 功能提升博客在搜索引擎中的表现，包括结构化数据、性能优化、Sitemap 配置等实用技巧'
 cover:
-  image: '/images/hero-1.jpg'
+  image: '/images/hero-1.webp'
 ---
 
 SEO（搜索引擎优化）对技术博客来说至关重要 —— 好的内容需要被看见。PaperUI 继承了 PaperMod 完善的 SEO 体系，并在此基础上做了一些增强。这篇文章分享具体的优化实践。

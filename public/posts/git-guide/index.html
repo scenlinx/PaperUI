@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="auto" data-theme="auto">
 
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
@@ -9,17 +9,17 @@
 <meta name="keywords" content="Git, 版本控制, 团队协作">
 <meta name="description" content="一份面向日常开发的 Git 实用指南，涵盖分支管理、合并冲突解决、提交规范与团队协作流程。">
 <meta name="author" content="新墨韬">
-<link rel="canonical" href="http://localhost:1313/posts/git-guide/">
+<link rel="canonical" href="https://paperui.newmt.fun/posts/git-guide/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.1506718a1528913975d2ff15b4dd737a9f63a79b59afacece1622bed06c90396.css" integrity="sha256-FQZxihUokTl10v8VtN1zep9jp5tZr6zs4WIr7QbJA5Y=" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/search.a984c7865ea98ba242110420e5e3740fd9b1723b0d4791fd03f2f9899beb6352.js" integrity="sha256-qYTHhl6pi6JCEQQg5eN0D9mxcjsNR5H9A/L5iZvrY1I="></script>
-<link rel="icon" href="http://localhost:1313/favicon.svg">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon.svg">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon.svg">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<link rel="icon" href="https://paperui.newmt.fun/favicon.svg">
+<link rel="icon" type="image/png" sizes="16x16" href="https://paperui.newmt.fun/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="https://paperui.newmt.fun/favicon.svg">
+<link rel="apple-touch-icon" href="https://paperui.newmt.fun/apple-touch-icon.png">
+<link rel="mask-icon" href="https://paperui.newmt.fun/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="zh-cn" href="http://localhost:1313/posts/git-guide/">
+<link rel="alternate" hreflang="zh-cn" href="https://paperui.newmt.fun/posts/git-guide/">
 <noscript>
     <style>
         #theme-toggle,
@@ -65,7 +65,7 @@
         document.querySelector("html").dataset.theme = 'light';
     }
 
-</script><meta property="og:url" content="http://localhost:1313/posts/git-guide/">
+</script><meta property="og:url" content="https://paperui.newmt.fun/posts/git-guide/">
   <meta property="og:site_name" content="新墨韬">
   <meta property="og:title" content="Git 实用指南：从日常操作到团队协作">
   <meta property="og:description" content="一份面向日常开发的 Git 实用指南，涵盖分支管理、合并冲突解决、提交规范与团队协作流程。">
@@ -77,9 +77,9 @@
     <meta property="article:tag" content="Git">
     <meta property="article:tag" content="版本控制">
     <meta property="article:tag" content="团队协作">
-    <meta property="og:image" content="http://localhost:1313/images/hero-3.jpg">
+    <meta property="og:image" content="https://paperui.newmt.fun/images/hero-3.webp">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="http://localhost:1313/images/hero-3.jpg">
+<meta name="twitter:image" content="https://paperui.newmt.fun/images/hero-3.webp">
   <meta name="twitter:title" content="Git 实用指南：从日常操作到团队协作">
   <meta name="twitter:description" content="一份面向日常开发的 Git 实用指南，涵盖分支管理、合并冲突解决、提交规范与团队协作流程。">
 
@@ -93,13 +93,13 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "文章",
-      "item": "http://localhost:1313/posts/"
+      "item": "https://paperui.newmt.fun/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "Git 实用指南：从日常操作到团队协作",
-      "item": "http://localhost:1313/posts/git-guide/"
+      "item": "https://paperui.newmt.fun/posts/git-guide/"
     }
   ]
 }
@@ -117,7 +117,7 @@
   "articleBody": "Git 是目前最主流的分布式版本控制系统。但学会 Git 不只是记住命令——理解背后的工作流才能真正高效协作。\n三个关键区域 每次操作 Git，数据在四个区域流转：\n工作目录 → 暂存区 → 本地仓库 → 远程仓库 理解这个模型后，add、commit、push 的关系就很清晰了：\ngit add . # 工作目录 → 暂存区 git commit -m \"...\" # 暂存区 → 本地仓库 git push origin main # 本地仓库 → 远程仓库 分支策略 日常开发中最常用的分支模型是 GitHub Flow：\nmain — 始终可部署 feature/* — 每个功能独立分支 hotfix/* — 紧急修复 # 从 main 切出功能分支 git checkout -b feature/add-login # 开发过程中频繁小提交 git commit -m \"feat: add login form\" git commit -m \"feat: add form validation\" # 完成后推送到远程 git push origin feature/add-login 合并 vs 变基 这是 Git 中最容易困惑的地方。简单原则：\n场景 推荐方式 原因 将 main 更新合入 feature 分支 git rebase main 保持提交历史线性整洁 将 feature 合并回 main git merge --no-ff feature 保留功能分支的完整记录 实际工作流示例：\n# 在 feature 分支上，先把 main 的最新代码变基过来 git checkout feature/add-login git fetch origin git rebase origin/main # 解决冲突后继续 git rebase --continue # 推到远程（注意需要 force，因为历史被改写了） git push --force-with-lease origin feature/add-login # 然后发 Pull Request 合并到 main 解决合并冲突 冲突不可怕，可怕的是不知道怎么处理：\n# 发生冲突时 git status # 查看哪些文件冲突 # 冲突文件内标记： # \u003c\u003c\u003c\u003c\u003c\u003c\u003c HEAD (当前分支的内容) # ======= # \u003e\u003e\u003e\u003e\u003e\u003e\u003e feature-xxx (要合并进来的内容) # 手动编辑解决后 git add conflicted_file.txt git commit # 不需要 -m，Git 会生成 merge commit 提交信息规范 推荐使用 Conventional Commits 格式：\n(): # 常用 type： feat: 新功能 fix: 修复 bug docs: 文档变更 refactor: 重构（不改变功能） chore: 构建/工具变更 style: 格式调整 好的提交信息让 git log 一目了然：\nfeat(auth): add JWT token refresh fix(upload): handle file size exceed error docs(readme): update deployment guide 常见场景速查 # 撤销工作区修改 git checkout -- filename # 撤销暂存区 git reset HEAD filename # 修改最近一次提交信息 git commit --amend -m \"new message\" # 暂存当前工作（临时切换分支） git stash git stash pop # 查看某次提交的详情 git show # 查看谁改过某行代码 git blame filename Git 的关键不在于记住所有命令，而在于理解数据流向和形成一套稳定的协作流程。从 add → commit → push 的基础操作，到 rebase → merge 的分支管理，一步一个脚印就好。\n",
   "wordCount" : "269",
   "inLanguage": "zh-cn",
-  "image":"http://localhost:1313/images/hero-3.jpg","datePublished": "2026-05-18T00:00:00Z",
+  "image":"https://paperui.newmt.fun/images/hero-3.webp","datePublished": "2026-05-18T00:00:00Z",
   "dateModified": "2026-05-18T00:00:00Z",
   "author":{
     "@type": "Person",
@@ -125,14 +125,14 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "http://localhost:1313/posts/git-guide/"
+    "@id": "https://paperui.newmt.fun/posts/git-guide/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "新墨韬",
     "logo": {
       "@type": "ImageObject",
-      "url": "http://localhost:1313/favicon.svg"
+      "url": "https://paperui.newmt.fun/favicon.svg"
     }
   }
 }
@@ -143,33 +143,33 @@
 <header class="header">
     <nav class="header-nav">
         <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="新墨韬 (Alt + H)">
-                    <img src="http://localhost:1313/images/logo.svg" alt="" aria-label="标识"
+            <a href="https://paperui.newmt.fun/" accesskey="h" title="新墨韬 (Alt + H)">
+                    <img src="https://paperui.newmt.fun/images/logo.svg" alt="" aria-label="标识"
                         height="24">新墨韬</a>
         </div>
         <ul id="menu" class="menu">
             <li>
-                <a href="http://localhost:1313/" title="首页">
+                <a href="https://paperui.newmt.fun/" title="首页">
                     <span>首页</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/posts/" title="文章">
+                <a href="https://paperui.newmt.fun/posts/" title="文章">
                     <span>文章</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/categories/" title="分类">
+                <a href="https://paperui.newmt.fun/categories/" title="分类">
                     <span>分类</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/archives/" title="归档">
+                <a href="https://paperui.newmt.fun/archives/" title="归档">
                     <span>归档</span>
                 </a>
             </li>
             <li>
-                <a href="http://localhost:1313/about/" title="关于">
+                <a href="https://paperui.newmt.fun/about/" title="关于">
                     <span>关于</span>
                 </a>
             </li>
@@ -225,27 +225,27 @@
 <nav id="mobile-menu" class="mobile-menu">
     <ul>
         <li>
-            <a href="http://localhost:1313/" title="首页">
+            <a href="https://paperui.newmt.fun/" title="首页">
                 <span>首页</span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:1313/posts/" title="文章">
+            <a href="https://paperui.newmt.fun/posts/" title="文章">
                 <span>文章</span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:1313/categories/" title="分类">
+            <a href="https://paperui.newmt.fun/categories/" title="分类">
                 <span>分类</span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:1313/archives/" title="归档">
+            <a href="https://paperui.newmt.fun/archives/" title="归档">
                 <span>归档</span>
             </a>
         </li>
         <li>
-            <a href="http://localhost:1313/about/" title="关于">
+            <a href="https://paperui.newmt.fun/about/" title="关于">
                 <span>关于</span>
             </a>
         </li>
@@ -284,7 +284,7 @@
 </div>
   </header> 
 <figure class="entry-cover">
-        <img loading="eager" src="http://localhost:1313/images/hero-3.jpg" alt="">
+        <img loading="eager" src="https://paperui.newmt.fun/images/hero-3.webp" alt="">
         
 </figure>
   <div class="post-content md-content"><p>Git 是目前最主流的分布式版本控制系统。但学会 Git 不只是记住命令——理解背后的工作流才能真正高效协作。</p>
@@ -401,12 +401,12 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="http://localhost:1313/tags/git/">Git</a></li>
-      <li><a href="http://localhost:1313/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">版本控制</a></li>
-      <li><a href="http://localhost:1313/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/">团队协作</a></li>
+      <li><a href="https://paperui.newmt.fun/tags/git/">Git</a></li>
+      <li><a href="https://paperui.newmt.fun/tags/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6/">版本控制</a></li>
+      <li><a href="https://paperui.newmt.fun/tags/%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C/">团队协作</a></li>
     </ul>
 <nav class="paginav">
-  <a class="next" href="http://localhost:1313/posts/python-tips/">
+  <a class="next" href="https://paperui.newmt.fun/posts/python-tips/">
     <span class="title">下一页 »</span>
     <span>Python 开发中值得养成的 8 个编码习惯</span>
   </a>
@@ -417,7 +417,7 @@
     </main>
     
 <footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">新墨韬</a></span> · 
+        <span>&copy; 2026 <a href="https://paperui.newmt.fun/">新墨韬</a></span> · 
 
     
     
@@ -426,7 +426,7 @@
         <a href="https://gohugo.io/" rel="noopener" target="_blank">Hugo</a> 与
         <a href="https://github.com/scenlinx/PaperUI" rel="noopener" target="_blank">PaperUI</a> 驱动
         ·
-        <a href="http://localhost:1313/sitemap.xml" rel="noopener">网站地图</a>
+        <a href="https://paperui.newmt.fun/sitemap.xml" rel="noopener">网站地图</a>
     </span>
 </footer>
 <a href="#top" id="top-link" class="top-link hidden" aria-label="回到顶部" title="回到顶部 (Alt + G)" accesskey="g">

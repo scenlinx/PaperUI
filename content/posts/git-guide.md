@@ -5,7 +5,7 @@ categories: ["技术"]
 tags: ["Git", "版本控制", "团队协作"]
 description: '一份面向日常开发的 Git 实用指南，涵盖分支管理、合并冲突解决、提交规范与团队协作流程。'
 cover:
-  image: '/images/hero-3.jpg'
+  image: '/images/hero-3.webp'
 ---
 
 Git 是目前最主流的分布式版本控制系统。但学会 Git 不只是记住命令——理解背后的工作流才能真正高效协作。

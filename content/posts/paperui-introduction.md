@@ -5,7 +5,7 @@ categories: ["PaperUI"]
 tags: ["Hugo", "PaperUI", "主题"]
 description: 'PaperUI 是基于 PaperMod 深度优化的 Hugo 主题，专为中文博客场景打造，支持首页轮播、双栏布局、彩色标签等现代特性'
 cover:
-  image: '/images/hero-1.jpg'
+  image: '/images/hero-1.webp'
 ---
 
 如果你正在使用 Hugo 搭建个人博客，一定听说过 **PaperMod** —— 它是 Hugo 生态中最受欢迎的主题之一，GitHub 上拥有超过 15,000 个 Star。PaperMod 以简洁、快速、轻量著称，但它的设计偏向英文博客场景，对中文用户来说还有一些可以改进的空间。

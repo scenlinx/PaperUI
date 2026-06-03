@@ -144,12 +144,12 @@ echo '---\ntitle: "标签"\n---' > content/tags/_index.md
 static/
 ├── favicon.svg
 └── images/
-    ├── hero-1.jpg
-    ├── hero-2.jpg
-    ├── hero-3.jpg
-    ├── square-1.jpg
-    ├── square-2.jpg
-    └── portrait-1.jpg
+    ├── hero-1.webp
+    ├── hero-2.webp
+    ├── hero-3.webp
+    ├── square-1.webp
+    ├── square-2.webp
+    └── portrait-1.webp
 ```
 
 ## 启动开发服务器
@@ -167,15 +167,15 @@ hugo server -D
 ```toml
 [params.homeCarousel]
 slides = [
-  { image = '/images/hero-1.jpg', url = '/posts/your-post-1/' },
-  { image = '/images/hero-2.jpg', url = '/posts/your-post-2/' },
-  { image = '/images/hero-3.jpg', url = '/posts/your-post-3/' },
+  { image = '/images/hero-1.webp', url = '/posts/your-post-1/' },
+  { image = '/images/hero-2.webp', url = '/posts/your-post-2/' },
+  { image = '/images/hero-3.webp', url = '/posts/your-post-3/' },
 ]
 middle = [
-  { image = '/images/square-1.jpg', url = '/posts/your-post-4/' },
-  { image = '/images/square-2.jpg', url = '/posts/your-post-5/' },
+  { image = '/images/square-1.webp', url = '/posts/your-post-4/' },
+  { image = '/images/square-2.webp', url = '/posts/your-post-5/' },
 ]
-right = { image = '/images/portrait-1.jpg', url = '/about/' }
+right = { image = '/images/portrait-1.webp', url = '/about/' }
 ```
 
 不配置轮播也不会报错，首页会回退到标准的 `homeInfoParams` 模式。
