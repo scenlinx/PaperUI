@@ -68,17 +68,17 @@ Content = '分享技术和思考'             # 首页简介
 [params.homeCarousel]
 # 左侧主轮播（16:9 比例）
 slides = [
-  { image = '/images/hero-1.jpg', url = '/posts/post-1/' },
-  { image = '/images/hero-2.jpg', url = '/posts/post-2/' },
-  { image = '/images/hero-3.jpg', url = '/posts/post-3/' },
+  { image = '/images/hero-1.webp', url = '/posts/post-1/' },
+  { image = '/images/hero-2.webp', url = '/posts/post-2/' },
+  { image = '/images/hero-3.webp', url = '/posts/post-3/' },
 ]
 # 中部正方形卡片（1:1 比例）
 middle = [
-  { image = '/images/square-1.jpg', url = '/posts/post-4/' },
-  { image = '/images/square-2.jpg', url = '/posts/post-5/' },
+  { image = '/images/square-1.webp', url = '/posts/post-4/' },
+  { image = '/images/square-2.webp', url = '/posts/post-5/' },
 ]
 # 右侧竖版图片（3:4 比例）
-right = { image = '/images/portrait-1.jpg', url = '/about/' }
+right = { image = '/images/portrait-1.webp', url = '/about/' }
 ```
 
 > 不配置 `homeCarousel` 时，首页使用标准的 `homeInfoParams` 模式。
