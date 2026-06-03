@@ -36,7 +36,7 @@ ShowFullTextinRSS = false
 homePostCount = 8
 
 [params.label]
-icon = '/images/logo.svg'
+icon = '/logo.svg'
 iconHeight = 24
 images = ['/images/hero-1.webp']
 
